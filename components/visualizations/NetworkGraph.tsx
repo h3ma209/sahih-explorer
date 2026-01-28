@@ -1,23 +1,9 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
-import {
-  ReactFlow,
-  Node,
-  Edge,
-  Background,
-  Controls,
-  MiniMap,
-  useNodesState,
-  useEdgesState,
-  MarkerType,
-  Position,
-} from "@xyflow/react";
-import "@xyflow/react/dist/style.css";
+import { useMemo } from "react";
+import ReactECharts from "echarts-for-react";
+import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Users, GraduationCap, BookOpen } from "lucide-react";
 
 interface Person {
   id: string;
@@ -35,226 +21,158 @@ interface NetworkGraphProps {
   students: Person[];
 }
 
-// Custom Node Component
-function ScholarNode({ data }: any) {
-  const isMain = data.type === "main";
-  const isTeacher = data.type === "teacher";
-
-  return (
-    <Card
-      className={`px-4 py-3 min-w-[200px] transition-all hover:shadow-lg ${
-        isMain
-          ? "bg-gradient-to-br from-amber-500/20 to-amber-600/20 border-amber-500/50 shadow-amber-500/20"
-          : isTeacher
-          ? "bg-blue-500/10 border-blue-500/30"
-          : "bg-emerald-500/10 border-emerald-500/30"
-      }`}
-    >
-      <div className="flex items-start gap-3">
-        <div
-          className={`p-2 rounded-lg ${
-            isMain
-              ? "bg-amber-500/20"
-              : isTeacher
-              ? "bg-blue-500/20"
-              : "bg-emerald-500/20"
-          }`}
-        >
-          {isMain ? (
-            <BookOpen className="w-4 h-4 text-amber-500" />
-          ) : isTeacher ? (
-            <GraduationCap className="w-4 h-4 text-blue-500" />
-          ) : (
-            <Users className="w-4 h-4 text-emerald-500" />
-          )}
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-sm truncate">{data.label}</h3>
-          {data.grade && (
-            <p className="text-xs text-muted-foreground mt-1 truncate">{data.grade}</p>
-          )}
-          <Badge
-            variant="outline"
-            className={`mt-2 text-xs ${
-              isMain
-                ? "border-amber-500/50 text-amber-500"
-                : isTeacher
-                ? "border-blue-500/50 text-blue-500"
-                : "border-emerald-500/50 text-emerald-500"
-            }`}
-          >
-            {isMain ? "Scholar" : isTeacher ? "Teacher" : "Student"}
-          </Badge>
-        </div>
-      </div>
-    </Card>
-  );
-}
-
-const nodeTypes = {
-  scholarNode: ScholarNode,
-};
-
-import * as dagre from 'dagre';
-
-const getLayoutedElements = (nodes: Node[], edges: Edge[], direction = 'TB') => {
-  const dagreGraph = new dagre.graphlib.Graph();
-  dagreGraph.setDefaultEdgeLabel(() => ({}));
-  
-  const isHorizontal = direction === 'LR';
-  dagreGraph.setGraph({ rankdir: direction });
-
-  nodes.forEach((node) => {
-    dagreGraph.setNode(node.id, { width: 350, height: 100 }); // Node width/height including spacing
-  });
-
-  edges.forEach((edge) => {
-    dagreGraph.setEdge(edge.source, edge.target);
-  });
-
-  dagre.layout(dagreGraph);
-
-  const layoutedNodes = nodes.map((node) => {
-    const nodeWithPosition = dagreGraph.node(node.id);
-    return {
-      ...node,
-      targetPosition: isHorizontal ? Position.Left : Position.Top,
-      sourcePosition: isHorizontal ? Position.Right : Position.Bottom,
-      position: {
-        x: nodeWithPosition.x - 350 / 2,
-        y: nodeWithPosition.y - 100 / 2,
-      },
-    };
-  });
-
-  return { nodes: layoutedNodes, edges };
-};
-
 export default function NetworkGraph({ scholar, teachers, students }: NetworkGraphProps) {
-  // Create nodes and edges first
-  // Create nodes and edges first
-  const { nodes: layoutedNodes, edges: layoutedEdges } = useMemo(() => {
-    const nodes: Node[] = [];
-    const edges: Edge[] = []; // ... (truncated for brevity in search, but logic is inside) ... to ...
+  const { theme } = useTheme();
+
+  // Helper to wrap text
+  const wrapText = (str: string, maxLen: number = 15) => {
+    if (!str) return "";
+    const words = str.split(" ");
+    let currentLine = "";
+    const lines = [];
     
-    // Main scholar node (center)
+    words.forEach((word) => {
+      if ((currentLine + word).length > maxLen) {
+        lines.push(currentLine.trim());
+        currentLine = word + " ";
+      } else {
+        currentLine += word + " ";
+      }
+    });
+    lines.push(currentLine.trim());
+    return lines.join("\n");
+  };
+
+  const options = useMemo(() => {
+    const isDark = theme === "dark";
+
+    const categories = [
+        { name: "Scholar", itemStyle: { color: "#f59e0b" } },
+        { name: "Teacher", itemStyle: { color: "#3b82f6" } },
+        { name: "Student", itemStyle: { color: "#10b981" } },
+    ];
+
+    const nodes: any[] = [];
+    const links: any[] = [];
+
+    // Main Scholar
     nodes.push({
-      id: scholar.id,
-      type: "scholarNode",
-      position: { x: 0, y: 0 }, // Position handled by dagre
-      data: {
-        label: scholar.name,
-        grade: scholar.grade,
-        type: "main",
-      },
+        id: scholar.id,
+        name: wrapText(scholar.name),
+        originalName: scholar.name,
+        category: 0,
+        symbolSize: 50,
+        value: 20,
+        fixed: true,
+        x: 400, // Center of 800px width
+        y: 400, // Center of 800px height
+        label: {
+            show: true,
+            position: "top",
+            fontSize: 14,
+            fontWeight: "bold",
+            color: isDark ? "#fff" : "#000",
+            formatter: "{b}"
+        }
     });
 
-    // Teacher nodes (sources)
-    teachers.slice(0, 15).forEach((teacher) => {
+    // Teachers
+    teachers.slice(0, 30).forEach((t) => {
         nodes.push({
-            id: teacher.id,
-            type: "scholarNode",
-            position: { x: 0, y: 0 },
-            data: { label: teacher.name, grade: teacher.grade, type: "teacher" },
+            id: t.id,
+            name: wrapText(t.name),
+            originalName: t.name,
+            category: 1,
+            symbolSize: 20,
+            value: 10,
+            label: { 
+                show: teachers.length < 20, 
+                position: "right",
+                color: isDark ? "#ccc" : "#333"
+            }
         });
-        edges.push({
-            id: `${teacher.id}-${scholar.id}`,
-            source: teacher.id,
+        links.push({
+            source: t.id,
             target: scholar.id,
-            type: "smoothstep",
-            animated: true,
-            style: { stroke: "#3b82f6", strokeWidth: 2 },
-            markerEnd: { type: MarkerType.ArrowClosed, color: "#3b82f6" },
+            lineStyle: { color: "#3b82f6", curveness: 0.1 }
         });
     });
 
-    // Student nodes (targets)
-    students.slice(0, 15).forEach((student) => {
+    // Students
+    students.slice(0, 50).forEach((s) => {
         nodes.push({
-            id: student.id,
-            type: "scholarNode",
-            position: { x: 0, y: 0 },
-            data: { label: student.name, grade: student.grade, type: "student" },
+            id: s.id,
+            name: wrapText(s.name),
+            originalName: s.name,
+            category: 2,
+            symbolSize: 15,
+            value: 5,
+            label: { show: false } 
         });
-        edges.push({
-            id: `${scholar.id}-${student.id}`,
+        links.push({
             source: scholar.id,
-            target: student.id,
-            type: "smoothstep",
-            animated: true,
-            style: { stroke: "#10b981", strokeWidth: 2 },
-            markerEnd: { type: MarkerType.ArrowClosed, color: "#10b981" },
+            target: s.id,
+            lineStyle: { color: "#10b981", curveness: 0.1 }
         });
     });
 
-    return getLayoutedElements(nodes, edges);
-  }, [scholar, teachers, students]);
-
-  const [nodes, , onNodesChange] = useNodesState(layoutedNodes);
-  const [edges, , onEdgesChange] = useEdgesState(layoutedEdges);
+    return {
+      title: {
+         text: 'Academic Network',
+         textStyle: { color: isDark ? '#fff' : '#000', fontSize: 14 },
+         top: 10,
+         left: 10
+      },
+      tooltip: {
+        formatter: (params: any) => {
+            if (params.dataType === 'node') {
+                return params.data.originalName || params.name;
+            }
+            return '';
+        }
+      },
+      legend: [
+        {
+          data: categories.map(a => a.name),
+          textStyle: { color: isDark ? "#ccc" : "#333" },
+          bottom: 10
+        }
+      ],
+      series: [
+        {
+          type: "graph",
+          layout: "force",
+          data: nodes,
+          links: links,
+          categories: categories,
+          roam: true,
+          label: {
+            show: true,
+            position: "right",
+            formatter: "{b}"
+          },
+          force: {
+            repulsion: 400,      // Increase repulsion to separate nodes
+            gravity: 0.05,       // Increase gravity slightly to pull them in
+            edgeLength: [50, 150],
+            friction: 0.6
+          },
+          emphasis: {
+            focus: "adjacency",
+            lineStyle: { width: 4 }
+          }
+        }
+      ]
+    };
+  }, [scholar, teachers, students, theme]);
 
   return (
-    <div className="w-full h-[800px] rounded-xl overflow-hidden border border-border bg-card/50">
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        nodeTypes={nodeTypes}
-        fitView
-        minZoom={0.5}
-        maxZoom={1.5}
-        defaultViewport={{ x: 0, y: 0, zoom: 0.8 }}
-      >
-        <Background className="bg-background" gap={20} size={1} />
-        <Controls className="bg-card border-border" />
-        <MiniMap
-          className="bg-card border-border"
-          nodeColor={(node) => {
-            if (node.data.type === "main") return "#f59e0b";
-            if (node.data.type === "teacher") return "#3b82f6";
-            return "#10b981";
-          }}
-        />
-      </ReactFlow>
-
-      {/* Legend & Grading Criteria */}
-      <div className="absolute top-4 right-4 bg-background/95 backdrop-blur border border-border p-4 rounded-lg shadow-lg max-w-xs z-10 text-xs">
-        <h4 className="font-bold mb-2 text-sm">Legend</h4>
-        <div className="space-y-2 mb-4">
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-amber-500"></span>
-            <span>Main Scholar (Current)</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-            <span>Teachers (Sources)</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
-            <span>Students (Transmitters)</span>
-          </div>
-        </div>
-        
-        <Separator className="my-2" />
-        
-        <h4 className="font-bold mb-2 text-sm">Grading Criteria</h4>
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-             <Badge variant="outline" className="border-emerald-500 text-emerald-500 bg-emerald-500/10">Thiqah</Badge>
-             <span className="text-muted-foreground">Trustworthy & Precise</span>
-          </div>
-          <div className="flex items-center gap-2">
-             <Badge variant="outline" className="border-amber-500 text-amber-500 bg-amber-500/10">Saduq</Badge>
-             <span className="text-muted-foreground">Truthful, Good Memory</span>
-          </div>
-           <div className="flex items-center gap-2">
-             <Badge variant="outline" className="border-rose-500 text-rose-500 bg-rose-500/10">Da'if</Badge>
-             <span className="text-muted-foreground">Weak Narrator</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <Card className="w-full h-[800px] overflow-hidden bg-card/50 border-border p-4">
+       <ReactECharts 
+         option={options} 
+         style={{ height: "100%", width: "100%" }}
+         opts={{ renderer: 'canvas' }}
+       />
+    </Card>
   );
 }

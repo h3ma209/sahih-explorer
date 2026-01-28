@@ -108,7 +108,7 @@ export default function AnalyticsDashboard({
             <CardDescription>Knowledge distribution across different fields</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="w-full h-[300px]">
+            <div style={{ width: '100%', height: 300 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={expertiseData}>
                   <PolarGrid className="stroke-border" />
@@ -145,7 +145,7 @@ export default function AnalyticsDashboard({
             <CardDescription>Distribution of teachers and students</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="w-full h-[300px]">
+            <div style={{ width: '100%', height: 300 }}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
