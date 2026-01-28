@@ -11,10 +11,12 @@ import {
   useNodesState,
   useEdgesState,
   MarkerType,
+  Position,
 } from "@xyflow/react";
 import "@xyflow/react/dist/style.css";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 import { Users, GraduationCap, BookOpen } from "lucide-react";
 
 interface Person {
@@ -93,16 +95,53 @@ const nodeTypes = {
   scholarNode: ScholarNode,
 };
 
-export default function NetworkGraph({ scholar, teachers, students }: NetworkGraphProps) {
-  // Create nodes
-  const initialNodes: Node[] = useMemo(() => {
-    const nodes: Node[] = [];
+import * as dagre from 'dagre';
 
+const getLayoutedElements = (nodes: Node[], edges: Edge[], direction = 'TB') => {
+  const dagreGraph = new dagre.graphlib.Graph();
+  dagreGraph.setDefaultEdgeLabel(() => ({}));
+  
+  const isHorizontal = direction === 'LR';
+  dagreGraph.setGraph({ rankdir: direction });
+
+  nodes.forEach((node) => {
+    dagreGraph.setNode(node.id, { width: 350, height: 100 }); // Node width/height including spacing
+  });
+
+  edges.forEach((edge) => {
+    dagreGraph.setEdge(edge.source, edge.target);
+  });
+
+  dagre.layout(dagreGraph);
+
+  const layoutedNodes = nodes.map((node) => {
+    const nodeWithPosition = dagreGraph.node(node.id);
+    return {
+      ...node,
+      targetPosition: isHorizontal ? Position.Left : Position.Top,
+      sourcePosition: isHorizontal ? Position.Right : Position.Bottom,
+      position: {
+        x: nodeWithPosition.x - 350 / 2,
+        y: nodeWithPosition.y - 100 / 2,
+      },
+    };
+  });
+
+  return { nodes: layoutedNodes, edges };
+};
+
+export default function NetworkGraph({ scholar, teachers, students }: NetworkGraphProps) {
+  // Create nodes and edges first
+  // Create nodes and edges first
+  const { nodes: layoutedNodes, edges: layoutedEdges } = useMemo(() => {
+    const nodes: Node[] = [];
+    const edges: Edge[] = []; // ... (truncated for brevity in search, but logic is inside) ... to ...
+    
     // Main scholar node (center)
     nodes.push({
       id: scholar.id,
       type: "scholarNode",
-      position: { x: 400, y: 300 },
+      position: { x: 0, y: 0 }, // Position handled by dagre
       data: {
         label: scholar.name,
         grade: scholar.grade,
@@ -110,88 +149,49 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
       },
     });
 
-    // Teacher nodes (top)
-    teachers.slice(0, 8).forEach((teacher, index) => {
-      const angle = (index / 8) * Math.PI - Math.PI / 2;
-      const radius = 250;
-      nodes.push({
-        id: teacher.id,
-        type: "scholarNode",
-        position: {
-          x: 400 + Math.cos(angle) * radius,
-          y: 100 + Math.sin(angle) * radius,
-        },
-        data: {
-          label: teacher.name,
-          grade: teacher.grade,
-          type: "teacher",
-        },
-      });
+    // Teacher nodes (sources)
+    teachers.slice(0, 15).forEach((teacher) => {
+        nodes.push({
+            id: teacher.id,
+            type: "scholarNode",
+            position: { x: 0, y: 0 },
+            data: { label: teacher.name, grade: teacher.grade, type: "teacher" },
+        });
+        edges.push({
+            id: `${teacher.id}-${scholar.id}`,
+            source: teacher.id,
+            target: scholar.id,
+            type: "smoothstep",
+            animated: true,
+            style: { stroke: "#3b82f6", strokeWidth: 2 },
+            markerEnd: { type: MarkerType.ArrowClosed, color: "#3b82f6" },
+        });
     });
 
-    // Student nodes (bottom)
-    students.slice(0, 12).forEach((student, index) => {
-      const angle = (index / 12) * Math.PI + Math.PI / 2;
-      const radius = 280;
-      nodes.push({
-        id: student.id,
-        type: "scholarNode",
-        position: {
-          x: 400 + Math.cos(angle) * radius,
-          y: 500 + Math.sin(angle) * radius,
-        },
-        data: {
-          label: student.name,
-          grade: student.grade,
-          type: "student",
-        },
-      });
+    // Student nodes (targets)
+    students.slice(0, 15).forEach((student) => {
+        nodes.push({
+            id: student.id,
+            type: "scholarNode",
+            position: { x: 0, y: 0 },
+            data: { label: student.name, grade: student.grade, type: "student" },
+        });
+        edges.push({
+            id: `${scholar.id}-${student.id}`,
+            source: scholar.id,
+            target: student.id,
+            type: "smoothstep",
+            animated: true,
+            style: { stroke: "#10b981", strokeWidth: 2 },
+            markerEnd: { type: MarkerType.ArrowClosed, color: "#10b981" },
+        });
     });
 
-    return nodes;
+    return getLayoutedElements(nodes, edges);
   }, [scholar, teachers, students]);
 
-  // Create edges
-  const initialEdges: Edge[] = useMemo(() => {
-    const edges: Edge[] = [];
-
-    // Teacher edges
-    teachers.slice(0, 8).forEach((teacher) => {
-      edges.push({
-        id: `${teacher.id}-${scholar.id}`,
-        source: teacher.id,
-        target: scholar.id,
-        type: "smoothstep",
-        animated: true,
-        style: { stroke: "#3b82f6", strokeWidth: 2 },
-        markerEnd: {
-          type: MarkerType.ArrowClosed,
-          color: "#3b82f6",
-        },
-      });
-    });
-
-    // Student edges
-    students.slice(0, 12).forEach((student) => {
-      edges.push({
-        id: `${scholar.id}-${student.id}`,
-        source: scholar.id,
-        target: student.id,
-        type: "smoothstep",
-        animated: true,
-        style: { stroke: "#10b981", strokeWidth: 2 },
-        markerEnd: {
-          type: MarkerType.ArrowClosed,
-          color: "#10b981",
-        },
-      });
-    });
-
-    return edges;
-  }, [scholar, teachers, students]);
-
-  const [nodes, , onNodesChange] = useNodesState(initialNodes);
-  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, , onNodesChange] = useNodesState(layoutedNodes);
+  const [edges, , onEdgesChange] = useEdgesState(layoutedEdges);
 
   return (
     <div className="w-full h-[800px] rounded-xl overflow-hidden border border-border bg-card/50">
@@ -218,24 +218,43 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
         />
       </ReactFlow>
 
-      {/* Legend */}
-      <div className="absolute bottom-6 left-6 bg-card/95 backdrop-blur-sm border border-border rounded-lg p-4 shadow-lg">
-        <h4 className="font-semibold text-sm mb-3">Network Legend</h4>
-        <div className="space-y-2 text-xs">
+      {/* Legend & Grading Criteria */}
+      <div className="absolute top-4 right-4 bg-background/95 backdrop-blur border border-border p-4 rounded-lg shadow-lg max-w-xs z-10 text-xs">
+        <h4 className="font-bold mb-2 text-sm">Legend</h4>
+        <div className="space-y-2 mb-4">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded bg-amber-500" />
-            <span>Main Scholar</span>
+            <span className="w-3 h-3 rounded-full bg-amber-500"></span>
+            <span>Main Scholar (Current)</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded bg-blue-500" />
-            <span>Teachers ({teachers.length})</span>
+            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+            <span>Teachers (Sources)</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded bg-emerald-500" />
-            <span>Students ({students.length})</span>
+            <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
+            <span>Students (Transmitters)</span>
+          </div>
+        </div>
+        
+        <Separator className="my-2" />
+        
+        <h4 className="font-bold mb-2 text-sm">Grading Criteria</h4>
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+             <Badge variant="outline" className="border-emerald-500 text-emerald-500 bg-emerald-500/10">Thiqah</Badge>
+             <span className="text-muted-foreground">Trustworthy & Precise</span>
+          </div>
+          <div className="flex items-center gap-2">
+             <Badge variant="outline" className="border-amber-500 text-amber-500 bg-amber-500/10">Saduq</Badge>
+             <span className="text-muted-foreground">Truthful, Good Memory</span>
+          </div>
+           <div className="flex items-center gap-2">
+             <Badge variant="outline" className="border-rose-500 text-rose-500 bg-rose-500/10">Da'if</Badge>
+             <span className="text-muted-foreground">Weak Narrator</span>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
