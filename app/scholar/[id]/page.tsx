@@ -8,10 +8,30 @@ import ScholarProfile from '@/components/features/ScholarProfile';
 async function getScholarData(id: string) {
   const filePath = path.join(process.cwd(), 'public/data/scholars', `${id}.json`);
   try {
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(fileContents);
-  } catch (error) {
-    return null;
+     const fileContents = fs.readFileSync(filePath, 'utf8');
+     const data = JSON.parse(fileContents);
+
+     // Hydrate children to get grandchildren (Descendants)
+     if (data.children && data.children.length > 0) {
+        data.children = data.children.map((child: any) => {
+            if (!child.id) return child;
+            try {
+                const childPath = path.join(process.cwd(), 'public/data/scholars', `${child.id}.json`);
+                if (fs.existsSync(childPath)) {
+                    const childData = JSON.parse(fs.readFileSync(childPath, 'utf8'));
+                    // We only need the child's children (grandchildren of root)
+                    return { ...child, children: childData.children || [] };
+                }
+            } catch (e) {
+                // Ignore missing files
+            }
+            return child;
+        });
+     }
+
+     return data;
+  } catch (e) {
+     return null;
   }
 }
 

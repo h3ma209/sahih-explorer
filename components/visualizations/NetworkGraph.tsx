@@ -55,6 +55,8 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     const nodes: any[] = [];
     const links: any[] = [];
 
+    const addedIds = new Set<string>();
+
     // Main Scholar
     nodes.push({
         id: scholar.id,
@@ -75,22 +77,26 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
             formatter: "{b}"
         }
     });
+    addedIds.add(scholar.id);
 
     // Teachers
     teachers.slice(0, 30).forEach((t) => {
-        nodes.push({
-            id: t.id,
-            name: wrapText(t.name),
-            originalName: t.name,
-            category: 1,
-            symbolSize: 20,
-            value: 10,
-            label: { 
-                show: teachers.length < 20, 
-                position: "right",
-                color: isDark ? "#ccc" : "#333"
-            }
-        });
+        if (!addedIds.has(t.id)) {
+            nodes.push({
+                id: t.id,
+                name: wrapText(t.name),
+                originalName: t.name,
+                category: 1,
+                symbolSize: 20,
+                value: 10,
+                label: { 
+                    show: teachers.length < 20, 
+                    position: "right",
+                    color: isDark ? "#ccc" : "#333"
+                }
+            });
+            addedIds.add(t.id);
+        }
         links.push({
             source: t.id,
             target: scholar.id,
@@ -100,15 +106,18 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
 
     // Students
     students.slice(0, 50).forEach((s) => {
-        nodes.push({
-            id: s.id,
-            name: wrapText(s.name),
-            originalName: s.name,
-            category: 2,
-            symbolSize: 15,
-            value: 5,
-            label: { show: false } 
-        });
+        if (!addedIds.has(s.id)) {
+            nodes.push({
+                id: s.id,
+                name: wrapText(s.name),
+                originalName: s.name,
+                category: 2,
+                symbolSize: 15,
+                value: 5,
+                label: { show: false } 
+            });
+            addedIds.add(s.id);
+        }
         links.push({
             source: scholar.id,
             target: s.id,
@@ -166,12 +175,22 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     };
   }, [scholar, teachers, students, theme]);
 
+  const onChartClick = (params: any) => {
+    if (params.dataType === 'node' && params.data.id && params.data.id !== scholar.id) {
+       // Navigate to the scholar's page
+       window.location.href = `/scholar/${params.data.id}`;
+    }
+  };
+
   return (
-    <Card className="w-full h-[800px] overflow-hidden bg-card/50 border-border p-4">
+    <Card className="w-full h-[500px] md:h-[800px] overflow-hidden bg-card/50 border-border p-4">
        <ReactECharts 
          option={options} 
          style={{ height: "100%", width: "100%" }}
          opts={{ renderer: 'canvas' }}
+         onEvents={{
+            click: onChartClick
+         }}
        />
     </Card>
   );

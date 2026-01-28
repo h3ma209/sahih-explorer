@@ -9,6 +9,7 @@ interface Person {
   id: string;
   name: string;
   grade?: string;
+  children?: Person[];
 }
 
 interface FamilyTreeGraphProps {
@@ -54,21 +55,23 @@ export default function FamilyTreeGraph({
   const options = useMemo(() => {
     const isDark = theme === "dark";
 
-    // Transform Data into a Hierarchy
-    // Strategy: Virtual Root -> Parents -> Scholar -> [Spouses, Siblings, Children]
-    // To make it look like a tree, we anchor everything around the scholar
-    
-    const childrenNodes = children.map(c => ({
-        name: wrapText(c.name),
-        originalName: c.name,
-        value: "Child",
+    // Recursive helper for descendants
+    const mapDescendant = (p: Person): any => ({
+        name: wrapText(p.name),
+        originalName: p.name,
+        id: p.id,
+        value: "Descendant",
         itemStyle: { color: "#10b981", borderColor: "#10b981" },
-        label: { color: isDark ? "#eee" : "#333", position: "bottom" }
-    }));
+        label: { color: isDark ? "#eee" : "#333", position: "bottom" },
+        children: p.children?.map(mapDescendant) || []
+    });
+    
+    const childrenNodes = children.map(mapDescendant);
 
     const spousesNodes = spouses.map(s => ({
         name: wrapText(s.name),
         originalName: s.name,
+        id: s.id,
         value: "Spouse",
         itemStyle: { color: "#e11d48", borderColor: "#e11d48" },
         label: { color: isDark ? "#eee" : "#333", position: "right" }
@@ -77,6 +80,7 @@ export default function FamilyTreeGraph({
     const siblingsNodes = siblings.map(s => ({
         name: wrapText(s.name),
         originalName: s.name,
+        id: s.id,
         value: "Sibling",
         itemStyle: { color: "#a855f7", borderColor: "#a855f7" },
         label: { color: isDark ? "#eee" : "#333", position: "right" }
@@ -127,6 +131,7 @@ export default function FamilyTreeGraph({
         rootData = {
             name: wrapText(mainParent.name),
             originalName: mainParent.name,
+            id: mainParent.id,
             value: "Parent",
             symbolSize: 15,
             itemStyle: { color: "#3b82f6", borderColor: "#3b82f6" },
@@ -145,11 +150,12 @@ export default function FamilyTreeGraph({
             return params.data.originalName || params.name.replace(/\n/g, " ");
         }
       },
+      legend: { show: false }, // Disable native legend
       series: [
         {
           type: "tree",
           data: [rootData],
-          top: "5%",
+          top: "5%", 
           left: "7%",
           bottom: "5%",
           right: "7%",
@@ -157,7 +163,8 @@ export default function FamilyTreeGraph({
           edgeShape: "curve",
           edgeForkPosition: "63%",
           initialTreeDepth: 3,
-          orient: "TB", // Top to Bottom Orientation
+          orient: "TB",
+          roam: true, // Enable Zoom & Pan
           
           label: {
             position: "left",
@@ -183,12 +190,51 @@ export default function FamilyTreeGraph({
     };
   }, [scholar, parents, spouses, children, siblings, theme]);
 
+  const onChartClick = (params: any) => {
+    // Only navigate if it's a person node (not "Spouses" group etc) and has an ID potentially
+    // Actually, in our tree logic, the node name is the person name.
+    // We don't store ID in the tree node data directly except maybe mapping.
+    // However, for now, let's assume we can navigate if we can match data. 
+    // To support navigation, we should attach ID to the node data.
+    
+    if (params.data && params.data.id) {
+       window.location.href = `/scholar/${params.data.id}`;
+    }
+  };
+
+  const legendItems = [
+    { label: "Scholar", color: "bg-amber-500", desc: "Central Figure" },
+    { label: "Parents", color: "bg-blue-500", desc: "Ancestors" },
+    { label: "Spouses", color: "bg-rose-500", desc: "Partners" },
+    { label: "Siblings", color: "bg-purple-500", desc: "Brothers/Sisters" },
+    { label: "Descendants", color: "bg-emerald-500", desc: "Children & Grandchildren" },
+  ];
+
   return (
-    <Card className="w-full h-[600px] overflow-hidden bg-card/50 border-border p-4">
+    <Card className="w-full h-[500px] md:h-[600px] overflow-hidden bg-card/50 border-border relative">
+       {/* Custom Legend Overlay */}
+       <div className="absolute top-4 left-4 z-10 bg-background/90 backdrop-blur-sm p-3 rounded-lg border border-border shadow-sm">
+          <h4 className="text-xs font-semibold mb-2 text-muted-foreground uppercase tracking-wider">Family Key</h4>
+          <div className="space-y-2">
+            {legendItems.map((item) => (
+              <div key={item.label} className="flex items-center gap-2">
+                <span className={`w-3 h-3 rounded-full ${item.color}`} />
+                <div className="flex flex-col">
+                   <span className="text-xs font-medium leading-none">{item.label}</span>
+                   <span className="text-[10px] text-muted-foreground scale-90 origin-left">{item.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+       </div>
+
        <ReactECharts 
          option={options} 
          style={{ height: "100%", width: "100%" }}
          opts={{ renderer: 'canvas' }}
+         onEvents={{
+            click: onChartClick
+         }}
        />
     </Card>
   );

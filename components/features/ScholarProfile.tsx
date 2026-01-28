@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navigation from "@/components/layout/Navigation";
 import HeroSection from "@/components/sections/HeroSection";
+import WikipediaSummary from "@/components/features/WikipediaSummary";
 import NetworkGraph from "@/components/visualizations/NetworkGraph";
 import FamilyTreeGraph from "@/components/visualizations/FamilyTreeGraph";
 import TimelineChart from "@/components/visualizations/TimelineChart";
@@ -23,6 +24,7 @@ import {
   MapPin,
   Award,
   Users,
+  ChevronDown,
 } from "lucide-react";
 
 interface ScholarProfileProps {
@@ -62,9 +64,16 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
         scholarName={name}
         scholarTitle={grade ? `${grade}` : "Islamic Scholar"}
       />
+      
+      {/* Wikipedia Summary */}
+      <WikipediaSummary 
+          scholarName={name} 
+          deathYear={biography?.death?.date_gregorian || biography?.death?.date_hijri}
+          scholarGrade={grade}
+      />
 
       {/* Biography Section */}
-      <section id="biography" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="biography" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -195,7 +204,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
       </section>
 
       {/* Family Tree Section */}
-      <section id="family" className="py-24 bg-gradient-to-b from-accent/5 to-background">
+      <section id="family" className="py-12 md:py-24 bg-gradient-to-b from-accent/5 to-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +240,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
       </section>
 
       {/* Network Section */}
-      <section id="network" className="py-24">
+      <section id="network" className="py-12 md:py-24">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -259,12 +268,85 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
               teachers={teachers}
               students={students}
             />
+
+            {/* Network Lists */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+               {/* Teachers List */}
+               <Card>
+                 <CardHeader>
+                   <CardTitle className="flex items-center gap-2 text-lg">
+                      <div className="w-3 h-3 rounded-full bg-blue-500" />
+                      Teachers ({teachers.length})
+                   </CardTitle>
+                 </CardHeader>
+                 <CardContent>
+                   <div className="max-h-[300px] overflow-y-auto pr-2 space-y-2">
+                      {Array.from(new Map(teachers.map((t: any) => [t.id, t])).values()).map((t: any) => (
+                        <div 
+                          key={t.id} 
+                          onClick={() => router.push(`/scholar/${t.id}`)}
+                          className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
+                        >
+                          <div className="flex items-center gap-2">
+                             <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-xs font-bold text-blue-500">
+                               T
+                             </div>
+                             <span className="font-medium group-hover:text-blue-500 transition-colors">{t.name}</span>
+                          </div>
+                          {t.id && (
+                            <Button variant="ghost" size="icon" className="h-6 w-6 opacity-0 group-hover:opacity-100">
+                              <span className="sr-only">View</span>
+                              <ChevronDown className="w-4 h-4 -rotate-90" />
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                      {teachers.length === 0 && <p className="text-sm text-muted-foreground p-4 text-center">No teachers recorded.</p>}
+                   </div>
+                 </CardContent>
+               </Card>
+
+               {/* Students List */}
+               <Card>
+                 <CardHeader>
+                   <CardTitle className="flex items-center gap-2 text-lg">
+                      <div className="w-3 h-3 rounded-full bg-emerald-500" />
+                      Students ({students.length})
+                   </CardTitle>
+                 </CardHeader>
+                 <CardContent>
+                   <div className="max-h-[300px] overflow-y-auto pr-2 space-y-2">
+                      {Array.from(new Map(students.map((s: any) => [s.id, s])).values()).map((s: any) => (
+                        <div 
+                          key={s.id} 
+                          onClick={() => router.push(`/scholar/${s.id}`)}
+                          className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
+                        >
+                          <div className="flex items-center gap-2">
+                             <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-xs font-bold text-emerald-500">
+                               S
+                             </div>
+                             <span className="font-medium group-hover:text-emerald-500 transition-colors">{s.name}</span>
+                          </div>
+                          {s.id && (
+                            <Button variant="ghost" size="icon" className="h-6 w-6 opacity-0 group-hover:opacity-100">
+                              <span className="sr-only">View</span>
+                              <ChevronDown className="w-4 h-4 -rotate-90" />
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                      {students.length === 0 && <p className="text-sm text-muted-foreground p-4 text-center">No students recorded.</p>}
+                   </div>
+                 </CardContent>
+               </Card>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="timeline" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -288,7 +370,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
       </section>
 
       {/* Hadiths Section */}
-      <section id="hadiths" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="hadiths" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -314,7 +396,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
       </section>
 
       {/* Analytics Section */}
-      <section id="analytics" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="analytics" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
