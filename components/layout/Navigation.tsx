@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpen, Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CommandPalette } from "@/components/features/CommandPalette";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -71,37 +72,35 @@ export default function Navigation() {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
-              {navItems.map((item, index) => (
-                <motion.button
+            <nav className="hidden md:flex items-center gap-6">
+              {navItems.map((item) => (
+                <button
                   key={item.href}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-lg hover:bg-accent/50"
+                  className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
                 >
                   {item.label}
-                </motion.button>
+                </button>
               ))}
             </nav>
 
-            {/* Actions */}
-            <div className="flex items-center gap-3">
+            {/* Right Section - Search & Language */}
+            <div className="hidden md:flex items-center gap-2">
               <CommandPalette />
+              <LanguageSwitcher />
+            </div>
 
-              {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle & Search */}
+            <div className="flex md:hidden items-center gap-2">
+              <CommandPalette />
+              <LanguageSwitcher />
               <Button
                 variant="ghost"
-                size="icon"
-                className="lg:hidden rounded-full"
+                size="sm"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2"
               >
-                {t('title') && isMobileMenuOpen ? (
-                  <X className="w-5 h-5" />
-                ) : (
-                  <Menu className="w-5 h-5" />
-                )}
+                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </Button>
             </div>
           </div>

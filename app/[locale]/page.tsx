@@ -368,7 +368,7 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl font-bold">{tHadith('collectionTitle')}</h2>
                 <p className="text-muted-foreground">
-                  {(tHadith('countSubtitle') as any).replace('{count}', hadiths.length)}
+                  {tHadith('countSubtitle', { count: hadiths.length })}
                 </p>
               </div>
             </div>

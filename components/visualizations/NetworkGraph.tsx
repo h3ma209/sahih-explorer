@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import ReactECharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
@@ -25,6 +26,8 @@ interface NetworkGraphProps {
 export default function NetworkGraph({ scholar, teachers, students }: NetworkGraphProps) {
   const t = useTranslations('Network');
   const { theme } = useTheme();
+  const locale = useLocale();
+  const router = useRouter();
 
   // Helper to wrap text
   const wrapText = (str: string, maxLen: number = 15) => {
@@ -179,8 +182,8 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
 
   const onChartClick = (params: any) => {
     if (params.dataType === 'node' && params.data.id && params.data.id !== scholar.id) {
-       // Navigate to the scholar's page
-       window.location.href = `/scholar/${params.data.id}`;
+       // Navigate to the scholar's page with locale
+       router.push(`/${locale}/scholar/${params.data.id}`);
     }
   };
 

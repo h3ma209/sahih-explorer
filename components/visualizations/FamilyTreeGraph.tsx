@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import ReactECharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
@@ -34,6 +35,8 @@ export default function FamilyTreeGraph({
 }: FamilyTreeGraphProps) {
   const t = useTranslations('Family');
   const { theme } = useTheme();
+  const locale = useLocale();
+  const router = useRouter();
 
   // Helper to wrap text
   const wrapText = (str: string, maxLen: number = 15) => {
@@ -193,14 +196,9 @@ export default function FamilyTreeGraph({
   }, [scholar, parents, spouses, children, siblings, theme, t]);
 
   const onChartClick = (params: any) => {
-    // Only navigate if it's a person node (not "Spouses" group etc) and has an ID potentially
-    // Actually, in our tree logic, the node name is the person name.
-    // We don't store ID in the tree node data directly except maybe mapping.
-    // However, for now, let's assume we can navigate if we can match data. 
-    // To support navigation, we should attach ID to the node data.
-    
-    if (params.data && params.data.id) {
-       window.location.href = `/scholar/${params.data.id}`;
+    if (params.dataType === 'node' && params.data.id && params.data.id !== scholar.id) {
+       // Navigate to the scholar's page with locale
+       router.push(`/${locale}/scholar/${params.data.id}`);
     }
   };
 
