@@ -114,7 +114,9 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                      
                      {/* Vertical Chain Layout */}
                      <div className="space-y-2">
-                       {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain).map((narrator, idx, arr) => (
+                       {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain).slice().reverse().map((narrator, idx, arr) => {
+                         const originalIdx = arr.length - 1 - idx; // Get original index for ID lookup
+                         return (
                          <div key={idx} className="flex items-start gap-3">
                            {/* Position Indicator */}
                            <div className="flex flex-col items-center flex-shrink-0">
@@ -130,7 +132,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                            <div className="flex-1 group">
                              <button
                                onClick={() => {
-                                 const narratorId = hadith.chain[idx];
+                                 const narratorId = hadith.chain[hadith.chain.length - 1 - idx]; // Reverse lookup
                                  if (narratorId) {
                                    router.push(`/${locale}/scholar/${narratorId}`);
                                  }
@@ -146,12 +148,13 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                  </svg>
                                </div>
                                <div className="text-xs text-muted-foreground mt-1">
-                                 {idx === 0 ? 'First Narrator' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
+                                 {idx === 0 ? 'Prophet ﷺ' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
                                </div>
                              </button>
                            </div>
                          </div>
-                       ))}
+                       );
+                       })}
                      </div>
                      
                      <p className="text-xs text-muted-foreground mt-4 italic flex items-center gap-1.5">
