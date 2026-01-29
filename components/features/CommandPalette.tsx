@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
+import { useLocale } from "next-intl";
 import { Search } from "lucide-react";
 import { useDebounce } from "use-debounce";
 import Fuse from "fuse.js";
@@ -31,6 +32,7 @@ export function CommandPalette() {
   const [allScholars, setAllScholars] = React.useState<SearchResult[]>([]);
   const [fuse, setFuse] = React.useState<Fuse<SearchResult> | null>(null);
   const router = useRouter();
+  const locale = useLocale();
 
   // Keyboard shortcut
   React.useEffect(() => {
@@ -73,7 +75,7 @@ export function CommandPalette() {
 
   const handleSelect = (id: string) => {
     setOpen(false);
-    router.push(`/scholar/${id}`);
+    router.push(`/${locale}/scholar/${id}`);
   };
 
   return (

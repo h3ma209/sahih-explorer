@@ -148,7 +148,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                  </svg>
                                </div>
                                <div className="text-xs text-muted-foreground mt-1">
-                                 {idx === 0 ? 'Prophet ﷺ' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
+                                 {idx === 0 ? 'Final Narrator' : idx === arr.length - 1 ? 'First Narrator' : `Narrator ${idx + 1}`}
                                </div>
                              </button>
                            </div>
