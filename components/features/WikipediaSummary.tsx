@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, BookOpen, Fingerprint } from "lucide-react";
@@ -10,9 +11,11 @@ interface WikipediaSummaryProps {
   scholarName: string;
   deathYear?: string;
   scholarGrade?: string;
+  locale: string;
 }
 
-export default function WikipediaSummary({ scholarName, deathYear, scholarGrade }: WikipediaSummaryProps) {
+export default function WikipediaSummary({ scholarName, deathYear, scholarGrade, locale }: WikipediaSummaryProps) {
+  const t = useTranslations('Wikipedia');
   const [summary, setSummary] = useState<string | null>(null);
   const [url, setUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -69,7 +72,7 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
       console.log(`Wikipedia: English Name: "${englishName}", Arabic Name: "${arabicName}"`);
 
       // Helper: Search implementation
-      const performSearch = async (lang: 'en' | 'ar', term: string, useSpecificFallback = false) => {
+      const performSearch = async (lang: string, term: string, useSpecificFallback = false) => {
           if (!term || term.length < 2) return null;
           
           try {
@@ -124,7 +127,7 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
       };
 
       // Helper: Validator
-      const validateResult = (data: any, title: string, lang: 'en' | 'ar') => {
+      const validateResult = (data: any, title: string, lang: string) => {
             const text = (data.extract || "").toLowerCase();
             const description = (data.description || "").toLowerCase();
             const lowerTitle = title.toLowerCase();
@@ -158,11 +161,14 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
                 "إسلام", "مسلم", "عالم", "حديث", "فقيه", "إمام", "سني", "صحابي", 
                 "نبي", "راوي", "محدث", "شيخ", "علماء", "سيرة", "تابعي", "خليفة"
             ];
+            // Kurdish Keywords (Basic)
+            const kuKeywords = [
+                "îslam", "misilman", "çîrok", "pêxember", "sehabe", "oldar", "zanist"
+            ];
 
-            const keywords = lang === 'en' ? enKeywords : arKeywords;
-            
-            // If we have a specific Role Keyword (e.g. Sahaba), check it specifically for higher confidence?
-            // Currently, just generic relevance is usually enough if Era Check passes.
+            let keywords = enKeywords;
+            if (lang === 'ar') keywords = arKeywords;
+            if (lang === 'ku' || lang === 'ckb') keywords = kuKeywords;
             
             return keywords.some(k => combinedText.includes(k));
       };
@@ -170,9 +176,50 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
 
       // --- Execution Flow ---
       
-      // Attempt 1: English
+      // Strategy based on Locale
+      // 1. If 'ar', try Arabic first.
+      // 2. If 'ku', try Kurdish ('ku' or 'ckb'?) Wikipedia uses 'ku' (Kurmanji) and 'ckb' (Sorani).
+      //    We'll assume 'ku' for now as generic.
+      // 3. If 'en' or other, try English first.
+
+      if (locale === 'ar') {
+           // ARABIC PRIORITY
+           if (arabicName) {
+               const arResult = await performSearch('ar', arabicName);
+               if (arResult && validateResult(arResult.data, arResult.title, 'ar')) {
+                   setSummary(arResult.data.extract);
+                   setUrl(arResult.data.content_urls?.desktop?.page);
+                   setLoading(false);
+                   return; 
+               }
+           }
+      } else if (locale === 'ckb') {
+           // KURDISH (SORANI) PRIORITY
+           // Try searching with Arabic Name (often shared) or translate?
+           // Central Kurdish Wikipedia uses Arabic script primarily.
+           // Let's try searching with Arabic name first in Kurdish Wiki, then English name.
+           if (arabicName) {
+                const ckbResult = await performSearch('ckb', arabicName);
+                if (ckbResult) {
+                    setSummary(ckbResult.data.extract);
+                    setUrl(ckbResult.data.content_urls?.desktop?.page);
+                    setLoading(false);
+                    return; 
+                }
+           }
+           if (englishName) {
+                const ckbResultEn = await performSearch('ckb', englishName);
+                 if (ckbResultEn) {
+                    setSummary(ckbResultEn.data.extract);
+                    setUrl(ckbResultEn.data.content_urls?.desktop?.page);
+                    setLoading(false);
+                    return; 
+                }
+           }
+      }
+
+      // DEFAULT / FALLBACK FLOW (English First)
       if (englishName) {
-          // Pass true for useSpecificFallback to use Grade (Sahaba/Tabi) in search if plain name fails
           const enResult = await performSearch('en', englishName, true);
           if (enResult && validateResult(enResult.data, enResult.title, 'en')) {
               setSummary(enResult.data.extract);
@@ -182,9 +229,8 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
           }
       }
 
-      // Attempt 2: Arabic (Fallback)
-      // Reaching here means English search either returned no results OR failed validation.
-      if (arabicName) {
+      // Attempt 2: Arabic (Fallback if English failed OR if we are in non-Arabic locale but still want results)
+      if (arabicName && locale !== 'ar') { // processed above if ar
           console.log("Wikipedia: English search yield no valid results. Switching to Arabic fallback...");
           const arResult = await performSearch('ar', arabicName);
           if (arResult && validateResult(arResult.data, arResult.title, 'ar')) {
@@ -201,7 +247,7 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
     };
 
     fetchWikiData();
-  }, [scholarName, deathYear, scholarGrade]);
+  }, [scholarName, deathYear, scholarGrade, locale]);
 
   if (loading || error || !summary) return null;
 
@@ -221,15 +267,15 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
             <div className="space-y-4 flex-grow">
               <div className="flex items-center gap-2">
                 <h3 className="text-xl font-semibold bg-gradient-to-r from-amber-600 to-amber-800 dark:from-amber-400 dark:to-amber-600 bg-clip-text text-transparent">
-                  Historical Context
+                  {t('title')}
                 </h3>
                 <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-medium border border-emerald-500/20 flex items-center gap-1">
                   <Fingerprint className="w-3 h-3" />
-                  Verified Match
+                  {t('verified')}
                 </span>
               </div>
               
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <p className="text-muted-foreground leading-relaxed text-lg text-start" dir="auto">
                 {summary}
               </p>
               
@@ -239,7 +285,7 @@ export default function WikipediaSummary({ scholarName, deathYear, scholarGrade 
                   className="p-0 h-auto text-amber-600 hover:text-amber-700 dark:text-amber-400 font-medium group"
                   onClick={() => window.open(url!, "_blank")}
                 >
-                  Read full article on Wikipedia
+                  {t('readMore')}
                   <ExternalLink className="w-4 h-4 ml-1 opacity-70 group-hover:opacity-100 transition-opacity" />
                 </Button>
               </div>

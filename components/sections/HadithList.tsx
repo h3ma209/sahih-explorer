@@ -1,12 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { BookOpen, ChevronDown, ChevronUp, Quote } from "lucide-react";
+import { resolveIsnadChainSync } from "@/lib/isnad";
 
 interface Hadith {
   hadith_no: string;
@@ -20,9 +22,11 @@ interface Hadith {
 
 interface HadithListProps {
   hadiths: Hadith[];
+  searchIndex?: any[];
 }
 
-export default function HadithList({ hadiths }: HadithListProps) {
+export default function HadithList({ hadiths, searchIndex = [] }: HadithListProps) {
+  const t = useTranslations('Hadiths');
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const itemsPerPage = 5;
@@ -32,7 +36,7 @@ export default function HadithList({ hadiths }: HadithListProps) {
       <Card className="bg-muted/5 border-dashed">
         <CardContent className="flex flex-col items-center justify-center py-12 text-center text-muted-foreground">
           <BookOpen className="w-12 h-12 mb-4 opacity-20" />
-          <p>No narrated hadiths recorded in this collection for this scholar.</p>
+          <p>{t('noNarrations')}</p>
         </CardContent>
       </Card>
     );
@@ -46,7 +50,7 @@ export default function HadithList({ hadiths }: HadithListProps) {
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-semibold flex items-center gap-2">
           <Quote className="w-5 h-5 text-amber-500" />
-          Recorded Narrations
+          {t('recordedNarrations')}
           <Badge variant="secondary" className="ml-2">
             {hadiths.length}
           </Badge>
@@ -69,7 +73,7 @@ export default function HadithList({ hadiths }: HadithListProps) {
                     {hadith.source.trim()}
                   </Badge>
                   <Badge variant="outline">
-                    Hadith {hadith.hadith_no}
+                    {t('label')} {hadith.hadith_no}
                   </Badge>
                   <span className="flex items-center gap-1 ml-auto">
                     {hadith.chapter}
@@ -86,15 +90,46 @@ export default function HadithList({ hadiths }: HadithListProps) {
 
                 {/* English Text */}
                 <div className="text-muted-foreground leading-relaxed">
-                  <span className="font-semibold text-foreground/80 block mb-2">Translation:</span>
+                  <span className="font-semibold text-foreground/80 block mb-2">{t('translation')}:</span>
                   {hadith.text_en}
                 </div>
                 
-                {/* Chain Expand (Optional Future Feature) */}
+                {/* Isnad Chain - Enhanced Display */}
                 {hadith.chain && hadith.chain.length > 0 && (
-                   <div className="pt-2 border-t border-border/50 mt-4">
-                     <p className="text-xs text-muted-foreground">
-                       Isnad Chain ID: {hadith.chain.join(" → ")}
+                   <div className="pt-4 mt-4 border-t border-border/50">
+                     <div className="flex items-center gap-2 mb-3">
+                       <div className="flex items-center gap-1.5 text-sm font-semibold text-amber-600 dark:text-amber-400">
+                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                         </svg>
+                         {t('isnad')}
+                       </div>
+                       <Badge variant="outline" className="text-xs">
+                         {hadith.chain.length} {hadith.chain.length === 1 ? 'narrator' : 'narrators'}
+                       </Badge>
+                     </div>
+                     <div className="flex flex-wrap items-center gap-2 text-sm">
+                       {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain).map((narrator, idx, arr) => (
+                         <div key={idx} className="flex items-center gap-2">
+                           <div className="group relative">
+                             <div className="px-3 py-1.5 rounded-lg bg-gradient-to-br from-amber-500/10 to-amber-600/10 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-200 hover:shadow-md">
+                               <span className="text-foreground/90 font-medium">{narrator}</span>
+                             </div>
+                             {/* Tooltip with position info */}
+                             <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-popover text-popover-foreground text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border shadow-lg">
+                               {idx === 0 ? 'First Narrator' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
+                             </div>
+                           </div>
+                           {idx < arr.length - 1 && (
+                             <svg className="w-5 h-5 text-amber-500/60 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                             </svg>
+                           )}
+                         </div>
+                       ))}
+                     </div>
+                     <p className="text-xs text-muted-foreground mt-3 italic">
+                       Chain of transmission from the Prophet ﷺ to the final narrator
                      </p>
                    </div>
                 )}
@@ -111,7 +146,7 @@ export default function HadithList({ hadiths }: HadithListProps) {
             className="group"
             onClick={() => setPage(p => p + 1)}
           >
-            Load More Narrations
+            {t('loadMore')}
             <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
           </Button>
         </div>

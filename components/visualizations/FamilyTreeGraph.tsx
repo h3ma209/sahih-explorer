@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 import ReactECharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
@@ -31,6 +32,7 @@ export default function FamilyTreeGraph({
   children,
   siblings,
 }: FamilyTreeGraphProps) {
+  const t = useTranslations('Family');
   const { theme } = useTheme();
 
   // Helper to wrap text
@@ -60,7 +62,7 @@ export default function FamilyTreeGraph({
         name: wrapText(p.name),
         originalName: p.name,
         id: p.id,
-        value: "Descendant",
+        value: t('descendant'),
         itemStyle: { color: "#10b981", borderColor: "#10b981" },
         label: { color: isDark ? "#eee" : "#333", position: "bottom" },
         children: p.children?.map(mapDescendant) || []
@@ -72,7 +74,7 @@ export default function FamilyTreeGraph({
         name: wrapText(s.name),
         originalName: s.name,
         id: s.id,
-        value: "Spouse",
+        value: t('spouse'),
         itemStyle: { color: "#e11d48", borderColor: "#e11d48" },
         label: { color: isDark ? "#eee" : "#333", position: "right" }
     }));
@@ -81,7 +83,7 @@ export default function FamilyTreeGraph({
         name: wrapText(s.name),
         originalName: s.name,
         id: s.id,
-        value: "Sibling",
+        value: t('sibling'),
         itemStyle: { color: "#a855f7", borderColor: "#a855f7" },
         label: { color: isDark ? "#eee" : "#333", position: "right" }
     }));
@@ -100,21 +102,21 @@ export default function FamilyTreeGraph({
         },
         children: [
             ...(spousesNodes.length ? [{
-                name: "Spouses",
+                name: t('spouses'),
                 collapsed: false,
                 itemStyle: { opacity: 0 }, // Invisible grouper
                 label: { show: false },
                 children: spousesNodes
             }] : []),
             ...(childrenNodes.length ? [{
-                name: "Children",
+                name: t('children'),
                 collapsed: false,
                 itemStyle: { opacity: 0 },
                 label: { show: false },
                 children: childrenNodes
             }] : []),
             ...(siblingsNodes.length ? [{
-                name: "Siblings",
+                name: t('siblings'),
                 collapsed: false,
                 itemStyle: { opacity: 0 },
                 label: { show: false },
@@ -132,7 +134,7 @@ export default function FamilyTreeGraph({
             name: wrapText(mainParent.name),
             originalName: mainParent.name,
             id: mainParent.id,
-            value: "Parent",
+            value: t('parent'),
             symbolSize: 15,
             itemStyle: { color: "#3b82f6", borderColor: "#3b82f6" },
             label: { color: isDark ? "#eee" : "#333", position: "top" },
@@ -188,7 +190,7 @@ export default function FamilyTreeGraph({
         },
       ],
     };
-  }, [scholar, parents, spouses, children, siblings, theme]);
+  }, [scholar, parents, spouses, children, siblings, theme, t]);
 
   const onChartClick = (params: any) => {
     // Only navigate if it's a person node (not "Spouses" group etc) and has an ID potentially
@@ -203,18 +205,18 @@ export default function FamilyTreeGraph({
   };
 
   const legendItems = [
-    { label: "Scholar", color: "bg-amber-500", desc: "Central Figure" },
-    { label: "Parents", color: "bg-blue-500", desc: "Ancestors" },
-    { label: "Spouses", color: "bg-rose-500", desc: "Partners" },
-    { label: "Siblings", color: "bg-purple-500", desc: "Brothers/Sisters" },
-    { label: "Descendants", color: "bg-emerald-500", desc: "Children & Grandchildren" },
+    { label: t('scholar'), color: "bg-amber-500", desc: t('centralFigure') },
+    { label: t('parents'), color: "bg-blue-500", desc: t('ancestors') },
+    { label: t('spouses'), color: "bg-rose-500", desc: t('partners') },
+    { label: t('siblings'), color: "bg-purple-500", desc: t('siblingsDesc') },
+    { label: t('descendants'), color: "bg-emerald-500", desc: t('descendantsDesc') },
   ];
 
   return (
     <Card className="w-full h-[500px] md:h-[600px] overflow-hidden bg-card/50 border-border relative">
        {/* Custom Legend Overlay */}
        <div className="absolute top-4 left-4 z-10 bg-background/90 backdrop-blur-sm p-3 rounded-lg border border-border shadow-sm">
-          <h4 className="text-xs font-semibold mb-2 text-muted-foreground uppercase tracking-wider">Family Key</h4>
+          <h4 className="text-xs font-semibold mb-2 text-muted-foreground uppercase tracking-wider">{t('key')}</h4>
           <div className="space-y-2">
             {legendItems.map((item) => (
               <div key={item.label} className="flex items-center gap-2">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Navigation from "@/components/layout/Navigation";
 import HeroSection from "@/components/sections/HeroSection";
@@ -8,7 +9,6 @@ import NetworkGraph from "@/components/visualizations/NetworkGraph";
 import TimelineChart from "@/components/visualizations/TimelineChart";
 import AnalyticsDashboard from "@/components/visualizations/AnalyticsDashboard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -25,6 +25,15 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const tStats = useTranslations('Stats');
+  const tNetwork = useTranslations('Network');
+  const tBio = useTranslations('Biography');
+  const tTime = useTranslations('Timeline');
+  const tHadith = useTranslations('Hadiths');
+  const tAnalytic = useTranslations('Analytics');
+  const tFooter = useTranslations('Footer');
+  const tHero = useTranslations('Hero');
+
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -70,7 +79,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroSection
         scholarName={scholar.name}
-        scholarTitle={`${scholar.grade} - Companion of the Prophet ﷺ`}
+        scholarTitle={`${scholar.grade} - ${tHero('companionTitle')}`}
       />
 
       {/* Biography Section */}
@@ -87,8 +96,8 @@ export default function Home() {
                 <User className="w-6 h-6 text-amber-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Biography</h2>
-                <p className="text-muted-foreground">Life and legacy</p>
+                <h2 className="text-4xl font-bold">{tBio('title')}</h2>
+                <p className="text-muted-foreground">{tBio('subtitle')}</p>
               </div>
             </div>
 
@@ -98,7 +107,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Calendar className="w-5 h-5 text-emerald-500" />
-                    Birth
+                    {tStats('born')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -127,7 +136,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Calendar className="w-5 h-5 text-rose-500" />
-                    Death
+                    {tStats('died')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -148,6 +157,14 @@ export default function Home() {
                       </p>
                     </div>
                   )}
+                  {scholar.biography.death.reason && (
+                    <div>
+                        <p className="text-sm text-muted-foreground">{tStats('causeOfDeath')}</p>
+                        <p className="font-medium text-rose-600 dark:text-rose-400">
+                          {scholar.biography.death.reason}
+                        </p>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 
@@ -156,16 +173,16 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Award className="w-5 h-5 text-amber-500" />
-                    Overview
+                    {tStats('overview')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Teachers</span>
+                    <span className="text-sm text-muted-foreground">{tNetwork('teachers')}</span>
                     <Badge variant="outline">{scholar.teachers.length}</Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Students</span>
+                    <span className="text-sm text-muted-foreground">{tNetwork('students')}</span>
                     <Badge variant="outline">{scholar.students.length}</Badge>
                   </div>
                   <div className="flex items-center justify-between">
@@ -182,7 +199,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BookOpen className="w-5 h-5 text-blue-500" />
-                    Areas of Expertise
+                    {tStats('interests')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -203,7 +220,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-purple-500" />
-                    Historical Significance
+                    {tBio('historicalSignificance')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -238,9 +255,9 @@ export default function Home() {
                 <Network className="w-6 h-6 text-blue-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Academic Network</h2>
+                <h2 className="text-4xl font-bold">{tNetwork('title')}</h2>
                 <p className="text-muted-foreground">
-                  Interactive visualization of teachers and students
+                   {tNetwork('subtitle')}
                 </p>
               </div>
             </div>
@@ -261,7 +278,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <GraduationCap className="w-5 h-5 text-blue-500" />
-                    Teachers ({scholar.teachers.length})
+                    {tNetwork('teachers')} ({scholar.teachers.length})
                   </CardTitle>
                   <CardDescription>Scholars who taught {scholar.name}</CardDescription>
                 </CardHeader>
@@ -286,7 +303,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Users className="w-5 h-5 text-emerald-500" />
-                    Students ({scholar.students.length})
+                    {tNetwork('students')} ({scholar.students.length})
                   </CardTitle>
                   <CardDescription>Scholars who learned from {scholar.name}</CardDescription>
                 </CardHeader>
@@ -325,8 +342,8 @@ export default function Home() {
                 <Calendar className="w-6 h-6 text-emerald-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Historical Timeline</h2>
-                <p className="text-muted-foreground">Life events and milestones</p>
+                <h2 className="text-4xl font-bold">{tTime('title')}</h2>
+                <p className="text-muted-foreground">{tTime('subtitle')}</p>
               </div>
             </div>
 
@@ -349,9 +366,9 @@ export default function Home() {
                 <BookOpen className="w-6 h-6 text-purple-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Hadith Collection</h2>
+                <h2 className="text-4xl font-bold">{tHadith('collectionTitle')}</h2>
                 <p className="text-muted-foreground">
-                  {hadiths.length} authentic narrations
+                  {(tHadith('countSubtitle') as any).replace('{count}', hadiths.length)}
                 </p>
               </div>
             </div>
@@ -404,8 +421,8 @@ export default function Home() {
                 <BarChart3 className="w-6 h-6 text-rose-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Analytics & Insights</h2>
-                <p className="text-muted-foreground">Statistical overview and data visualization</p>
+                <h2 className="text-4xl font-bold">{tAnalytic('title')}</h2>
+                <p className="text-muted-foreground">{tAnalytic('subtitle')}</p>
               </div>
             </div>
 
@@ -424,14 +441,14 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
-              Sahih Explorer
+              {tFooter('title')}
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Preserving and exploring the chains of Islamic knowledge
+              {tFooter('tagline')}
             </p>
             <Separator className="my-6" />
             <p className="text-xs text-muted-foreground">
-              Data sourced from authentic Islamic scholarly databases • Version 2.0
+              {tFooter('attribution')}
             </p>
           </div>
         </div>

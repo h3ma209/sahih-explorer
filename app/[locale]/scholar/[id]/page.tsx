@@ -92,6 +92,18 @@ export default async function ScholarPage({ params }: PageProps) {
   if (!data) {
     notFound();
   }
+  
+  // Load search index for isnad chain resolution
+  let searchIndex = [];
+  try {
+    const searchIndexPath = path.join(process.cwd(), 'public/data/search-index.json');
+    if (fs.existsSync(searchIndexPath)) {
+      const searchIndexData = fs.readFileSync(searchIndexPath, 'utf8');
+      searchIndex = JSON.parse(searchIndexData);
+    }
+  } catch (error) {
+    console.error('Failed to load search index:', error);
+  }
 
-  return <ScholarProfile initialData={data} />;
+  return <ScholarProfile initialData={data} searchIndex={searchIndex} />;
 }

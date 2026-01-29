@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 import ReactECharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
@@ -22,6 +23,7 @@ interface NetworkGraphProps {
 }
 
 export default function NetworkGraph({ scholar, teachers, students }: NetworkGraphProps) {
+  const t = useTranslations('Network');
   const { theme } = useTheme();
 
   // Helper to wrap text
@@ -47,9 +49,9 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     const isDark = theme === "dark";
 
     const categories = [
-        { name: "Scholar", itemStyle: { color: "#f59e0b" } },
-        { name: "Teacher", itemStyle: { color: "#3b82f6" } },
-        { name: "Student", itemStyle: { color: "#10b981" } },
+        { name: t('scholar'), itemStyle: { color: "#f59e0b" } },
+        { name: t('teacher'), itemStyle: { color: "#3b82f6" } },
+        { name: t('student'), itemStyle: { color: "#10b981" } },
     ];
 
     const nodes: any[] = [];
@@ -127,7 +129,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
 
     return {
       title: {
-         text: 'Academic Network',
+         text: t('title'),
          textStyle: { color: isDark ? '#fff' : '#000', fontSize: 14 },
          top: 10,
          left: 10
@@ -173,7 +175,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
         }
       ]
     };
-  }, [scholar, teachers, students, theme]);
+  }, [scholar, teachers, students, theme, t]);
 
   const onChartClick = (params: any) => {
     if (params.dataType === 'node' && params.data.id && params.data.id !== scholar.id) {

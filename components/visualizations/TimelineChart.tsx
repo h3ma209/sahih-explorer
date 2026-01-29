@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 import {
   BarChart,
   Bar,
@@ -37,14 +38,15 @@ interface TimelineChartProps {
 }
 
 export default function TimelineChart({ biography, name }: TimelineChartProps) {
+  const t = useTranslations('Timeline');
   const timelineData = useMemo(() => {
     const data = [];
 
     // Birth event
     if (biography.birth.place) {
       data.push({
-        event: "Birth",
-        year: biography.birth.date_hijri || "Unknown",
+        event: t('birth'),
+        year: biography.birth.date_hijri || t('unknown'),
         location: biography.birth.place,
         value: 1,
         color: "#10b981",
@@ -53,16 +55,16 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
 
     // Major life events (placeholder - would come from data)
     data.push({
-      event: "Early Education",
-      year: "Youth",
-      location: biography.places_of_stay[0] || "Unknown",
+      event: t('earlyEducation'),
+      year: t('youth'),
+      location: biography.places_of_stay[0] || t('unknown'),
       value: 2,
       color: "#3b82f6",
     });
 
     data.push({
-      event: "Scholarly Work",
-      year: "Adulthood",
+      event: t('scholarlyWork'),
+      year: t('adulthood'),
       location: biography.places_of_stay[1] || biography.birth.place,
       value: 3,
       color: "#f59e0b",
@@ -71,8 +73,8 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
     // Death event
     if (biography.death.place) {
       data.push({
-        event: "Death",
-        year: biography.death.date_hijri || "Unknown",
+        event: t('death'),
+        year: biography.death.date_hijri || t('unknown'),
         location: biography.death.place,
         value: 1,
         color: "#ef4444",
@@ -80,7 +82,7 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
     }
 
     return data;
-  }, [biography]);
+  }, [biography, t]);
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
@@ -109,8 +111,8 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
   return (
     <Card className="w-full">
       <CardHeader>
-        <CardTitle>Life Timeline</CardTitle>
-        <CardDescription>Major events in {name}'s life</CardDescription>
+        <CardTitle>{t('lifeTimeline')}</CardTitle>
+        <CardDescription>{t('majorEvents', { name: name })}</CardDescription>
       </CardHeader>
       <CardContent>
         <div style={{ width: '100%', height: 300 }}>
@@ -138,28 +140,28 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
           <div className="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="w-4 h-4 text-emerald-500" />
-              <h4 className="font-semibold text-sm">Birth</h4>
+              <h4 className="font-semibold text-sm">{t('birth')}</h4>
             </div>
             <p className="text-xs text-muted-foreground mb-1">
-              {biography.birth.date_display?.join(" / ") || "Date unknown"}
+              {biography.birth.date_display?.join(" / ") || t('dateUnknown')}
             </p>
             <p className="text-xs text-muted-foreground">
               <MapPin className="w-3 h-3 inline mr-1" />
-              {biography.birth.place || "Location unknown"}
+              {biography.birth.place || t('locationUnknown')}
             </p>
           </div>
 
           <div className="p-4 rounded-lg bg-rose-500/10 border border-rose-500/20">
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="w-4 h-4 text-rose-500" />
-              <h4 className="font-semibold text-sm">Death</h4>
+              <h4 className="font-semibold text-sm">{t('death')}</h4>
             </div>
             <p className="text-xs text-muted-foreground mb-1">
-              {biography.death.date_display?.join(" / ") || "Date unknown"}
+              {biography.death.date_display?.join(" / ") || t('dateUnknown')}
             </p>
             <p className="text-xs text-muted-foreground">
               <MapPin className="w-3 h-3 inline mr-1" />
-              {biography.death.place || "Location unknown"}
+              {biography.death.place || t('locationUnknown')}
             </p>
             {biography.death.reason && (
               <p className="text-xs text-muted-foreground mt-2 italic">

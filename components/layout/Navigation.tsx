@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpen, Menu, X, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { CommandPalette } from "@/components/features/CommandPalette";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
+  const t = useTranslations('Navigation');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -22,11 +24,11 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { label: "Biography", href: "#biography" },
-    { label: "Network", href: "#network" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "Hadiths", href: "#hadiths" },
-    { label: "Analytics", href: "#analytics" },
+    { label: t('biography'), href: "#biography" },
+    { label: t('network'), href: "#network" },
+    { label: t('timeline'), href: "#timeline" },
+    { label: t('hadiths'), href: "#hadiths" },
+    { label: t('analytics'), href: "#analytics" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -62,9 +64,9 @@ export default function Navigation() {
               </div>
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
-                  Sahih Explorer
+                  {t('title')}
                 </h1>
-                <p className="text-xs text-muted-foreground">Islamic Scholar Database</p>
+                <p className="text-xs text-muted-foreground">{t('subtitle')}</p>
               </div>
             </motion.div>
 
@@ -95,7 +97,7 @@ export default function Navigation() {
                 className="lg:hidden rounded-full"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
-                {isMobileMenuOpen ? (
+                {t('title') && isMobileMenuOpen ? (
                   <X className="w-5 h-5" />
                 ) : (
                   <Menu className="w-5 h-5" />

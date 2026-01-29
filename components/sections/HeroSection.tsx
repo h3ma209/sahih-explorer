@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ scholarName, scholarTitle }: HeroSectionProps) {
+  const t = useTranslations('Hero');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
@@ -89,7 +91,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 bg-amber-500/10 border border-amber-500/20 rounded-full backdrop-blur-sm"
           >
             <Sparkles className="w-4 h-4 text-amber-500" />
-            <span className="text-sm font-medium text-amber-500">Islamic Scholar Database</span>
+            <span className="text-sm font-medium text-amber-500">{t('database')}</span>
           </motion.div>
 
           {/* Main Title */}
@@ -121,8 +123,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             transition={{ delay: 0.7, duration: 0.8 }}
             className="text-base md:text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Explore the life, scholarly network, and authentic narrations through
-            interactive visualizations and comprehensive biographical data
+            {t('description')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -137,7 +138,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
               onClick={scrollToNext}
               className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-500/25 px-8 py-6 text-lg rounded-xl"
             >
-              Explore Biography
+              {t('exploreBio')}
             </Button>
             <Button
               size="lg"
@@ -145,7 +146,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
               onClick={() => document.querySelector("#network")?.scrollIntoView({ behavior: "smooth" })}
               className="border-amber-500/30 hover:bg-amber-500/10 px-8 py-6 text-lg rounded-xl"
             >
-              View Network
+              {t('viewNetwork')}
             </Button>
           </motion.div>
         </motion.div>
@@ -163,7 +164,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
-            <span className="text-sm font-medium">Scroll to explore</span>
+            <span className="text-sm font-medium">{t('scroll')}</span>
             <ChevronDown className="w-5 h-5" />
           </motion.button>
         </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navigation from "@/components/layout/Navigation";
@@ -15,6 +15,7 @@ import { Card, CardContent, CardTitle, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { translateValue, translateArray } from "@/lib/translations";
 import {
   User,
   Network,
@@ -29,25 +30,32 @@ import {
 
 interface ScholarProfileProps {
   initialData: any;
+  searchIndex?: any[];
 }
 
-export default function ScholarProfile({ initialData }: ScholarProfileProps) {
+export default function ScholarProfile({ initialData, searchIndex = [] }: ScholarProfileProps) {
   const router = useRouter();
+  const locale = useLocale();
+  const tStats = useTranslations('Stats');
+  const tNetwork = useTranslations('Network');
+  const tBio = useTranslations('Biography');
+  const tFamily = useTranslations('Family');
+  const tTime = useTranslations('Timeline');
+  const tHadith = useTranslations('Hadiths');
+  const tAnalytic = useTranslations('Analytics');
+  const tFooter = useTranslations('Footer');
+  const tCommon = useTranslations('Common');
+  const tHero = useTranslations('Hero');
 
   // If initialData is missing (e.g. error in server fetch), show error state
   if (!initialData) {
     return (
         <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold">Scholar Not Found</h2>
+            <h2 className="text-3xl font-bold">{tCommon('scholarNotFound')}</h2>
             <p className="text-muted-foreground max-w-md">
-              This scholar's profile is not available.
+              {tCommon('scholarNotFoundDesc')}
             </p>
-            <div className="flex gap-4 justify-center">
-              <Button onClick={() => router.push("/")} variant="default">
-                Go Home
-              </Button>
-            </div>
           </div>
         </div>
       );
@@ -62,7 +70,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
       {/* Hero Section */}
       <HeroSection
         scholarName={name}
-        scholarTitle={grade ? `${grade}` : "Islamic Scholar"}
+        scholarTitle={grade ? `${grade}` : tHero('scholarTitleFallback')}
       />
       
       {/* Wikipedia Summary */}
@@ -70,6 +78,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
           scholarName={name} 
           deathYear={biography?.death?.date_gregorian || biography?.death?.date_hijri}
           scholarGrade={grade}
+          locale={locale}
       />
 
       {/* Biography Section */}
@@ -86,7 +95,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <User className="w-6 h-6 text-amber-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Biography</h2>
+                <h2 className="text-4xl font-bold">{tBio('title')}</h2>
                 <p className="text-muted-foreground text-lg">{full_name}</p>
               </div>
             </div>
@@ -97,13 +106,13 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Calendar className="w-5 h-5 text-emerald-500" />
-                    Birth
+                    {tStats('born')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   {biography.birth.date_display && (
                     <div>
-                      <p className="text-sm text-muted-foreground">Date</p>
+                      <p className="text-sm text-muted-foreground">{tStats('date')}</p>
                       <p className="font-medium">
                         {biography.birth.date_display.join(" / ")}
                       </p>
@@ -111,10 +120,10 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                   )}
                   {biography.birth.place && (
                     <div>
-                      <p className="text-sm text-muted-foreground">Place</p>
+                      <p className="text-sm text-muted-foreground">{tStats('place')}</p>
                       <p className="font-medium flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {biography.birth.place}
+                        {translateValue(biography.birth.place, locale, 'city')}
                       </p>
                     </div>
                   )}
@@ -126,13 +135,13 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Calendar className="w-5 h-5 text-rose-500" />
-                    Death
+                    {tStats('died')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   {biography.death.date_display && (
                     <div>
-                      <p className="text-sm text-muted-foreground">Date</p>
+                      <p className="text-sm text-muted-foreground">{tStats('date')}</p>
                       <p className="font-medium">
                         {biography.death.date_display.join(" / ")}
                       </p>
@@ -140,10 +149,10 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                   )}
                   {biography.death.place && (
                     <div>
-                      <p className="text-sm text-muted-foreground">Place</p>
+                      <p className="text-sm text-muted-foreground">{tStats('place')}</p>
                       <p className="font-medium flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {biography.death.place}
+                        {translateValue(biography.death.place, locale, 'city')}
                       </p>
                     </div>
                   )}
@@ -155,20 +164,20 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Award className="w-5 h-5 text-amber-500" />
-                    Overview
+                    {tStats('overview')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Teachers</span>
+                    <span className="text-sm text-muted-foreground">{tNetwork('teachers')}</span>
                     <Badge variant="outline">{teachers.length}</Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Students</span>
+                    <span className="text-sm text-muted-foreground">{tNetwork('students')}</span>
                     <Badge variant="outline">{students.length}</Badge>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Hadiths</span>
+                    <span className="text-sm text-muted-foreground">{tHadith('title')}</span>
                     <Badge variant="outline">{hadiths.length}</Badge>
                   </div>
                 </CardContent>
@@ -181,7 +190,7 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-purple-500" />
-                    Historical Significance
+                    {tBio('historicalSignificance')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -192,13 +201,37 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                         variant="outline"
                         className="px-3 py-1.5 border-amber-500/30 text-amber-600 dark:text-amber-400"
                       >
-                        {tag}
+                        {translateValue(tag, locale, 'tag')}
                       </Badge>
                     ))}
                   </div>
                 </CardContent>
               </Card>
             )}
+
+              {biography.places_of_stay && biography.places_of_stay.length > 0 && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <MapPin className="w-5 h-5 text-amber-500" />
+                      {tStats('residence')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {translateArray(biography.places_of_stay, locale, 'city').map((place: string, index: number) => (
+                        <Badge
+                          key={index}
+                          variant="secondary"
+                          className="px-3 py-1.5"
+                        >
+                          {place}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
           </motion.div>
         </div>
       </section>
@@ -217,9 +250,9 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <Users className="w-6 h-6 text-rose-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Family Lineage</h2>
+                <h2 className="text-4xl font-bold">{tFamily('title')}</h2>
                 <p className="text-muted-foreground">
-                  Genealogical relationships and family connections
+                  {tFamily('subtitle')}
                 </p>
               </div>
             </div>
@@ -252,9 +285,9 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <Network className="w-6 h-6 text-blue-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Academic Network</h2>
+                <h2 className="text-4xl font-bold">{tNetwork('title')}</h2>
                 <p className="text-muted-foreground">
-                  Interactive visualization of teachers and students
+                   {tNetwork('subtitle')}
                 </p>
               </div>
             </div>
@@ -276,15 +309,15 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                  <CardHeader>
                    <CardTitle className="flex items-center gap-2 text-lg">
                       <div className="w-3 h-3 rounded-full bg-blue-500" />
-                      Teachers ({teachers.length})
+                      {tNetwork('teachers')} ({teachers.length})
                    </CardTitle>
                  </CardHeader>
                  <CardContent>
                    <div className="max-h-[300px] overflow-y-auto pr-2 space-y-2">
-                      {Array.from(new Map(teachers.map((t: any) => [t.id, t])).values()).map((t: any) => (
+                      {teachers.length > 0 ? Array.from(new Map(teachers.map((t: any) => [t.id, t])).values()).map((t: any) => (
                         <div 
                           key={t.id} 
-                          onClick={() => router.push(`/scholar/${t.id}`)}
+                          onClick={() => router.push(`/${locale}/scholar/${t.id}`)}
                           className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center gap-2">
@@ -300,8 +333,9 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                             </Button>
                           )}
                         </div>
-                      ))}
-                      {teachers.length === 0 && <p className="text-sm text-muted-foreground p-4 text-center">No teachers recorded.</p>}
+                      )) : (
+                        <p className="text-sm text-muted-foreground p-4 text-center">{tNetwork('noTeachers')}</p>
+                      )}
                    </div>
                  </CardContent>
                </Card>
@@ -311,15 +345,15 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                  <CardHeader>
                    <CardTitle className="flex items-center gap-2 text-lg">
                       <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                      Students ({students.length})
+                      {tNetwork('students')} ({students.length})
                    </CardTitle>
                  </CardHeader>
                  <CardContent>
                    <div className="max-h-[300px] overflow-y-auto pr-2 space-y-2">
-                      {Array.from(new Map(students.map((s: any) => [s.id, s])).values()).map((s: any) => (
+                      {students.length > 0 ? Array.from(new Map(students.map((s: any) => [s.id, s])).values()).map((s: any) => (
                         <div 
                           key={s.id} 
-                          onClick={() => router.push(`/scholar/${s.id}`)}
+                          onClick={() => router.push(`/${locale}/scholar/${s.id}`)}
                           className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center gap-2">
@@ -335,8 +369,9 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                             </Button>
                           )}
                         </div>
-                      ))}
-                      {students.length === 0 && <p className="text-sm text-muted-foreground p-4 text-center">No students recorded.</p>}
+                      )) : (
+                        <p className="text-sm text-muted-foreground p-4 text-center">{tNetwork('noStudents')}</p>
+                      )}
                    </div>
                  </CardContent>
                </Card>
@@ -359,8 +394,8 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <Calendar className="w-6 h-6 text-emerald-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Historical Timeline</h2>
-                <p className="text-muted-foreground">Life events and milestones</p>
+                <h2 className="text-4xl font-bold">{tTime('title')}</h2>
+                <p className="text-muted-foreground">{tTime('subtitle')}</p>
               </div>
             </div>
 
@@ -383,14 +418,14 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <BookOpen className="w-6 h-6 text-amber-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Narrations</h2>
+                <h2 className="text-4xl font-bold">{tHadith('title')}</h2>
                 <p className="text-muted-foreground">
-                  Authentic hadiths reported by or attributing to this scholar
+                  {tHadith('countSubtitle', { count: hadiths.length })}
                 </p>
               </div>
             </div>
 
-            <HadithList hadiths={hadiths} />
+            <HadithList hadiths={hadiths} searchIndex={searchIndex} />
           </motion.div>
         </div>
       </section>
@@ -409,8 +444,8 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
                 <BarChart3 className="w-6 h-6 text-rose-500" />
               </div>
               <div>
-                <h2 className="text-4xl font-bold">Analytics & Insights</h2>
-                <p className="text-muted-foreground">Statistical overview and data visualization</p>
+                <h2 className="text-4xl font-bold">{tAnalytic('title')}</h2>
+                <p className="text-muted-foreground">{tAnalytic('subtitle')}</p>
               </div>
             </div>
 
@@ -429,14 +464,14 @@ export default function ScholarProfile({ initialData }: ScholarProfileProps) {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
-              Sahih Explorer
+              {tFooter('title')}
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Preserving and exploring the chains of Islamic knowledge
+              {tFooter('tagline')}
             </p>
             <Separator className="my-6" />
             <p className="text-xs text-muted-foreground">
-              Data sourced from authentic Islamic scholarly databases • Version 2.0
+              {tFooter('attribution')}
             </p>
           </div>
         </div>

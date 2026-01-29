@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   PieChart,
   Pie,
@@ -35,6 +36,11 @@ export default function AnalyticsDashboard({
   students,
   hadiths,
 }: AnalyticsDashboardProps) {
+  const t = useTranslations('Analytics');
+  const tNetwork = useTranslations('Network');
+  const tStats = useTranslations('Stats');
+  const tBio = useTranslations('Biography');
+  
   // Expertise Radar Data
   const expertiseData = biography.area_of_interest.slice(0, 6).map((area) => ({
     subject: area.length > 15 ? area.substring(0, 15) + "..." : area,
@@ -43,35 +49,35 @@ export default function AnalyticsDashboard({
 
   // Network Distribution
   const networkData = [
-    { name: "Teachers", value: teachers.length, color: "#3b82f6" },
-    { name: "Students", value: students.length, color: "#10b981" },
+    { name: tNetwork('teachers'), value: teachers.length, color: "#3b82f6" },
+    { name: tNetwork('students'), value: students.length, color: "#10b981" },
   ];
 
   // Stats Cards
   const stats = [
     {
-      title: "Total Hadiths",
+      title: t('totalHadiths'),
       value: hadiths.length,
       icon: BookOpen,
       color: "text-amber-500",
       bgColor: "bg-amber-500/10",
     },
     {
-      title: "Teachers",
+      title: tNetwork('teachers'),
       value: teachers.length,
       icon: Users,
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
     },
     {
-      title: "Students",
+      title: tNetwork('students'),
       value: students.length,
       icon: TrendingUp,
       color: "text-emerald-500",
       bgColor: "bg-emerald-500/10",
     },
     {
-      title: "Areas of Expertise",
+      title: tStats('interests'),
       value: biography.area_of_interest.length,
       icon: BarChart3,
       color: "text-purple-500",
@@ -104,8 +110,8 @@ export default function AnalyticsDashboard({
         {/* Expertise Radar */}
         <Card>
           <CardHeader>
-            <CardTitle>Areas of Expertise</CardTitle>
-            <CardDescription>Knowledge distribution across different fields</CardDescription>
+            <CardTitle>{tStats('interests')}</CardTitle>
+            <CardDescription>{t('knowledgeDist')}</CardDescription>
           </CardHeader>
           <CardContent>
             <div style={{ width: '100%', height: 300 }}>
@@ -119,7 +125,7 @@ export default function AnalyticsDashboard({
                   />
                   <PolarRadiusAxis angle={90} domain={[0, 100]} className="text-xs" />
                   <Radar
-                    name="Expertise"
+                    name={t('expertise')}
                     dataKey="value"
                     stroke="#f59e0b"
                     fill="#f59e0b"
@@ -141,8 +147,8 @@ export default function AnalyticsDashboard({
         {/* Network Distribution */}
         <Card>
           <CardHeader>
-            <CardTitle>Academic Network</CardTitle>
-            <CardDescription>Distribution of teachers and students</CardDescription>
+            <CardTitle>{tNetwork('title')}</CardTitle>
+            <CardDescription>{t('distribution')}</CardDescription>
           </CardHeader>
           <CardContent>
             <div style={{ width: '100%', height: 300 }}>
@@ -181,8 +187,8 @@ export default function AnalyticsDashboard({
       {/* Tags */}
       <Card>
         <CardHeader>
-          <CardTitle>Historical Significance</CardTitle>
-          <CardDescription>Tags and affiliations</CardDescription>
+          <CardTitle>{tBio('historicalSignificance')}</CardTitle>
+          <CardDescription>{t('tagsAffiliations')}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
