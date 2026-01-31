@@ -1,54 +1,73 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Navigation from "@/components/layout/Navigation";
-import HeroSection from "@/components/sections/HeroSection";
-import NetworkGraph from "@/components/visualizations/NetworkGraph";
-import TimelineChart from "@/components/visualizations/TimelineChart";
-import AnalyticsDashboard from "@/components/visualizations/AnalyticsDashboard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import {
-  User,
-  Network,
-  Calendar,
-  BarChart3,
-  BookOpen,
-  MapPin,
-  Award,
-  GraduationCap,
   Users,
+  BookOpen,
+  Network,
+  Search,
+  TrendingUp,
+  Award,
+  Globe,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react";
 
-export default function Home() {
-  const tStats = useTranslations('Stats');
-  const tNetwork = useTranslations('Network');
-  const tBio = useTranslations('Biography');
-  const tTime = useTranslations('Timeline');
-  const tHadith = useTranslations('Hadiths');
-  const tAnalytic = useTranslations('Analytics');
-  const tFooter = useTranslations('Footer');
-  const tHero = useTranslations('Hero');
+interface Stats {
+  totalScholars: number;
+  totalHadiths: number;
+  hadithsByBook: { [key: string]: number };
+}
 
-  const [data, setData] = useState<any>(null);
+export default function Home() {
+  const locale = useLocale();
+  const router = useRouter();
+  const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((d) => {
-        setData(d);
+    // Load statistics
+    Promise.all([
+      fetch("/data/search-index.json").then(res => res.json()),
+      fetch("/data/hadith-index.json").then(res => res.json())
+    ])
+      .then(([scholars, hadiths]) => {
+        // Count hadiths by book
+        const hadithsByBook: { [key: string]: number } = {};
+        hadiths.forEach((h: any) => {
+          const book = h.book.trim();
+          hadithsByBook[book] = (hadithsByBook[book] || 0) + 1;
+        });
+
+        setStats({
+          totalScholars: scholars.length,
+          totalHadiths: hadiths.length,
+          hadithsByBook
+        });
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error loading data:", error);
+        console.error("Error loading stats:", error);
         setLoading(false);
       });
   }, []);
+
+  const hadithCollections = [
+    { name: "Sahih Bukhari", icon: "📖", color: "from-emerald-500 to-emerald-700" },
+    { name: "Sahih Muslim", icon: "📗", color: "from-blue-500 to-blue-700" },
+    { name: "Sunan an-Nasa'i", icon: "📘", color: "from-purple-500 to-purple-700" },
+    { name: "Sunan Abi Da'ud", icon: "📙", color: "from-amber-500 to-amber-700" },
+    { name: "Sunan Ibn Majah", icon: "📕", color: "from-rose-500 to-rose-700" },
+    { name: "Jami' al-Tirmidhi", icon: "📔", color: "from-cyan-500 to-cyan-700" }
+  ];
 
   if (loading) {
     return (
@@ -56,383 +75,214 @@ export default function Home() {
         <Navigation />
         <div className="container mx-auto px-4 pt-32 space-y-8">
           <Skeleton className="h-64 w-full" />
-          <Skeleton className="h-96 w-full" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Skeleton className="h-48 w-full" />
+            <Skeleton className="h-48 w-full" />
+            <Skeleton className="h-48 w-full" />
+          </div>
         </div>
       </div>
     );
   }
-
-  if (!data) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p className="text-muted-foreground">Failed to load data</p>
-      </div>
-    );
-  }
-
-  const { scholar, hadiths } = data;
 
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
-      <HeroSection
-        scholarName={scholar.name}
-        scholarTitle={`${scholar.grade} - ${tHero('companionTitle')}`}
-      />
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-background" />
+          <motion.div
+            className="absolute top-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.15, 0.1],
+            }}
+            transition={{ duration: 8, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+            animate={{
+              scale: [1.2, 1, 1.2],
+              opacity: [0.08, 0.12, 0.08],
+            }}
+            transition={{ duration: 10, repeat: Infinity }}
+          />
+        </div>
 
-      {/* Biography Section */}
-      <section id="biography" className="py-24 bg-gradient-to-b from-background to-accent/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-amber-500/10 rounded-xl">
-                <User className="w-6 h-6 text-amber-500" />
+            <Badge className="mb-6 px-4 py-2 text-sm" variant="outline">
+              <Sparkles className="w-4 h-4 mr-2" />
+              Explore the Golden Chain of Islamic Scholarship
+            </Badge>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
+              Sahih Explorer
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              Discover the interconnected world of Islamic scholars and authentic hadith narrations
+            </p>
+
+            {stats && (
+              <div className="flex flex-wrap justify-center gap-6 mb-12">
+                <div className="flex items-center gap-2 px-6 py-3 bg-card/50 rounded-full border border-border">
+                  <Users className="w-5 h-5 text-amber-500" />
+                  <span className="font-bold text-2xl">{stats.totalScholars.toLocaleString()}</span>
+                  <span className="text-muted-foreground">Scholars</span>
+                </div>
+                <div className="flex items-center gap-2 px-6 py-3 bg-card/50 rounded-full border border-border">
+                  <BookOpen className="w-5 h-5 text-blue-500" />
+                  <span className="font-bold text-2xl">{stats.totalHadiths.toLocaleString()}</span>
+                  <span className="text-muted-foreground">Hadiths</span>
+                </div>
+                <div className="flex items-center gap-2 px-6 py-3 bg-card/50 rounded-full border border-border">
+                  <Globe className="w-5 h-5 text-emerald-500" />
+                  <span className="font-bold text-2xl">6</span>
+                  <span className="text-muted-foreground">Collections</span>
+                </div>
               </div>
-              <div>
-                <h2 className="text-4xl font-bold">{tBio('title')}</h2>
-                <p className="text-muted-foreground">{tBio('subtitle')}</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-              {/* Birth Info */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Calendar className="w-5 h-5 text-emerald-500" />
-                    {tStats('born')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  {scholar.biography.birth.date_display && (
-                    <div>
-                      <p className="text-sm text-muted-foreground">Date</p>
-                      <p className="font-medium">
-                        {scholar.biography.birth.date_display.join(" / ")}
-                      </p>
-                    </div>
-                  )}
-                  {scholar.biography.birth.place && (
-                    <div>
-                      <p className="text-sm text-muted-foreground">Place</p>
-                      <p className="font-medium flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {scholar.biography.birth.place}
-                      </p>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-
-              {/* Death Info */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Calendar className="w-5 h-5 text-rose-500" />
-                    {tStats('died')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  {scholar.biography.death.date_display && (
-                    <div>
-                      <p className="text-sm text-muted-foreground">Date</p>
-                      <p className="font-medium">
-                        {scholar.biography.death.date_display.join(" / ")}
-                      </p>
-                    </div>
-                  )}
-                  {scholar.biography.death.place && (
-                    <div>
-                      <p className="text-sm text-muted-foreground">Place</p>
-                      <p className="font-medium flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {scholar.biography.death.place}
-                      </p>
-                    </div>
-                  )}
-                  {scholar.biography.death.reason && (
-                    <div>
-                        <p className="text-sm text-muted-foreground">{tStats('causeOfDeath')}</p>
-                        <p className="font-medium text-rose-600 dark:text-rose-400">
-                          {scholar.biography.death.reason}
-                        </p>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-
-              {/* Quick Stats */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Award className="w-5 h-5 text-amber-500" />
-                    {tStats('overview')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">{tNetwork('teachers')}</span>
-                    <Badge variant="outline">{scholar.teachers.length}</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">{tNetwork('students')}</span>
-                    <Badge variant="outline">{scholar.students.length}</Badge>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">Hadiths</span>
-                    <Badge variant="outline">{hadiths.length}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Areas of Expertise */}
-            {scholar.biography.area_of_interest.length > 0 && (
-              <Card className="mb-8">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BookOpen className="w-5 h-5 text-blue-500" />
-                    {tStats('interests')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {scholar.biography.area_of_interest.map((area: string, index: number) => (
-                      <Badge key={index} variant="secondary" className="px-3 py-1.5">
-                        {area}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
             )}
 
-            {/* Historical Tags */}
-            {scholar.biography.tags.length > 0 && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Award className="w-5 h-5 text-purple-500" />
-                    {tBio('historicalSignificance')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {scholar.biography.tags.map((tag: string, index: number) => (
-                      <Badge
-                        key={index}
-                        variant="outline"
-                        className="px-3 py-1.5 border-amber-500/30 text-amber-600 dark:text-amber-400"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Network Section */}
-      <section id="network" className="py-24">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-blue-500/10 rounded-xl">
-                <Network className="w-6 h-6 text-blue-500" />
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold">{tNetwork('title')}</h2>
-                <p className="text-muted-foreground">
-                   {tNetwork('subtitle')}
-                </p>
-              </div>
-            </div>
-
-            <NetworkGraph
-              scholar={{
-                id: scholar.id,
-                name: scholar.name,
-                grade: scholar.grade,
-              }}
-              teachers={scholar.teachers}
-              students={scholar.students}
-            />
-
-            {/* Academic Lineage Details */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <GraduationCap className="w-5 h-5 text-blue-500" />
-                    {tNetwork('teachers')} ({scholar.teachers.length})
-                  </CardTitle>
-                  <CardDescription>Scholars who taught {scholar.name}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {scholar.teachers.slice(0, 10).map((teacher: any, index: number) => (
-                      <div
-                        key={index}
-                        className="p-3 rounded-lg bg-accent/50 hover:bg-accent transition-colors"
-                      >
-                        <p className="font-medium text-sm">{teacher.name}</p>
-                        {teacher.grade && (
-                          <p className="text-xs text-muted-foreground mt-1">{teacher.grade}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-emerald-500" />
-                    {tNetwork('students')} ({scholar.students.length})
-                  </CardTitle>
-                  <CardDescription>Scholars who learned from {scholar.name}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {scholar.students.slice(0, 10).map((student: any, index: number) => (
-                      <div
-                        key={index}
-                        className="p-3 rounded-lg bg-accent/50 hover:bg-accent transition-colors"
-                      >
-                        <p className="font-medium text-sm">{student.name}</p>
-                        {student.grade && (
-                          <p className="text-xs text-muted-foreground mt-1">{student.grade}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                className="gap-2 bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800"
+                onClick={() => {
+                  const event = new KeyboardEvent('keydown', {
+                    key: 'k',
+                    metaKey: true,
+                    bubbles: true
+                  });
+                  document.dispatchEvent(event);
+                }}
+              >
+                <Search className="w-5 h-5" />
+                Search Scholars & Hadiths
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2"
+                onClick={() => router.push(`/${locale}/scholar/1`)}
+              >
+                <Award className="w-5 h-5" />
+                View Prophet Muhammad ﷺ
+                <ArrowRight className="w-4 h-4" />
+              </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section id="timeline" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      {/* Hadith Collections Section */}
+      <section className="py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
+            className="text-center mb-12"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-emerald-500/10 rounded-xl">
-                <Calendar className="w-6 h-6 text-emerald-500" />
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold">{tTime('title')}</h2>
-                <p className="text-muted-foreground">{tTime('subtitle')}</p>
-              </div>
-            </div>
-
-            <TimelineChart biography={scholar.biography} name={scholar.name} />
+            <h2 className="text-4xl font-bold mb-4">Hadith Collections</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Explore authentic narrations from the six major hadith collections
+            </p>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Hadiths Section */}
-      <section id="hadiths" className="py-24">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-5xl mx-auto"
-          >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-purple-500/10 rounded-xl">
-                <BookOpen className="w-6 h-6 text-purple-500" />
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold">{tHadith('collectionTitle')}</h2>
-                <p className="text-muted-foreground">
-                  {tHadith('countSubtitle', { count: hadiths.length })}
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {hadiths.slice(0, 5).map((hadith: any, index: number) => (
-                <Card key={index}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {hadithCollections.map((collection, index) => (
+              <motion.div
+                key={collection.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-amber-500/50">
                   <CardHeader>
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <CardTitle className="text-lg">
-                          {hadith.source} - {hadith.hadith_no}
-                        </CardTitle>
-                        <CardDescription>{hadith.chapter}</CardDescription>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className={`text-4xl p-3 rounded-xl bg-gradient-to-br ${collection.color} bg-opacity-10`}>
+                        {collection.icon}
                       </div>
-                      <Badge variant="outline">{hadith.chapter_no}</Badge>
+                      <div className="flex-1">
+                        <CardTitle className="text-lg group-hover:text-amber-600 transition-colors">
+                          {collection.name}
+                        </CardTitle>
+                        {stats && (
+                          <Badge variant="secondary" className="mt-1">
+                            {(stats.hadithsByBook[collection.name] || 0).toLocaleString()} hadiths
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    {hadith.text_ar && (
-                      <p className="text-right font-amiri text-lg mb-4 leading-loose">
-                        {hadith.text_ar}
-                      </p>
-                    )}
-                    {hadith.text_en && (
-                      <>
-                        <Separator className="my-4" />
-                        <p className="text-muted-foreground leading-relaxed">{hadith.text_en}</p>
-                      </>
-                    )}
-                  </CardContent>
                 </Card>
-              ))}
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Analytics Section */}
-      <section id="analytics" className="py-24 bg-gradient-to-b from-background to-accent/5">
+      {/* Features Section */}
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
+            className="text-center mb-12"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-3 bg-rose-500/10 rounded-xl">
-                <BarChart3 className="w-6 h-6 text-rose-500" />
-              </div>
-              <div>
-                <h2 className="text-4xl font-bold">{tAnalytic('title')}</h2>
-                <p className="text-muted-foreground">{tAnalytic('subtitle')}</p>
-              </div>
-            </div>
-
-            <AnalyticsDashboard
-              biography={scholar.biography}
-              teachers={scholar.teachers}
-              students={scholar.students}
-              hadiths={hadiths}
-            />
+            <h2 className="text-4xl font-bold mb-4">Powerful Features</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Advanced tools to explore Islamic scholarship
+            </p>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-4">
+                  <Network className="w-8 h-8 text-blue-500" />
+                </div>
+                <CardTitle>Scholar Networks</CardTitle>
+                <CardDescription className="mt-2">
+                  Visualize teacher-student relationships and academic lineages
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-4">
+                  <Search className="w-8 h-8 text-amber-500" />
+                </div>
+                <CardTitle>Advanced Search</CardTitle>
+                <CardDescription className="mt-2">
+                  Search through 24,000+ scholars and 34,000+ hadiths instantly
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-4">
+                  <TrendingUp className="w-8 h-8 text-emerald-500" />
+                </div>
+                <CardTitle>Narrator Grades</CardTitle>
+                <CardDescription className="mt-2">
+                  View reliability ratings and biographical details for each narrator
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -441,14 +291,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
-              {tFooter('title')}
+              Sahih Explorer
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              {tFooter('tagline')}
+              Preserving and exploring the golden chain of Islamic scholarship
             </p>
-            <Separator className="my-6" />
             <p className="text-xs text-muted-foreground">
-              {tFooter('attribution')}
+              Built with Next.js, TypeScript, and Tailwind CSS
             </p>
           </div>
         </div>

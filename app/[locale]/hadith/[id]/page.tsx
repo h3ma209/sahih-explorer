@@ -170,12 +170,12 @@ export default async function HadithPage({ params }: PageProps) {
                               isScholar ? 'group-hover:text-blue-500 transition-colors' : ''
                             }`}>
                               {narrator.name}
+                              {narrator.grade && (
+                                <span className="text-xs text-muted-foreground ml-2">
+                                  [Grade: {narrator.grade}]
+                                </span>
+                              )}
                             </span>
-                            {narrator.grade && (
-                              <Badge variant="outline" className="text-xs">
-                                {narrator.grade}
-                              </Badge>
-                            )}
                           </div>
                         </div>
                         {isScholar && (

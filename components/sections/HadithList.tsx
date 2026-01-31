@@ -143,16 +143,14 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                 className="w-full text-left px-4 py-2.5 rounded-lg bg-gradient-to-br from-amber-500/5 to-amber-600/5 border border-amber-500/20 hover:border-amber-500/40 hover:shadow-md transition-all duration-200"
                               >
                                 <div className="flex items-center justify-between">
-                                  <div className="flex items-center gap-2">
-                                    <span className="text-sm font-medium text-foreground/90 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                                      {narratorName}
-                                    </span>
+                                  <span className="text-sm font-medium text-foreground/90 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                                    {narratorName}
                                     {narratorGrade && (
-                                      <Badge variant="outline" className="text-xs">
-                                        {narratorGrade}
-                                      </Badge>
+                                      <span className="text-xs text-muted-foreground ml-2">
+                                        [Grade: {narratorGrade}]
+                                      </span>
                                     )}
-                                  </div>
+                                  </span>
                                   <svg className="w-4 h-4 text-amber-500/60 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                   </svg>
