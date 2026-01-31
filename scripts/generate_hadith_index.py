@@ -58,6 +58,7 @@ def process_hadiths():
                     "id": str(s['id']),
                     "name": s['name'],
                     "grade": s.get('grade', 'Unknown'),
+                    "reliability_grade": s.get('reliability_grade', ''),
                     "death_year": s.get('death_year', '')
                 })
             else:

@@ -41,6 +41,17 @@ def clean_name(name):
     clean = ' '.join(clean.split())
     return clean.strip()
 
+def extract_reliability_grade(area_of_interest_str):
+    """Extract reliability grade from area_of_interest field (e.g., 'Narrator[Grade:Thiqah]')"""
+    if not area_of_interest_str or area_of_interest_str == 'NA':
+        return None
+    
+    # Match pattern: Narrator[Grade:XXX]
+    match = re.search(r'Narrator\[Grade:([^\]]+)\]', str(area_of_interest_str))
+    if match:
+        return match.group(1).strip()
+    return None
+
 def parse_tags(tags_str):
     """Parse tags field which contains space-separated tags with URLs"""
     if not tags_str or tags_str == 'NA':
@@ -94,6 +105,7 @@ def get_enhanced_scholar_data(target_id, scholars, all_hadiths):
         "name": clean_name(person['name']),
         "full_name": person['name'],
         "grade": person.get('grade', ''),
+        "reliability_grade": extract_reliability_grade(person.get('area_of_interest', '')),
         
         # Biographical information
         "biography": {
@@ -188,6 +200,7 @@ def main():
             "id": scholar_id,
             "name": name,
             "grade": person.get('grade', ''),
+            "reliability_grade": extract_reliability_grade(person.get('area_of_interest', '')),
             "death_year": person.get('death_date_hijri', ''),
             "score": influence
         })
