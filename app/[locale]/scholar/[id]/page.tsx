@@ -9,23 +9,34 @@ import { cache } from 'react';
 const getScholarData = cache(async (id: string, depth = 0) => {
   if (depth > 1) return null; // Prevent deep recursion
 
-  // Use string concatenation to avoid Next.js build tracer creating overly broad globs
-  const filePath = `${process.cwd()}/public/data/scholars/${id}.json`;
-  
+  // 1. Try Filesystem (Fastest for Local Dev & Build Time)
   try {
-     // Check existence first to avoid throw/catch overhead for missing files
-     if (!fs.existsSync(filePath)) return null;
-
-     const fileContents = fs.readFileSync(filePath, 'utf8');
-     const data = JSON.parse(fileContents);
-
-     // Hydration of children removed to prevent build warnings and performance bottlenecks.
-     // Relationships should be handled by client-side or search-index lookups.
-
-     return data;
+    // Use string concatenation to avoid Next.js build tracer creating overly broad globs
+    const filePath = `${process.cwd()}/public/data/scholars/${id}.json`;
+    if (fs.existsSync(filePath)) {
+         const fileContents = fs.readFileSync(filePath, 'utf8');
+         const data = JSON.parse(fileContents);
+         // Hydration logic removed for performance
+         return data;
+    }
   } catch (e) {
-     return null;
+    // Filesystem access failed (likely on Vercel where files are excluded)
   }
+
+  // 2. Fallback to Fetch (For Vercel Runtime where files are static assets)
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
+    const res = await fetch(`${baseUrl}/data/scholars/${id}.json`, { 
+        next: { revalidate: 3600 } 
+    });
+    if (res.ok) {
+        return res.json();
+    }
+  } catch (e) {
+    console.error(`Failed to fetch scholar ${id}:`, e);
+  }
+
+  return null;
 });
 
 // Cached search index loader
@@ -77,18 +88,23 @@ export async function generateStaticParams() {
     return []; 
   }
 
-  // Use string concatenation to avoid overly broad glob warning
-  const scholarsDir = `${process.cwd()}/public/data/scholars`;
+  // Read from search-index.json to avoid tracing the entire scholars directory
+  const indexPath = path.join(process.cwd(), 'public/data/search-index.json');
   try {
-      const filenames = fs.readdirSync(scholarsDir);
-      // Limit for build performance - map top 1000 or strategic subset
-      return filenames
-        .filter((file) => file.endsWith('.json'))
-        .slice(0, 20) 
-        .map((file) => ({
-          id: file.replace('.json', ''),
-        }));
+      if (fs.existsSync(indexPath)) {
+          const fileContent = fs.readFileSync(indexPath, 'utf8');
+          const scholars = JSON.parse(fileContent);
+          
+          // Limit for build performance
+          return scholars
+            .slice(0, 20) 
+            .map((s: any) => ({
+              id: s.id,
+            }));
+      }
+      return [];
   } catch(e) {
+      console.error("Error generating static params:", e);
       return [];
   }
 }
