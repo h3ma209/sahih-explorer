@@ -64,7 +64,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
   const { id: scholarId, name, full_name, grade, biography, parents, spouses, siblings, children, teachers, students, hadiths } = initialData;
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}

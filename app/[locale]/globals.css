@@ -56,13 +56,15 @@
 }
 
 body {
+  background-color: #ffffff; /* or any color */
   background-attachment: fixed;
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
+  background-image: radial-gradient(
+    rgba(212, 175, 55, 0.25) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 24px 24px;
 }
 
 /* Custom Scrollbar */

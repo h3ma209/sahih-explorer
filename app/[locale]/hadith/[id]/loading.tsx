@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function HadithLoading() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Hero Section Skeleton */}
       <section className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto px-4">

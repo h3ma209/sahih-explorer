@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ScholarLoading() {
   return (
-    <div className="min-h-screen bg-background pb-12">
+    <div className="min-h-screen pb-12">
       {/* Hero Skeleton */}
       <section className="relative py-20 overflow-hidden bg-background">
         <div className="container px-4 mx-auto relative z-10 text-center">
