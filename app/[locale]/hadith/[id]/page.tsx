@@ -12,6 +12,7 @@ interface Narrator {
   id: string;
   name: string;
   grade: string;
+  reliability_grade?: string;
   death_year: string;
 }
 
@@ -170,9 +171,9 @@ export default async function HadithPage({ params }: PageProps) {
                               isScholar ? 'group-hover:text-blue-500 transition-colors' : ''
                             }`}>
                               {narrator.name}
-                              {narrator.grade && (
+                              {(narrator.reliability_grade || narrator.grade) && (
                                 <span className="text-xs text-muted-foreground ml-2">
-                                  [Grade: {narrator.grade}]
+                                  [Grade: {[narrator.reliability_grade, narrator.grade].filter(Boolean).join(' - ')}]
                                 </span>
                               )}
                             </span>

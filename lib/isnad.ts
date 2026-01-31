@@ -24,7 +24,7 @@ export async function resolveIsnadChain(chainIds: string[]): Promise<string[]> {
 }
 
 // Synchronous version using search index (more efficient)
-export function resolveIsnadChainSync(chainIds: string[], searchIndex: any[]): Array<{id: string, name: string, grade: string}> {
+export function resolveIsnadChainSync(chainIds: string[], searchIndex: any[]): Array<{id: string, name: string, grade: string, reliability_grade: string}> {
   return chainIds.map(id => {
     const scholar = searchIndex.find((s: any) => s.id === id);
     if (scholar) {
@@ -34,13 +34,15 @@ export function resolveIsnadChainSync(chainIds: string[], searchIndex: any[]): A
       return {
         id,
         name: englishName,
-        grade: scholar.grade || ''
+        grade: scholar.grade || '',
+        reliability_grade: scholar.reliability_grade || ''
       };
     }
     return {
       id,
       name: id,
-      grade: ''
+      grade: '',
+      reliability_grade: ''
     };
   });
 }

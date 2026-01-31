@@ -114,10 +114,12 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                      
                      {/* Vertical Chain Layout */}
                       <div className="space-y-2">
-                        {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain.map(id => ({ id, name: id, grade: '' }))).slice().reverse().map((narrator, idx, arr) => {
+                        {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain.map(id => ({ id, name: id, grade: '', reliability_grade: '' }))).slice().reverse().map((narrator, idx, arr) => {
                           const originalIdx = arr.length - 1 - idx; // Get original index for ID lookup
                           const narratorName = typeof narrator === 'string' ? narrator : narrator.name;
                           const narratorGrade = typeof narrator === 'object' ? narrator.grade : '';
+                          const reliabilityGrade = typeof narrator === 'object' ? narrator.reliability_grade : '';
+                          const displayGrade = [reliabilityGrade, narratorGrade].filter(Boolean).join(' - ');
                           const narratorId = typeof narrator === 'object' ? narrator.id : hadith.chain[hadith.chain.length - 1 - idx];
                           
                           return (
@@ -145,9 +147,9 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                 <div className="flex items-center justify-between">
                                   <span className="text-sm font-medium text-foreground/90 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                                     {narratorName}
-                                    {narratorGrade && (
+                                    {displayGrade && (
                                       <span className="text-xs text-muted-foreground ml-2">
-                                        [Grade: {narratorGrade}]
+                                        [Grade: {displayGrade}]
                                       </span>
                                     )}
                                   </span>
