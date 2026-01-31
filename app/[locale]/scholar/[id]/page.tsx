@@ -84,7 +84,7 @@ export async function generateStaticParams() {
       // Limit for build performance - map top 1000 or strategic subset
       return filenames
         .filter((file) => file.endsWith('.json'))
-        .slice(0, 1000) 
+        .slice(0, 20) 
         .map((file) => ({
           id: file.replace('.json', ''),
         }));

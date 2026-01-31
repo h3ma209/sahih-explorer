@@ -90,7 +90,7 @@ export async function generateStaticParams() {
          const hadiths: Hadith[] = JSON.parse(fileContents);
          // Limit static generation to top 100 to reduce build time significantly (from hours to minutes)
          // The rest will be statically generated on demand (ISR)
-         return hadiths.slice(0, 100).map((h) => ({ id: h.id }));
+         return hadiths.slice(0, 20).map((h) => ({ id: h.id }));
      }
    } catch (error) {
      console.error("Error generating static params:", error);
