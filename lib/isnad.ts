@@ -24,15 +24,23 @@ export async function resolveIsnadChain(chainIds: string[]): Promise<string[]> {
 }
 
 // Synchronous version using search index (more efficient)
-export function resolveIsnadChainSync(chainIds: string[], searchIndex: any[]): string[] {
+export function resolveIsnadChainSync(chainIds: string[], searchIndex: any[]): Array<{id: string, name: string, grade: string}> {
   return chainIds.map(id => {
     const scholar = searchIndex.find((s: any) => s.id === id);
     if (scholar) {
       // Extract English name before parentheses
       const fullName = scholar.name || id;
       const englishName = fullName.split('(')[0].trim();
-      return englishName;
+      return {
+        id,
+        name: englishName,
+        grade: scholar.grade || ''
+      };
     }
-    return id;
+    return {
+      id,
+      name: id,
+      grade: ''
+    };
   });
 }

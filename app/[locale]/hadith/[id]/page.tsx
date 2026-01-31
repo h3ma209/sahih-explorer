@@ -165,11 +165,18 @@ export default async function HadithPage({ params }: PageProps) {
                           }`}>
                             {index + 1}
                           </div>
-                          <span className={`font-medium ${
-                            isScholar ? 'group-hover:text-blue-500 transition-colors' : ''
-                          }`}>
-                            {narrator.name}
-                          </span>
+                          <div className="flex items-center gap-2">
+                            <span className={`font-medium ${
+                              isScholar ? 'group-hover:text-blue-500 transition-colors' : ''
+                            }`}>
+                              {narrator.name}
+                            </span>
+                            {narrator.grade && (
+                              <Badge variant="outline" className="text-xs">
+                                {narrator.grade}
+                              </Badge>
+                            )}
+                          </div>
                         </div>
                         {isScholar && (
                           <Button variant="ghost" size="icon" className="h-6 w-6 opacity-0 group-hover:opacity-100">

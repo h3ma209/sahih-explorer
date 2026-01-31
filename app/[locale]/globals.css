@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap");
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-amiri: 'Amiri', serif;
-  
-  --color-gold-400: #FFD700;
-  --color-gold-500: #D4AF37;
-  --color-gold-600: #AA8C2C;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-amiri: "Amiri", serif;
+
+  --color-gold-400: #ffd700;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #aa8c2c;
 }
 
 :root {
@@ -57,7 +57,11 @@
 
 body {
   background-attachment: fixed;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   overflow-x: hidden;
 }
 
@@ -78,6 +82,27 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #f4e5c2 0%, #d4af37 100%);
+}
+
+/* Force scrollbar visibility on Safari */
+.force-scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+}
+
+.force-scrollbar::-webkit-scrollbar-track {
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 4px;
+}
+
+.force-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 4px;
+}
+
+.force-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.8);
 }
 
 /* Animated gradient background */
@@ -107,14 +132,16 @@ body {
 
 /* Glow effects */
 .glow-gold {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
-              0 0 40px rgba(212, 175, 55, 0.1);
+  box-shadow:
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 0 40px rgba(212, 175, 55, 0.1);
 }
 
 .glow-gold-strong {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
-              0 0 60px rgba(212, 175, 55, 0.2),
-              0 0 90px rgba(212, 175, 55, 0.1);
+  box-shadow:
+    0 0 30px rgba(212, 175, 55, 0.5),
+    0 0 60px rgba(212, 175, 55, 0.2),
+    0 0 90px rgba(212, 175, 55, 0.1);
 }
 
 /* Text gradients */
@@ -127,7 +154,8 @@ body {
 
 /* Floating animation */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -246,6 +274,6 @@ body {
 
 @layer utilities {
   .font-amiri {
-    font-family: 'Amiri', serif;
+    font-family: "Amiri", serif;
   }
 }

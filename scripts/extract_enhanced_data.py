@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 
 # Configuration
-DATA_DIR = 'data'
+DATA_DIR = 'data(good)'
 OUTPUT_DIR = 'sahih-explorer/public/data'
 SCHOLARS_DIR = os.path.join(OUTPUT_DIR, 'scholars')
 
@@ -125,8 +125,8 @@ def get_enhanced_scholar_data(target_id, scholars, all_hadiths):
         "teachers": resolve_person_names(person.get('teachers_inds', '').split(', ') if person.get('teachers_inds') and person.get('teachers_inds') != 'NA' else [], scholars),
         "students": resolve_person_names(person.get('students_inds', '').split(', ') if person.get('students_inds') and person.get('students_inds') != 'NA' else [], scholars),
         
-        # Hadiths (limit for file size)
-        "hadiths": person_hadiths[:50],
+        # Hadiths (all hadiths for this narrator)
+        "hadiths": person_hadiths,
         "total_hadiths": len(person_hadiths)
     }
     
@@ -192,19 +192,17 @@ def main():
             "score": influence
         })
         
-        # 3. Generate Individual JSON Files (Limit to top scholars or batch for now)
-        # For full production, we would process ALL, but for dev optimization/demo
-        # we will process the top 200 most influential + Abu Bakr specifically
-        if scholar_id == "2" or influence > 10:  # Adjust threshold as needed
-            scholar_data = get_enhanced_scholar_data(scholar_id, scholars, all_hadiths)
-            if scholar_data:
-                output_path = os.path.join(SCHOLARS_DIR, f"{scholar_id}.json")
-                with open(output_path, 'w', encoding='utf-8') as f:
-                    json.dump(scholar_data, f, indent=2, ensure_ascii=False)
+        # 3. Generate Individual JSON Files for ALL scholars
+        scholar_data = get_enhanced_scholar_data(scholar_id, scholars, all_hadiths)
+        if scholar_data:
+            output_path = os.path.join(SCHOLARS_DIR, f"{scholar_id}.json")
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(scholar_data, f, indent=2, ensure_ascii=False)
             
         count += 1
         if count % 1000 == 0:
             print(f"Processed {count}/{total}...")
+
 
     # Sort search index by influence score
     search_index.sort(key=lambda x: x['score'], reverse=True)

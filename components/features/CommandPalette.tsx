@@ -173,31 +173,46 @@ export function CommandPalette() {
           />
         </div>
         
-        <Tabs 
-          value={searchMode} 
-          onValueChange={(val) => setSearchMode(val as SearchMode)}
-          className="w-full border-b bg-muted/30 px-2"
-        >
-          <TabsList className="w-full justify-start bg-transparent p-0 h-10 overflow-x-auto">
-            <TabsTrigger 
-              value="scholar" 
-              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap"
+        <div className="relative w-full">
+          {/* Scroll fade indicators */}
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-muted/30 to-transparent pointer-events-none z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-muted/30 to-transparent pointer-events-none z-10" />
+          
+          <div 
+            className="w-full overflow-x-auto overflow-y-hidden pb-2 force-scrollbar" 
+            style={{ 
+              WebkitOverflowScrolling: 'touch',
+              scrollbarWidth: 'thin',
+              scrollbarColor: '#d4af37 transparent'
+            }}
+          >
+            <Tabs 
+              value={searchMode} 
+              onValueChange={(val) => setSearchMode(val as SearchMode)}
+              className="min-w-full border-b bg-muted/30 px-2"
             >
-              <User className="mr-2 h-4 w-4" />
-              Scholars
-            </TabsTrigger>
-            {HADITH_BOOKS.map((book) => (
-              <TabsTrigger 
-                key={book}
-                value={book} 
-                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap text-xs"
-              >
-                <Book className="mr-2 h-4 w-4" />
-                {book}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
+              <TabsList className="inline-flex flex-nowrap justify-start bg-transparent p-0 h-10 min-w-max gap-1">
+                <TabsTrigger 
+                  value="scholar" 
+                  className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap flex-shrink-0"
+                >
+                  <User className="mr-2 h-4 w-4" />
+                  Scholars
+                </TabsTrigger>
+                {HADITH_BOOKS.map((book) => (
+                  <TabsTrigger 
+                    key={book}
+                    value={book} 
+                    className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap text-xs flex-shrink-0"
+                  >
+                    <Book className="mr-2 h-4 w-4" />
+                    {book}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          </div>
+        </div>
 
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>

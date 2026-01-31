@@ -113,49 +113,59 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                      </div>
                      
                      {/* Vertical Chain Layout */}
-                     <div className="space-y-2">
-                       {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain).slice().reverse().map((narrator, idx, arr) => {
-                         const originalIdx = arr.length - 1 - idx; // Get original index for ID lookup
-                         return (
-                         <div key={idx} className="flex items-start gap-3">
-                           {/* Position Indicator */}
-                           <div className="flex flex-col items-center flex-shrink-0">
-                             <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500/20 to-amber-600/20 border-2 border-amber-500/40 flex items-center justify-center text-xs font-bold text-amber-600 dark:text-amber-400">
-                               {idx + 1}
-                             </div>
-                             {idx < arr.length - 1 && (
-                               <div className="w-0.5 h-6 bg-gradient-to-b from-amber-500/40 to-amber-500/20 my-1" />
-                             )}
-                           </div>
-                           
-                           {/* Narrator Card */}
-                           <div className="flex-1 group">
-                             <button
-                               onClick={() => {
-                                 const narratorId = hadith.chain[hadith.chain.length - 1 - idx]; // Reverse lookup
-                                 if (narratorId) {
-                                   router.push(`/${locale}/scholar/${narratorId}`);
-                                 }
-                               }}
-                               className="w-full text-left px-4 py-2.5 rounded-lg bg-gradient-to-br from-amber-500/5 to-amber-600/5 border border-amber-500/20 hover:border-amber-500/40 hover:shadow-md transition-all duration-200"
-                             >
-                               <div className="flex items-center justify-between">
-                                 <span className="text-sm font-medium text-foreground/90 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
-                                   {narrator}
-                                 </span>
-                                 <svg className="w-4 h-4 text-amber-500/60 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                 </svg>
-                               </div>
-                               <div className="text-xs text-muted-foreground mt-1">
-                                 {idx === 0 ? 'First Narrator' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
-                               </div>
-                             </button>
-                           </div>
-                         </div>
-                       );
-                       })}
-                     </div>
+                      <div className="space-y-2">
+                        {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain.map(id => ({ id, name: id, grade: '' }))).slice().reverse().map((narrator, idx, arr) => {
+                          const originalIdx = arr.length - 1 - idx; // Get original index for ID lookup
+                          const narratorName = typeof narrator === 'string' ? narrator : narrator.name;
+                          const narratorGrade = typeof narrator === 'object' ? narrator.grade : '';
+                          const narratorId = typeof narrator === 'object' ? narrator.id : hadith.chain[hadith.chain.length - 1 - idx];
+                          
+                          return (
+                          <div key={idx} className="flex items-start gap-3">
+                            {/* Position Indicator */}
+                            <div className="flex flex-col items-center flex-shrink-0">
+                              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500/20 to-amber-600/20 border-2 border-amber-500/40 flex items-center justify-center text-xs font-bold text-amber-600 dark:text-amber-400">
+                                {idx + 1}
+                              </div>
+                              {idx < arr.length - 1 && (
+                                <div className="w-0.5 h-6 bg-gradient-to-b from-amber-500/40 to-amber-500/20 my-1" />
+                              )}
+                            </div>
+                            
+                            {/* Narrator Card */}
+                            <div className="flex-1 group">
+                              <button
+                                onClick={() => {
+                                  if (narratorId) {
+                                    router.push(`/${locale}/scholar/${narratorId}`);
+                                  }
+                                }}
+                                className="w-full text-left px-4 py-2.5 rounded-lg bg-gradient-to-br from-amber-500/5 to-amber-600/5 border border-amber-500/20 hover:border-amber-500/40 hover:shadow-md transition-all duration-200"
+                              >
+                                <div className="flex items-center justify-between">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm font-medium text-foreground/90 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                                      {narratorName}
+                                    </span>
+                                    {narratorGrade && (
+                                      <Badge variant="outline" className="text-xs">
+                                        {narratorGrade}
+                                      </Badge>
+                                    )}
+                                  </div>
+                                  <svg className="w-4 h-4 text-amber-500/60 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                </div>
+                                <div className="text-xs text-muted-foreground mt-1">
+                                  {idx === 0 ? 'First Narrator' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+                        );
+                        })}
+                      </div>
                      
                      <p className="text-xs text-muted-foreground mt-4 italic flex items-center gap-1.5">
                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
