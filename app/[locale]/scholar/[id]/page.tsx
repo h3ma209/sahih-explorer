@@ -9,7 +9,8 @@ import { cache } from 'react';
 const getScholarData = cache(async (id: string, depth = 0) => {
   if (depth > 1) return null; // Prevent deep recursion
 
-  const filePath = path.join(process.cwd(), 'public/data/scholars', `${id}.json`);
+  // Use string concatenation to avoid Next.js build tracer creating overly broad globs
+  const filePath = `${process.cwd()}/public/data/scholars/${id}.json`;
   
   try {
      // Check existence first to avoid throw/catch overhead for missing files
@@ -18,32 +19,8 @@ const getScholarData = cache(async (id: string, depth = 0) => {
      const fileContents = fs.readFileSync(filePath, 'utf8');
      const data = JSON.parse(fileContents);
 
-     // Hydrate children: only fetch 1 level deep and avoid recursion if possible
-     // Currently only needed for immediate children in the tree view
-     if (depth === 0 && data.children && data.children.length > 0) {
-        // Optimize: Limit number of children processed if list is huge
-        const processedChildren = [];
-        for (const child of data.children.slice(0, 50)) { // Limit to 50 children for performance
-            if (child.id) {
-               // Use same pattern but avoid recursive `getScholarData` call for children to prevent loop
-               const childPath = path.join(process.cwd(), 'public/data/scholars', `${child.id}.json`);
-               if (fs.existsSync(childPath)) {
-                  try {
-                      const childContent = fs.readFileSync(childPath, 'utf8');
-                      const childData = JSON.parse(childContent);
-                      processedChildren.push({ ...child, children: childData.children || [] });
-                  } catch (e) {
-                      processedChildren.push(child);
-                  }
-               } else {
-                  processedChildren.push(child);
-               }
-            } else {
-               processedChildren.push(child);
-            }
-        }
-        data.children = processedChildren;
-     }
+     // Hydration of children removed to prevent build warnings and performance bottlenecks.
+     // Relationships should be handled by client-side or search-index lookups.
 
      return data;
   } catch (e) {
@@ -100,7 +77,8 @@ export async function generateStaticParams() {
     return []; 
   }
 
-  const scholarsDir = path.join(process.cwd(), 'public/data/scholars');
+  // Use string concatenation to avoid overly broad glob warning
+  const scholarsDir = `${process.cwd()}/public/data/scholars`;
   try {
       const filenames = fs.readdirSync(scholarsDir);
       // Limit for build performance - map top 1000 or strategic subset
