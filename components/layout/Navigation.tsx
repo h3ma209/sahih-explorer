@@ -40,6 +40,9 @@ export default function Navigation() {
 
   return (
     <>
+      {/* Global Command Palette - Rendered once */}
+      <CommandPalette />
+      
       <motion.header
         style={{ opacity: headerOpacity }}
         className={cn(
@@ -86,13 +89,45 @@ export default function Navigation() {
 
             {/* Right Section - Search & Language */}
             <div className="hidden md:flex items-center gap-2">
-              <CommandPalette />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const event = new KeyboardEvent('keydown', {
+                    key: 'k',
+                    metaKey: true,
+                    bubbles: true
+                  });
+                  document.dispatchEvent(event);
+                }}
+                className="gap-2"
+              >
+                <Search className="w-4 h-4" />
+                <span className="hidden lg:inline">Search</span>
+                <kbd className="hidden lg:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100">
+                  <span className="text-xs">⌘</span>K
+                </kbd>
+              </Button>
               <LanguageSwitcher />
             </div>
 
-            {/* Mobile Menu Toggle & Search */}
+            {/* Mobile Menu Toggle, Search & Language */}
             <div className="flex md:hidden items-center gap-2">
-              <CommandPalette />
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  const event = new KeyboardEvent('keydown', {
+                    key: 'k',
+                    metaKey: true,
+                    bubbles: true
+                  });
+                  document.dispatchEvent(event);
+                }}
+                className="p-2"
+              >
+                <Search className="w-5 h-5" />
+              </Button>
               <LanguageSwitcher />
               <Button
                 variant="ghost"

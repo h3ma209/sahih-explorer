@@ -7,7 +7,7 @@ import os
 CSV_PATH = '../data(good)/all_hadiths_clean.csv'
 SEARCH_INDEX_PATH = 'public/data/search-index.json'
 OUTPUT_PATH = 'public/data/hadith-index.json'
-LIMIT = 1000  # For prototype performance
+LIMIT = None  # Process all hadiths (34k+ from 6 collections)
 
 def load_scholar_map():
     """Load search index to map IDs to scholar details"""
@@ -42,7 +42,7 @@ def process_hadiths():
     # Process rows
     count = 0
     for _, row in df.iterrows():
-        if count >= LIMIT:
+        if LIMIT is not None and count >= LIMIT:
             break
             
         # Parse chain IDs

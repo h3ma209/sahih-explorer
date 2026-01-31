@@ -44,23 +44,23 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             </svg>
           </div>
 
-          {/* Floating Orbs */}
+          {/* Floating Orbs - Subtle */}
           <motion.div
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
+              scale: [1, 1.1, 1],
+              opacity: [0.1, 0.15, 0.1],
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.2, 0.4, 0.2],
+              scale: [1.1, 1, 1.1],
+              opacity: [0.08, 0.12, 0.08],
             }}
             transition={{
               duration: 10,
@@ -68,7 +68,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
           />
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="bg-gradient-to-r from-amber-200 via-amber-500 to-amber-700 bg-clip-text text-transparent">
               {scholarName}
@@ -111,7 +111,8 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed font-amiri"
+            dir="auto"
           >
             {scholarTitle}
           </motion.p>

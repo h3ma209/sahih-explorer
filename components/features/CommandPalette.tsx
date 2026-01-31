@@ -33,7 +33,16 @@ interface HadithResult {
   sanad: string;
 }
 
-type SearchMode = "scholar" | "hadith";
+type SearchMode = "scholar" | "Sahih Bukhari" | "Sahih Muslim" | "Sunan an-Nasa'i" | "Sunan Abi Da'ud" | "Sunan Ibn Majah" | "Jami' al-Tirmidhi";
+
+const HADITH_BOOKS = [
+  "Sahih Bukhari",
+  "Sahih Muslim", 
+  "Sunan an-Nasa'i",
+  "Sunan Abi Da'ud",
+  "Sunan Ibn Majah",
+  "Jami' al-Tirmidhi"
+] as const;
 
 export function CommandPalette() {
   const [open, setOpen] = React.useState(false);
@@ -82,9 +91,9 @@ export function CommandPalette() {
     }
   }, [open, allScholars.length]);
 
-  // Load Hadith Index (only if mode is hadith or switched to it)
+  // Load Hadith Index (only if mode is a book collection)
   React.useEffect(() => {
-    if (open && searchMode === "hadith" && allHadiths.length === 0) {
+    if (open && searchMode !== "scholar" && allHadiths.length === 0) {
       fetch("/data/hadith-index.json")
         .then((res) => res.json())
         .then((data) => {
@@ -114,11 +123,15 @@ export function CommandPalette() {
         setScholarResults(allScholars.slice(0, 20));
       }
     } else {
+      // Filter by selected book
+      const bookFilter = searchMode as string;
       if (hadithFuse && debouncedQuery) {
         const results = hadithFuse.search(debouncedQuery, { limit: 50 });
-        setHadithResults(results.map((result) => result.item));
+        const filtered = results.map((result) => result.item).filter(h => h.book === bookFilter);
+        setHadithResults(filtered);
       } else if (allHadiths.length > 0) {
-        setHadithResults(allHadiths.slice(0, 20));
+        const filtered = allHadiths.filter(h => h.book === bookFilter).slice(0, 20);
+        setHadithResults(filtered);
       }
     }
   }, [debouncedQuery, searchMode, scholarFuse, hadithFuse, allScholars, allHadiths]);
@@ -165,21 +178,24 @@ export function CommandPalette() {
           onValueChange={(val) => setSearchMode(val as SearchMode)}
           className="w-full border-b bg-muted/30 px-2"
         >
-          <TabsList className="w-full justify-start bg-transparent p-0 h-10">
+          <TabsList className="w-full justify-start bg-transparent p-0 h-10 overflow-x-auto">
             <TabsTrigger 
               value="scholar" 
-              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2"
+              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap"
             >
               <User className="mr-2 h-4 w-4" />
               Scholars
             </TabsTrigger>
-            <TabsTrigger 
-              value="hadith" 
-              className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2"
-            >
-              <Book className="mr-2 h-4 w-4" />
-              Hadiths
-            </TabsTrigger>
+            {HADITH_BOOKS.map((book) => (
+              <TabsTrigger 
+                key={book}
+                value={book} 
+                className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:bg-transparent px-4 pb-2 pt-2 whitespace-nowrap text-xs"
+              >
+                <Book className="mr-2 h-4 w-4" />
+                {book}
+              </TabsTrigger>
+            ))}
           </TabsList>
         </Tabs>
 
@@ -211,11 +227,11 @@ export function CommandPalette() {
             </CommandGroup>
           )}
 
-          {searchMode === "hadith" && (
-            <CommandGroup heading={debouncedQuery ? "Hadiths" : "Sample Hadiths"}>
-              {hadithResults.map((hadith) => (
+          {searchMode !== "scholar" && (
+            <CommandGroup heading={debouncedQuery ? `${searchMode} Results` : `Sample from ${searchMode}`}>
+              {hadithResults.map((hadith, index) => (
                 <CommandItem
-                  key={hadith.id}
+                  key={`${hadith.book}-${hadith.hadith_no}-${index}`}
                   value={`${hadith.book} ${hadith.hadith_no} ${hadith.matn}`}
                   onSelect={() => handleSelectHadith(hadith)}
                   className="flex flex-col items-start gap-1 p-3 cursor-default"

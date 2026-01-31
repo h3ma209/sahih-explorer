@@ -79,7 +79,9 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
             fontSize: 14,
             fontWeight: "bold",
             color: isDark ? "#fff" : "#000",
-            formatter: "{b}"
+            formatter: "{b}",
+            overflow: "truncate",
+            width: 100
         }
     });
     addedIds.add(scholar.id);
@@ -97,7 +99,9 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
                 label: { 
                     show: teachers.length < 20, 
                     position: "right",
-                    color: isDark ? "#ccc" : "#333"
+                    color: isDark ? "#ccc" : "#333",
+                    overflow: "truncate",
+                    width: 80
                 }
             });
             addedIds.add(t.id);
