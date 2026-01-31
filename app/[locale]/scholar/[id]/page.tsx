@@ -3,37 +3,67 @@ import path from 'path';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ScholarProfile from '@/components/features/ScholarProfile';
+import { cache } from 'react';
 
-// Helper to fetch data on the server
-async function getScholarData(id: string) {
+// Cached data fetcher to deduplicate requests
+const getScholarData = cache(async (id: string, depth = 0) => {
+  if (depth > 1) return null; // Prevent deep recursion
+
   const filePath = path.join(process.cwd(), 'public/data/scholars', `${id}.json`);
+  
   try {
+     // Check existence first to avoid throw/catch overhead for missing files
+     if (!fs.existsSync(filePath)) return null;
+
      const fileContents = fs.readFileSync(filePath, 'utf8');
      const data = JSON.parse(fileContents);
 
-     // Hydrate children to get grandchildren (Descendants)
-     if (data.children && data.children.length > 0) {
-        data.children = data.children.map((child: any) => {
-            if (!child.id) return child;
-            try {
-                const childPath = path.join(process.cwd(), 'public/data/scholars', `${child.id}.json`);
-                if (fs.existsSync(childPath)) {
-                    const childData = JSON.parse(fs.readFileSync(childPath, 'utf8'));
-                    // We only need the child's children (grandchildren of root)
-                    return { ...child, children: childData.children || [] };
-                }
-            } catch (e) {
-                // Ignore missing files
+     // Hydrate children: only fetch 1 level deep and avoid recursion if possible
+     // Currently only needed for immediate children in the tree view
+     if (depth === 0 && data.children && data.children.length > 0) {
+        // Optimize: Limit number of children processed if list is huge
+        const processedChildren = [];
+        for (const child of data.children.slice(0, 50)) { // Limit to 50 children for performance
+            if (child.id) {
+               // Use same pattern but avoid recursive `getScholarData` call for children to prevent loop
+               const childPath = path.join(process.cwd(), 'public/data/scholars', `${child.id}.json`);
+               if (fs.existsSync(childPath)) {
+                  try {
+                      const childContent = fs.readFileSync(childPath, 'utf8');
+                      const childData = JSON.parse(childContent);
+                      processedChildren.push({ ...child, children: childData.children || [] });
+                  } catch (e) {
+                      processedChildren.push(child);
+                  }
+               } else {
+                  processedChildren.push(child);
+               }
+            } else {
+               processedChildren.push(child);
             }
-            return child;
-        });
+        }
+        data.children = processedChildren;
      }
 
      return data;
   } catch (e) {
      return null;
   }
-}
+});
+
+// Cached search index loader
+const getSearchIndex = cache(async () => {
+  try {
+    const searchIndexPath = path.join(process.cwd(), 'public/data/search-index.json');
+    if (fs.existsSync(searchIndexPath)) {
+      const searchIndexData = fs.readFileSync(searchIndexPath, 'utf8');
+      return JSON.parse(searchIndexData);
+    }
+  } catch (error) {
+    console.error('Failed to load search index:', error);
+  }
+  return [];
+});
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -51,59 +81,52 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const reliability = data.reliability_grade ? `[${data.reliability_grade}]` : '';
+
   return {
-    title: `${data.name} | Sahih Explorer`,
-    description: `Explore the biography, teachers, students, and narrations of ${data.name} (${data.grade}). View their authentic hadith chains and academic network.`,
+    title: `${data.name} ${reliability} | Sahih Explorer`,
+    description: `Explore the biography and narrations of ${data.name}. ${data.grade}. Influence Score: ${data.total_hadiths || 'N/A'}.`,
     openGraph: {
-      title: `${data.name} - Islamic Scholar Profile`,
-      description: `Detailed biography, family tree, and network graph for ${data.name}. Influence Score: ${data.total_hadiths || 'N/A'}.`,
+      title: `${data.name} ${reliability}`,
+      description: `Biography, teachers, students, and hadith network for ${data.name}.`,
       type: 'article',
       tags: data.biography?.tags || [],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${data.name}`,
-      description: `Explore the scholarly network of ${data.name}.`,
     },
   };
 }
 
-// Generate Static Params for SSG (Zero-Cost)
 export async function generateStaticParams() {
-  // Read all available JSON files to generate paths
-  const scholarsDir = path.join(process.cwd(), 'public/data/scholars');
-  const filenames = fs.readdirSync(scholarsDir);
+  if (process.env.NODE_ENV === 'development') {
+    return []; 
+  }
 
-  // Filter for .json files and map to IDs
-  // Limiting to top 200 for now to prevent build timeouts in demo environment
-  // In full production, this would map all 24,000 files
-  return filenames
-    .filter((file) => file.endsWith('.json'))
-    .slice(0, 200) 
-    .map((file) => ({
-      id: file.replace('.json', ''),
-    }));
+  const scholarsDir = path.join(process.cwd(), 'public/data/scholars');
+  try {
+      const filenames = fs.readdirSync(scholarsDir);
+      // Limit for build performance - map top 1000 or strategic subset
+      return filenames
+        .filter((file) => file.endsWith('.json'))
+        .slice(0, 1000) 
+        .map((file) => ({
+          id: file.replace('.json', ''),
+        }));
+  } catch(e) {
+      return [];
+  }
 }
 
 export default async function ScholarPage({ params }: PageProps) {
   const resolvedParams = await params;
-  const data = await getScholarData(resolvedParams.id);
+  
+  // Parallel data fetching
+  const [data, searchIndex] = await Promise.all([
+     getScholarData(resolvedParams.id),
+     getSearchIndex()
+  ]);
 
   if (!data) {
     notFound();
   }
   
-  // Load search index for isnad chain resolution
-  let searchIndex = [];
-  try {
-    const searchIndexPath = path.join(process.cwd(), 'public/data/search-index.json');
-    if (fs.existsSync(searchIndexPath)) {
-      const searchIndexData = fs.readFileSync(searchIndexPath, 'utf8');
-      searchIndex = JSON.parse(searchIndexData);
-    }
-  } catch (error) {
-    console.error('Failed to load search index:', error);
-  }
-
   return <ScholarProfile initialData={data} searchIndex={searchIndex} />;
 }

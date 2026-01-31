@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { Search, Book, User } from "lucide-react";
+import { Search, Book, User, Loader2 } from "lucide-react";
 import { useDebounce } from "use-debounce";
 import Fuse from "fuse.js";
 import {
@@ -74,9 +74,12 @@ export function CommandPalette() {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  const [isLoading, setIsLoading] = React.useState(false);
+
   // Load Scholar Index
   React.useEffect(() => {
     if (open && allScholars.length === 0) {
+      setIsLoading(true);
       fetch("/data/search-index.json")
         .then((res) => res.json())
         .then((data) => {
@@ -86,14 +89,19 @@ export function CommandPalette() {
             threshold: 0.3,
           });
           setScholarFuse(fuseInstance as unknown as Fuse<SearchResult>);
+          setIsLoading(false);
         })
-        .catch((err) => console.error("Failed to load scholar index", err));
+        .catch((err) => {
+          console.error("Failed to load scholar index", err);
+          setIsLoading(false);
+        });
     }
   }, [open, allScholars.length]);
 
   // Load Hadith Index (only if mode is a book collection)
   React.useEffect(() => {
     if (open && searchMode !== "scholar" && allHadiths.length === 0) {
+      setIsLoading(true);
       fetch("/data/hadith-index.json")
         .then((res) => res.json())
         .then((data) => {
@@ -108,8 +116,12 @@ export function CommandPalette() {
             ignoreLocation: true,
           });
           setHadithFuse(fuseInstance as unknown as Fuse<HadithResult>);
+          setIsLoading(false);
         })
-        .catch((err) => console.error("Failed to load hadith index", err));
+        .catch((err) => {
+          console.error("Failed to load hadith index", err);
+          setIsLoading(false);
+        });
     }
   }, [open, searchMode, allHadiths.length]);
 
@@ -215,7 +227,13 @@ export function CommandPalette() {
         </div>
 
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
+          {isLoading && (
+            <div className="flex items-center justify-center py-6">
+              <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+              <span className="ml-2 text-sm text-muted-foreground">Loading index...</span>
+            </div>
+          )}
+          {!isLoading && <CommandEmpty>No results found.</CommandEmpty>}
           
           {searchMode === "scholar" && (
             <CommandGroup heading={debouncedQuery ? "Scholars" : "Most Influential"}>
