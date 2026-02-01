@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from 'nextjs-toploader';
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ScholarLoaderProvider>
             {children}
+            <Analytics />
           </ScholarLoaderProvider>
         </NextIntlClientProvider>
       </body>
