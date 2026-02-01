@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Outfit, Amiri, Noto_Naskh_Arabic } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from 'nextjs-toploader';
 import { Analytics } from "@vercel/analytics/react";
@@ -14,9 +14,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+const notoNaskh = Noto_Naskh_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-noto-naskh",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#f59e0b",
+};
+
 export const metadata: Metadata = {
   title: "Sahih Explorer - Islamic Scholar & Hadith Database",
   description: "Explore the lives, family trees, and authentic narrations of Islamic scholars and companions through an interactive visualization platform.",
+  manifest: "/manifest.json",
+  icons: {
+    apple: "/icons/icon-512x512.png",
+  },
 };
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -52,10 +80,21 @@ export default async function RootLayout({
   // Determine direction
   const dir = locale === 'ar' || locale === 'ckb' ? 'rtl' : 'ltr';
 
+  // Select font based on locale
+  let fontClass = outfit.className;
+  let fontVar = outfit.variable;
+  if (locale === 'ar') {
+    fontClass = amiri.className;
+    fontVar = amiri.variable;
+  } else if (locale === 'ckb') {
+    fontClass = notoNaskh.className;
+    fontVar = notoNaskh.variable;
+  }
+
   return (
     <html lang={locale} dir={dir}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontClass} ${fontVar} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextTopLoader 
           color="#D4AF37"
