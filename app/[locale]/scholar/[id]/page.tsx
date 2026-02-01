@@ -126,18 +126,29 @@ export default async function ScholarPage({ params }: PageProps & { params: Prom
   if (!data) {
      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`);
      return (
-        <main className="container py-20 text-center">
-            <h1 className="text-3xl font-bold text-red-600 mb-4">Error Loading Scholar</h1>
-            <p className="mb-4">Could not retrieve data for ID: {resolvedParams.id}</p>
-            <div className="bg-gray-100 p-4 rounded text-left mx-auto max-w-lg overflow-auto text-sm">
-                <p><strong>Attempted URL:</strong> {baseUrl}/data/scholars/{resolvedParams.id}.json</p>
-                <p><strong>Environment:</strong> {process.env.NODE_ENV}</p>
-                <p className="mt-2 text-xs text-gray-500">
-                    Note: If you are on a Vercel Preview/Private deployment, fetching from self requires authentication headers which are not available in server-side fetch. 
-                    Please ensure the deployment is Public or use a persistent storage solution.
-                </p>
+        <main className="container flex flex-col items-center justify-center min-h-[60vh] py-20 text-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Scholar Not Found</h1>
+            <p className="text-lg text-gray-600 mb-8">We couldn't connect to the data source for Scholar ID: <span className="font-mono font-bold">{resolvedParams.id}</span></p>
+            
+            <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg text-left max-w-2xl w-full">
+                <h3 className="font-semibold text-amber-800 mb-2">Troubleshooting for Vercel:</h3>
+                <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+                    <li><strong>Invalid ID?</strong> Ensure ID `{resolvedParams.id}` exists in your data. (Try 30003 for Imam Muslim)</li>
+                    <li><strong>Private Deployment?</strong> If this is a Preview URL, Vercel Authentication blocks the server from fetching its own data.
+                        <ul className="pl-6 mt-1 list-circle text-xs text-gray-500">
+                            <li>Fix: Make the deployment <strong>Public</strong> in Vercel Settings.</li>
+                            <li>Fix: Or visit the <strong>Production</strong> domain (if public).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div className="mt-4 pt-4 border-t border-amber-100 text-xs text-gray-400 break-all">
+                    Debug URL: {baseUrl}/data/scholars/{resolvedParams.id}.json
+                </div>
             </div>
-            <Link href="/" className="mt-8 inline-block underline">Return Home</Link>
+
+            <Link href="/" className="mt-8 px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
+                Return to Search
+            </Link>
         </main>
      );
   }
