@@ -18,6 +18,7 @@ interface Hadith {
   chapter_no: string;
   text_ar: string;
   text_en: string;
+  usc_msa_ref?: string;
   chain: string[];
 }
 
@@ -78,6 +79,11 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                   <Badge variant="outline">
                     {t('label')} {hadith.hadith_no}
                   </Badge>
+                  {hadith.usc_msa_ref && (
+                    <Badge variant="outline" className="bg-slate-100 dark:bg-slate-800" title="USC-MSA Reference">
+                      USC {hadith.usc_msa_ref}
+                    </Badge>
+                  )}
                   <span className="flex items-center gap-1 ml-auto">
                     {hadith.chapter}
                   </span>

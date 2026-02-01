@@ -4,7 +4,7 @@ import os
 
 # Configuration
 # Assuming running from sahih-explorer root
-CSV_PATH = '../data(good)/all_hadiths_clean.csv'
+CSV_PATH = 'data-processing/data/all_hadiths_clean.csv'
 SEARCH_INDEX_PATH = 'public/data/search-index.json'
 OUTPUT_PATH = 'public/data/hadith-index.json'
 LIMIT = None  # Process all hadiths (34k+ from 6 collections)
@@ -26,6 +26,13 @@ def clean_text(text):
         return ""
     return str(text).strip()
 
+def slugify(text):
+    import re
+    text = str(text).lower()
+    text = re.sub(r'[^\w\s-]', '', text)
+    text = re.sub(r'[-\s]+', '-', text).strip('-')
+    return text
+
 def process_hadiths():
     scholar_map = load_scholar_map()
     print(f"Loaded {len(scholar_map)} scholars.")
@@ -38,6 +45,7 @@ def process_hadiths():
         return
 
     hadiths = []
+    seen_ids = set()
     
     # Process rows
     count = 0
@@ -70,11 +78,24 @@ def process_hadiths():
                     "death_year": ""
                 })
 
+        source = clean_text(row.get('source', 'Unknown Book'))
+        hadith_no = clean_text(row.get('hadith_no', ''))
+        
+        # Generate Unique ID
+        base_id = f"{slugify(source)}-{hadith_no}" if hadith_no else f"{slugify(source)}-{count}"
+        unique_id = base_id
+        dup_count = 1
+        while unique_id in seen_ids:
+            dup_count += 1
+            unique_id = f"{base_id}-{dup_count}"
+        
+        seen_ids.add(unique_id)
+
         hadith = {
-            "id": f"h{row['hadith_id']}",
-            "source": clean_text(row.get('source', 'Unknown Book')),
-            "book": clean_text(row.get('source', '')), # Alias for UI compatibility
-            "hadith_no": clean_text(row.get('hadith_no', '')),
+            "id": unique_id,
+            "source": source,
+            "book": source, # Alias for UI compatibility
+            "hadith_no": hadith_no,
             "chapter_no": clean_text(row.get('chapter_no', '')),
             "chapter": clean_text(row.get('chapter', '')),
             "matn": clean_text(row.get('text_ar', '')),

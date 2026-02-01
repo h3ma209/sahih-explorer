@@ -5,8 +5,8 @@ import os
 from datetime import datetime
 
 # Configuration
-DATA_DIR = 'data(good)'
-OUTPUT_DIR = 'sahih-explorer/public/data'
+DATA_DIR = 'data-processing/data'
+OUTPUT_DIR = 'public/data'
 SCHOLARS_DIR = os.path.join(OUTPUT_DIR, 'scholars')
 
 # Ensure output directories exist
@@ -144,9 +144,19 @@ def get_enhanced_scholar_data(target_id, scholars, all_hadiths):
     
     return tree
 
+def slugify(text):
+    import re
+    text = str(text).lower()
+    text = re.sub(r'[^\w\s-]', '', text)
+    text = re.sub(r'[-\s]+', '-', text).strip('-')
+    return text
+
 def load_all_hadiths(filepath):
     """Load all hadiths into memory with parsed chains"""
     hadiths = []
+    seen_ids = set()
+    count = 0
+    
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
@@ -154,15 +164,31 @@ def load_all_hadiths(filepath):
                 chain = row.get('chain_indx', '')
                 chain_ids = [x.strip() for x in chain.split(',') if x.strip()]
                 
+                source = row.get('source', '').strip() or 'Unknown Book'
+                hadith_no = row.get('hadith_no', '').strip()
+                
+                # Generate Unique ID
+                base_id = f"{slugify(source)}-{hadith_no}" if hadith_no else f"{slugify(source)}-{count}"
+                unique_id = base_id
+                dup_count = 1
+                while unique_id in seen_ids:
+                    dup_count += 1
+                    unique_id = f"{base_id}-{dup_count}"
+                
+                seen_ids.add(unique_id)
+                
                 hadiths.append({
-                    "hadith_no": row.get('hadith_no', '').strip(),
-                    "source": row.get('source', ''),
+                    "id": unique_id,
+                    "hadith_no": hadith_no,
+                    "source": source,
                     "chapter": row.get('chapter', ''),
                     "chapter_no": row.get('chapter_no', ''),
                     "text_ar": row.get('text_ar', ''),
                     "text_en": row.get('text_en', ''),
+                    "usc_msa_ref": row.get('usc_msa_ref', ''),
                     "chain": chain_ids
                 })
+                count += 1
     except FileNotFoundError:
         print(f"Warning: Hadith file not found at {filepath}")
     return hadiths

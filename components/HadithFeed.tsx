@@ -8,6 +8,7 @@ interface Hadith {
   hadith_no: string;
   chapter: string;
   text_en: string;
+  usc_msa_ref?: string;
   chain: string[];
 }
 
@@ -45,6 +46,11 @@ function HadithCard({ hadith, index }: { hadith: Hadith; index: number }) {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-amber-400 font-bold font-mono text-lg">#{hadith.hadith_no.trim()}</span>
+                {hadith.usc_msa_ref && (
+                  <span className="text-slate-500 text-sm ml-2 font-mono" title="USC-MSA Reference">
+                    (USC {hadith.usc_msa_ref})
+                  </span>
+                )}
               </div>
               <h3 className="text-slate-400 text-xs mt-1 max-w-md line-clamp-1">
                 {hadith.chapter}
