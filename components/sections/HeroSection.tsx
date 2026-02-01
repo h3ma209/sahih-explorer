@@ -45,7 +45,8 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
           </div>
 
           {/* Floating Orbs - Subtle */}
-          {/* <motion.div
+          {/* Floating Orbs - Subtle (Desktop Only) */}
+          <motion.div
             animate={{
               scale: [1, 1.1, 1],
               opacity: [0.1, 0.15, 0.1],
@@ -55,7 +56,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
+            className="hidden md:block absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl will-change-transform"
           />
           <motion.div
             animate={{
@@ -68,8 +69,8 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
-          /> */}
+            className="hidden md:block absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl will-change-transform"
+          />
         </div>
       </div>
 
@@ -154,7 +155,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
         </motion.div>
 
         {/* Scroll Indicator */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
@@ -169,7 +170,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             <span className="text-sm font-medium group-hover:text-amber-500 transition-colors">{t('scroll')}</span>
             <ChevronDown className="w-5 h-5 group-hover:text-amber-500 transition-colors" />
           </motion.button>
-        </motion.div> */}
+        </motion.div>
       </motion.div>
 
     </section>

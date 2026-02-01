@@ -89,7 +89,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     addedIds.add(scholar.id);
 
     // Teachers
-    teachers.slice(0, 30).forEach((t) => {
+    teachers.slice(0, 20).forEach((t) => {
         if (!addedIds.has(t.id)) {
             nodes.push({
                 id: t.id,
@@ -99,7 +99,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
                 symbolSize: 20,
                 value: 10,
                 label: { 
-                    show: teachers.length < 20, 
+                    show: teachers.length < 15, 
                     position: "right",
                     color: isDark ? "#ccc" : "#333",
                     overflow: "truncate",
@@ -116,7 +116,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     });
 
     // Students
-    students.slice(0, 50).forEach((s) => {
+    students.slice(0, 30).forEach((s) => {
         if (!addedIds.has(s.id)) {
             nodes.push({
                 id: s.id,
@@ -144,12 +144,12 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
          left: 20
       },
       tooltip: {
-        backgroundColor: isDark ? 'rgba(30, 41, 59, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: isDark ? 'rgba(30, 41, 59, 0.95)' : 'rgba(255, 255, 255, 0.95)',
         borderColor: isDark ? '#475569' : '#e2e8f0',
         textStyle: { color: isDark ? '#f8fafc' : '#0f172a' },
         padding: [10, 15],
         borderRadius: 8,
-        backdropFilter: 'blur(4px)',
+        // backdropFilter removed for performance
         formatter: (params: any) => {
             if (params.dataType === 'node') {
                 return `<div class="font-bold">${params.data.originalName || params.name}</div>

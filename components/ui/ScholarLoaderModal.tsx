@@ -26,7 +26,7 @@ export default function ScholarLoaderModal({ isOpen }: ScholarLoaderModalProps) 
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute pointer-events-none opacity-5"
+              className="absolute pointer-events-none opacity-5 will-change-transform"
             >
               <div className="w-96 h-96 border-2 border-dashed border-primary rounded-full flex items-center justify-center">
                 <div className="w-72 h-72 border border-primary/50 rounded-full" />
@@ -37,14 +37,14 @@ export default function ScholarLoaderModal({ isOpen }: ScholarLoaderModalProps) 
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="absolute w-48 h-48 pointer-events-none"
+              className="absolute w-48 h-48 pointer-events-none will-change-transform"
             >
               <div className="w-2 h-2 bg-amber-500 rounded-full absolute top-0 left-1/2 -translate-x-1/2 shadow-[0_0_10px_2px_rgba(245,158,11,0.5)]" />
             </motion.div>
              <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-              className="absolute w-32 h-32 pointer-events-none"
+              className="absolute w-32 h-32 pointer-events-none will-change-transform"
             >
                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full absolute bottom-0 left-1/2 -translate-x-1/2 shadow-[0_0_8px_2px_rgba(59,130,246,0.5)]" />
             </motion.div>
