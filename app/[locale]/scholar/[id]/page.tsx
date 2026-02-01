@@ -10,18 +10,36 @@ import { cache } from 'react';
 const getScholarData = cache(async (id: string, depth = 0) => {
   if (depth > 1) return null;
 
-  // FETCH ONLY STRATEGY (STRICT)
-  // We explicitly removed the filesystem fallback here. 
-  // This ensures Vercel's bundler does NOT see a dependency on the 'scholars' directory.
-  // We rely fully on runtime fetching from the public assets.
-  
+  // 1. Try Filesystem (Fastest for Local Dev & Build Time)
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
+    // Obfuscate path to avoid Next.js build tracer bundling all files (Vercel 250MB limit)
+    // We break the static string analysis by using variables
+    const dataFolder = 'scholars';
+    const filePath = path.join(process.cwd(), 'public', 'data', dataFolder, `${id}.json`);
+    
+    if (fs.existsSync(filePath)) {
+         const fileContents = fs.readFileSync(filePath, 'utf8');
+         return JSON.parse(fileContents);
+    }
+  } catch (e) {
+    // Filesystem access failed
+  }
+
+  // 2. Fallback to Fetch (For Vercel Runtime)
+  try {
+    // Attempt to determine base URL dynamically if not set
+    const port = process.env.PORT || 3000;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${port}`;
+    console.log(`Fetching scholar ${id} data from: ${baseUrl}/data/scholars/${id}.json`);
+    
     const res = await fetch(`${baseUrl}/data/scholars/${id}.json`, { 
         next: { revalidate: 3600 } 
     });
+    
     if (res.ok) {
         return res.json();
+    } else {
+        console.error(`Fetch failed for scholar ${id}: ${res.status} ${res.statusText}`);
     }
   } catch (e) {
     console.error(`Failed to fetch scholar ${id}:`, e);
