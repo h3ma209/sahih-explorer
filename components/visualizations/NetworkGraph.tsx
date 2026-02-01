@@ -139,14 +139,23 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
     return {
       title: {
          text: t('title'),
-         textStyle: { color: isDark ? '#fff' : '#000', fontSize: 14 },
-         top: 10,
-         left: 10
+         textStyle: { color: isDark ? '#fff' : '#000', fontSize: 16, fontWeight: 'bold', fontFamily: 'Inter' },
+         top: 20,
+         left: 20
       },
       tooltip: {
+        backgroundColor: isDark ? 'rgba(30, 41, 59, 0.9)' : 'rgba(255, 255, 255, 0.9)',
+        borderColor: isDark ? '#475569' : '#e2e8f0',
+        textStyle: { color: isDark ? '#f8fafc' : '#0f172a' },
+        padding: [10, 15],
+        borderRadius: 8,
+        backdropFilter: 'blur(4px)',
         formatter: (params: any) => {
             if (params.dataType === 'node') {
-                return params.data.originalName || params.name;
+                return `<div class="font-bold">${params.data.originalName || params.name}</div>
+                        ${params.data.category === 0 ? '<div class="text-xs text-amber-500 mt-1">Scholar</div>' : ''}
+                        ${params.data.category === 1 ? '<div class="text-xs text-blue-500 mt-1">Teacher</div>' : ''}
+                        ${params.data.category === 2 ? '<div class="text-xs text-emerald-500 mt-1">Student</div>' : ''}`;
             }
             return '';
         }
@@ -155,7 +164,8 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
         {
           data: categories.map(a => a.name),
           textStyle: { color: isDark ? "#ccc" : "#333" },
-          bottom: 10
+          bottom: 20,
+          itemGap: 20
         }
       ],
       series: [
@@ -169,17 +179,34 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
           label: {
             show: true,
             position: "right",
-            formatter: "{b}"
+            formatter: "{b}",
+            color: isDark ? "#e2e8f0" : "#1e293b"
           },
           force: {
-            repulsion: 400,      // Increase repulsion to separate nodes
-            gravity: 0.05,       // Increase gravity slightly to pull them in
-            edgeLength: [50, 150],
+            repulsion: 800,
+            gravity: 0.1,
+            edgeLength: [80, 200],
             friction: 0.6
           },
           emphasis: {
             focus: "adjacency",
-            lineStyle: { width: 4 }
+            scale: true,
+            itemStyle: {
+                shadowBlur: 20,
+                shadowColor: 'rgba(0,0,0,0.3)'
+            },
+            lineStyle: { width: 3, opacity: 0.8 }
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.2,
+            opacity: 0.4
+          },
+          itemStyle: {
+            borderColor: isDark ? '#1e293b' : '#fff',
+            borderWidth: 2,
+            shadowBlur: 5,
+            shadowColor: 'rgba(0,0,0,0.1)'
           }
         }
       ]
@@ -196,7 +223,8 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
   };
 
   return (
-    <Card className="w-full h-[500px] md:h-[800px] overflow-hidden bg-card/50 border-border p-4">
+    <Card className="w-full h-[500px] md:h-[800px] overflow-hidden bg-white/50 dark:bg-slate-950/50 backdrop-blur-sm border-border p-4 shadow-sm relative group">
+       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
        <ReactECharts 
          option={options} 
          style={{ height: "100%", width: "100%" }}

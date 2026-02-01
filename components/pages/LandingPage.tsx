@@ -157,16 +157,17 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative max-w-2xl mx-auto mb-8"
+            className="relative max-w-2xl mx-auto mb-8 group"
           >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <div className="relative transform transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-amber-500 transition-colors" />
               <input
                 type="text"
                 placeholder={locale === 'ar' ? 'ابحث عن عالم... (مثل: أبو هريرة)' : locale === 'ckb' ? 'گەڕان بۆ زانایەک... (وەک: ئەبووهورەیرە)' : 'Search for a scholar... (e.g., Abu Huraira)'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-6 text-lg rounded-2xl border-2 border-border bg-background/80 backdrop-blur-sm focus:border-amber-500 focus:ring-4 focus:ring-amber-500/20 transition-all outline-none"
+                className="w-full pl-12 pr-4 py-6 text-lg rounded-2xl border-2 border-border bg-background/80 backdrop-blur-sm focus:border-amber-500 focus:ring-4 focus:ring-amber-500/20 transition-all outline-none shadow-sm hover:shadow-md"
               />
             </div>
 
@@ -175,22 +176,23 @@ export default function LandingPage() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="absolute top-full mt-2 w-full bg-background/95 backdrop-blur-xl border-2 border-border rounded-2xl shadow-2xl overflow-hidden z-50"
+                className="absolute top-full mt-2 w-full bg-background/95 backdrop-blur-xl border-2 border-border/50 rounded-2xl shadow-2xl overflow-hidden z-50 divide-y divide-border/30"
               >
                 {searchResults.map((scholar) => (
                   <button
                     key={scholar.id}
                     onClick={() => handleSelectScholar(scholar.id)}
-                    className="w-full px-6 py-4 text-left hover:bg-accent/50 transition-colors border-b border-border/50 last:border-0 flex items-center justify-between group"
+                    className="w-full px-6 py-4 text-left hover:bg-accent/50 transition-colors flex items-center justify-between group/item"
                   >
                     <div>
-                      <p className="font-semibold text-foreground group-hover:text-amber-600 transition-colors">
+                      <p className="font-semibold text-foreground group-hover/item:text-amber-600 transition-colors flex items-center gap-2">
                         {scholar.name}
+                        <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all" />
                       </p>
                       <p className="text-sm text-muted-foreground">{scholar.grade}</p>
                     </div>
                     {scholar.death_year && (
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs bg-background/50">
                         d. {scholar.death_year} AH
                       </Badge>
                     )}
@@ -208,9 +210,9 @@ export default function LandingPage() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-4 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50">
-                <p className="text-3xl font-bold text-amber-600">{stat.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+              <div key={index} className="text-center p-4 rounded-xl bg-background/40 backdrop-blur-sm border border-border/50 hover:border-amber-500/30 hover:bg-background/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-amber-500/5 group">
+                <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-amber-500 to-amber-700 group-hover:scale-110 transition-transform duration-300">{stat.value}</p>
+                <p className="text-sm text-muted-foreground mt-1 font-medium">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -218,8 +220,11 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-amber-500/5 to-transparent skew-x-12 pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               {locale === 'ar' ? 'الميزات الرئيسية' : locale === 'ckb' ? 'تایبەتمەندییە سەرەکییەکان' : 'Powerful Features'}
@@ -241,14 +246,15 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-amber-500/50 group">
-                  <CardContent className="p-6">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                      <feature.icon className="w-6 h-6 text-white" />
+                <Card className="h-full transition-all duration-500 hover:shadow-xl hover:shadow-amber-500/10 border-2 hover:border-amber-500/50 group bg-card/50 backdrop-blur-sm">
+                  <CardContent className="p-8">
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500 shadow-lg`}>
+                      <feature.icon className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
+                    <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
