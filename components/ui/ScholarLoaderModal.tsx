@@ -18,7 +18,7 @@ export default function ScholarLoaderModal({ isOpen }: ScholarLoaderModalProps) 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/90 backdrop-blur-none sm:backdrop-blur-md"
         >
           <div className="relative flex flex-col items-center justify-center">
             

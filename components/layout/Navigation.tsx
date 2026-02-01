@@ -48,7 +48,7 @@ export default function Navigation() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg"
+            ? "bg-background/90 backdrop-blur-none sm:backdrop-blur-md border-b border-border/50 shadow-sm"
             : "bg-transparent"
         )}
       >
@@ -61,13 +61,13 @@ export default function Navigation() {
               className="flex items-center gap-3"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl blur-lg opacity-50" />
-                <div className="relative bg-gradient-to-br from-amber-500 to-amber-700 p-2.5 rounded-xl">
+                <div className="absolute inset-0 bg-linear-to-br from-amber-500 to-amber-700 rounded-xl blur-lg opacity-50" />
+                <div className="relative bg-linear-to-br from-amber-500 to-amber-700 p-2.5 rounded-xl">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
               </div>
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-linear-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
                   {t('title')}
                 </h1>
                 <p className="text-xs text-muted-foreground">{t('subtitle')}</p>
@@ -148,7 +148,7 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-xl pt-24"
+          className="fixed inset-0 z-40 lg:hidden bg-background/95 backdrop-blur-md pt-24"
         >
           <nav className="container mx-auto px-4 flex flex-col gap-2">
             {navItems.map((item, index) => (

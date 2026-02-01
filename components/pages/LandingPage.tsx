@@ -123,8 +123,8 @@ export default function LandingPage() {
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="hidden md:block absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="hidden md:block absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto text-center">
@@ -176,7 +176,7 @@ export default function LandingPage() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="absolute top-full mt-2 w-full bg-background/95 backdrop-blur-xl border-2 border-border/50 rounded-2xl shadow-2xl overflow-hidden z-50 divide-y divide-border/30"
+                className="absolute top-full mt-2 w-full bg-background/95 backdrop-blur-md border-2 border-border/50 rounded-2xl shadow-2xl overflow-hidden z-50 divide-y divide-border/30"
               >
                 {searchResults.map((scholar) => (
                   <button
