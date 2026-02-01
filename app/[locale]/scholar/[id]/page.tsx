@@ -3,6 +3,7 @@ import path from 'path';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ScholarProfile from '@/components/features/ScholarProfile';
+import Link from 'next/link';
 import { cache } from 'react';
 
 // Cached data fetcher to deduplicate requests
@@ -123,7 +124,22 @@ export default async function ScholarPage({ params }: PageProps & { params: Prom
   ]);
 
   if (!data) {
-    notFound();
+     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`);
+     return (
+        <main className="container py-20 text-center">
+            <h1 className="text-3xl font-bold text-red-600 mb-4">Error Loading Scholar</h1>
+            <p className="mb-4">Could not retrieve data for ID: {resolvedParams.id}</p>
+            <div className="bg-gray-100 p-4 rounded text-left mx-auto max-w-lg overflow-auto text-sm">
+                <p><strong>Attempted URL:</strong> {baseUrl}/data/scholars/{resolvedParams.id}.json</p>
+                <p><strong>Environment:</strong> {process.env.NODE_ENV}</p>
+                <p className="mt-2 text-xs text-gray-500">
+                    Note: If you are on a Vercel Preview/Private deployment, fetching from self requires authentication headers which are not available in server-side fetch. 
+                    Please ensure the deployment is Public or use a persistent storage solution.
+                </p>
+            </div>
+            <Link href="/" className="mt-8 inline-block underline">Return Home</Link>
+        </main>
+     );
   }
   
   return <ScholarProfile initialData={data} searchIndex={searchIndex} />;
