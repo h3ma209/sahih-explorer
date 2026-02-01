@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { BookOpen, ChevronDown, ChevronUp, Quote } from "lucide-react";
 import { resolveIsnadChainSync } from "@/lib/isnad";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 
 interface Hadith {
   hadith_no: string;
@@ -31,6 +32,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
   const t = useTranslations('Hadiths');
   const locale = useLocale();
   const router = useRouter();
+  const { simulateLoading } = useScholarLoader();
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [page, setPage] = useState(1);
   const itemsPerPage = 5;
@@ -145,7 +147,9 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                               <button
                                 onClick={() => {
                                   if (narratorId) {
-                                    router.push(`/${locale}/scholar/${narratorId}`);
+                                    simulateLoading(() => {
+                                      router.push(`/${locale}/scholar/${narratorId}`);
+                                    });
                                   }
                                 }}
                                 className="w-full text-left px-4 py-2.5 rounded-lg bg-gradient-to-br from-amber-500/5 to-amber-600/5 border border-amber-500/20 hover:border-amber-500/40 hover:shadow-md transition-all duration-200"

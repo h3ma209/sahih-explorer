@@ -14,6 +14,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -61,6 +62,7 @@ export function CommandPalette() {
 
   const router = useRouter();
   const locale = useLocale();
+  const { simulateLoading } = useScholarLoader();
 
   // Keyboard shortcut
   React.useEffect(() => {
@@ -150,7 +152,9 @@ export function CommandPalette() {
 
   const handleSelectScholar = (id: string) => {
     setOpen(false);
-    router.push(`/${locale}/scholar/${id}`);
+    simulateLoading(() => {
+        router.push(`/${locale}/scholar/${id}`);
+    });
   };
 
   const handleSelectHadith = (hadith: HadithResult) => {

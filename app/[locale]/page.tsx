@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 import Navigation from "@/components/layout/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -30,6 +31,7 @@ interface Stats {
 export default function Home() {
   const locale = useLocale();
   const router = useRouter();
+  const { simulateLoading } = useScholarLoader();
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -171,7 +173,11 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 className="gap-2"
-                onClick={() => router.push(`/${locale}/scholar/1`)}
+                onClick={() => {
+                  simulateLoading(() => {
+                    router.push(`/${locale}/scholar/1`);
+                  });
+                }}
               >
                 <Award className="w-5 h-5" />
                 View Prophet Muhammad ﷺ
@@ -183,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* Hadith Collections Section */}
-      <section className="py-24 bg-gradient-to-b from-background to-accent/5">
+      <section className="py-24 ">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

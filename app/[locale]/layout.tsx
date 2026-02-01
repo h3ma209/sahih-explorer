@@ -22,6 +22,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '../../i18n/routing';
+import { ScholarLoaderProvider } from '@/components/providers/ScholarLoaderProvider';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -67,7 +68,9 @@ export default async function RootLayout({
           shadow="0 0 10px #D4AF37,0 0 5px #D4AF37"
         />
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <ScholarLoaderProvider>
+            {children}
+          </ScholarLoaderProvider>
         </NextIntlClientProvider>
       </body>
     </html>

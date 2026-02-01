@@ -138,7 +138,7 @@ export default async function HadithPage({ params }: PageProps) {
       />
 
       {/* Hero Section - Matching Scholar Page */}
-      <section className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-3 mb-8">

@@ -27,6 +27,7 @@ import {
   Users,
   ChevronDown,
 } from "lucide-react";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 
 interface ScholarProfileProps {
   initialData: any;
@@ -36,6 +37,7 @@ interface ScholarProfileProps {
 export default function ScholarProfile({ initialData, searchIndex = [] }: ScholarProfileProps) {
   const router = useRouter();
   const locale = useLocale();
+  const { simulateLoading } = useScholarLoader();
   const tStats = useTranslations('Stats');
   const tNetwork = useTranslations('Network');
   const tBio = useTranslations('Biography');
@@ -82,7 +84,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
       />
 
       {/* Biography Section */}
-      <section id="biography" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="biography" className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -317,7 +319,11 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                       {teachers.length > 0 ? Array.from(new Map(teachers.map((t: any) => [t.id, t])).values()).map((t: any) => (
                         <div 
                           key={t.id} 
-                          onClick={() => router.push(`/${locale}/scholar/${t.id}`)}
+                          onClick={() => {
+                            simulateLoading(() => {
+                                router.push(`/${locale}/scholar/${t.id}`);
+                            });
+                          }}
                           className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center gap-2">
@@ -353,7 +359,11 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                       {students.length > 0 ? Array.from(new Map(students.map((s: any) => [s.id, s])).values()).map((s: any) => (
                         <div 
                           key={s.id} 
-                          onClick={() => router.push(`/${locale}/scholar/${s.id}`)}
+                          onClick={() => {
+                            simulateLoading(() => {
+                                router.push(`/${locale}/scholar/${s.id}`);
+                            });
+                          }}
                           className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/50 cursor-pointer transition-colors group"
                         >
                           <div className="flex items-center gap-2">
@@ -381,7 +391,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
       </section>
 
       {/* Timeline Section */}
-      <section id="timeline" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="timeline" className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -405,7 +415,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
       </section>
 
       {/* Hadiths Section */}
-      <section id="hadiths" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="hadiths" className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -431,7 +441,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
       </section>
 
       {/* Analytics Section */}
-      <section id="analytics" className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section id="analytics" className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

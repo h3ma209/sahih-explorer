@@ -4,7 +4,7 @@ export default function HadithLoading() {
   return (
     <div className="min-h-screen">
       {/* Hero Section Skeleton */}
-      <section className="py-12 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <section className="py-12 md:py-24 ">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Title Block */}

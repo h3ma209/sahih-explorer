@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import ReactECharts from "echarts-for-react";
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 
 interface Person {
   id: string;
@@ -28,6 +29,7 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
   const { theme } = useTheme();
   const locale = useLocale();
   const router = useRouter();
+  const { simulateLoading } = useScholarLoader();
 
   // Helper to wrap text
   const wrapText = (str: string, maxLen: number = 15) => {
@@ -187,7 +189,9 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
   const onChartClick = (params: any) => {
     if (params.dataType === 'node' && params.data.id && params.data.id !== scholar.id) {
        // Navigate to the scholar's page with locale
-       router.push(`/${locale}/scholar/${params.data.id}`);
+       simulateLoading(() => {
+         router.push(`/${locale}/scholar/${params.data.id}`);
+       });
     }
   };
 

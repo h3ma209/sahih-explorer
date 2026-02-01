@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Fuse from "fuse.js";
+import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 
 interface SearchResult {
   id: string;
@@ -30,6 +31,7 @@ interface SearchResult {
 export default function LandingPage() {
   const locale = useLocale();
   const router = useRouter();
+  const { simulateLoading } = useScholarLoader();
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [allScholars, setAllScholars] = useState<SearchResult[]>([]);
@@ -64,7 +66,9 @@ export default function LandingPage() {
   }, [searchQuery, fuse]);
 
   const handleSelectScholar = (id: string) => {
-    router.push(`/${locale}/scholar/${id}`);
+    simulateLoading(() => {
+        router.push(`/${locale}/scholar/${id}`);
+    });
   };
 
   const features = [
