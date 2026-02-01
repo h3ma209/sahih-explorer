@@ -27,6 +27,32 @@
     "tags": [
       "B.Asad",
       "al-Damashqi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Weak] [ ي  د  ت  -  ضعيف ]",
+        "ar": "Narrator[Grade:Weak] [ ي  د  ت  -  ضعيف ]",
+        "ckb": "Narrator[Grade:Weak] [ ي  د  ت  -  ضعيف ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Damascus",
+        "ar": "دمشق",
+        "ckb": "دیمەشق"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Banu Asad",
+        "ar": "بنو أسد",
+        "ckb": "بەنی ئەسەد"
+      },
+      {
+        "en": "al-Damashqi",
+        "ar": "al-Damashqi",
+        "ckb": "al-Damashqi"
+      }
     ]
   },
   "parents": [],
@@ -37,39 +63,74 @@
     {
       "id": "11016",
       "name": "al-Hasan al-Basri الحسن البصري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11029",
       "name": "'Ata' bin Abi Rabah عطاء بن أبي رباح",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11010",
       "name": "'Umar bin ‘Abdul-‘Aziz عمر بن عبد العزيز",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "18879",
       "name": "Ka'b bin Dhhl كعب بن ذهل",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20461",
       "name": "Mubashir bin Isma'i مبشر بن إسماعيل - أبو إسماعيل الكلبي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20644",
       "name": "Baqiyya bin al-Walid bin Sa'aid بقية بن الوليد بن صائد",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20736",
       "name": "Isma'il bin Ayyash bin Saleem إسماعيل بن عياش بن سليم",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -85,7 +146,12 @@
       "chain": [
         "30309",
         "27501"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-981",
@@ -102,8 +168,18 @@
         "27501",
         "11016",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [7th Generation]",
+    "ar": "تابع التابعين [الجيل السابع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+  }
 }

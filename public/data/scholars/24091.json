@@ -28,6 +28,37 @@
     "tags": [
       "Basri",
       "Egypt"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Not Thiqah] [ ق  -  مستور ]",
+        "ar": "Narrator[Grade:Not Thiqah] [ ق  -  مستور ]",
+        "ckb": "Narrator[Grade:Not Thiqah] [ ق  -  مستور ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      },
+      {
+        "en": "Egypt",
+        "ar": "مصر",
+        "ckb": "میسر"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Basri",
+        "ar": "Basri",
+        "ckb": "Basri"
+      },
+      {
+        "en": "Egypt",
+        "ar": "Egypt",
+        "ckb": "Egypt"
+      }
     ]
   },
   "parents": [],
@@ -38,44 +69,84 @@
     {
       "id": "11015",
       "name": "Ayoub al-Sakhtiyani أيوب السختياني",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11073",
       "name": "Sa'id bin Abi 'Aruba سعيد بن أبي عروبة",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "20001",
       "name": "Imam Maalik مالك بن أنس بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]"
+      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "18767",
       "name": "'Umara bin Juwayn, Abu Harun عمارة بن جوين أبو هارون العبدي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20029",
       "name": "'Abdullah bin Wahb عبد الله بن وهب بن مسلم القرشي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "30286",
       "name": "'Amr bin Abi Salmah عمرو بن أبي سلمة التنيسي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "36051",
       "name": "Muhammad bin al-Harith bin Rashid محمد بن الحارث بن راشد بن طارق",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30399",
       "name": "Yahya bin Yahya bin Bukayr يحيى بن يحيى بن بكير",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -93,8 +164,18 @@
         "24091",
         "18767",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 1
+  "total_hadiths": 1,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [7th Generation]",
+    "ar": "تابع التابعين [الجيل السابع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+  }
 }

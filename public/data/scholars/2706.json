@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Hijaz",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -32,13 +42,69 @@
       "Child",
       "Madni",
       "Hijazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ خ  م  س  -  صحبة ]",
+        "ar": "Narrator [ خ  م  س  -  صحبة ]",
+        "ckb": "Narrator [ خ  م  س  -  صحبة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "B.Taym",
+        "ar": "B.Taym",
+        "ckb": "B.Taym"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      },
+      {
+        "en": "Madni",
+        "ar": "Madni",
+        "ckb": "Madni"
+      },
+      {
+        "en": "Hijazi",
+        "ar": "Hijazi",
+        "ckb": "Hijazi"
+      }
     ]
   },
   "parents": [
     {
       "id": "2705",
       "name": "'Abdur Rahman bin 'Uthman ( عبد الرحمن بن عثمان بن عبيد الله ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [],
@@ -46,7 +112,12 @@
     {
       "id": "11525",
       "name": "'Uthman bin 'Abdur Rahman bin 'Uthman عثمان بن عبد الرحمن بن عثمان بن عبد الله",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "children": [],
@@ -54,44 +125,84 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "2705",
       "name": "'Abdur Rahman bin 'Uthman ( عبد الرحمن بن عثمان بن عبيد الله ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "11525",
       "name": "'Uthman bin 'Abdur Rahman bin 'Uthman عثمان بن عبد الرحمن بن عثمان بن عبد الله",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11059",
       "name": "Nafi' bin Jubayr bin Mut'im نافع بن جبير بن مطعم",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11213",
       "name": "Muhammad bin Ibrahim bin al-Harith محمد بن إبراهيم بن الحارث",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11013",
       "name": "al-Zuhri ابن شهاب الزهري‎, محمد بن مسلم",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11048",
       "name": "Muhammad bin al-Munkdar bin 'Abdullah محمد بن المنكدر بن عبد الله بن الهدير",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10929",
       "name": "'Abdullah bin Abi Salma عبد الله بن أبي سلمة الماجشون",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -110,7 +221,12 @@
         "11449",
         "11213",
         "2706"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sunan-an-nasai-2817",
@@ -128,8 +244,18 @@
         "11048",
         "2706",
         "2705"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "70",
@@ -29,6 +34,42 @@
       "al-Ghaffari",
       "Khaybar",
       "Hunain"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ م  4  -  صحابي ]",
+        "ar": "Narrator [ م  4  -  صحابي ]",
+        "ckb": "Narrator [ م  4  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Ghaffari",
+        "ar": "al-Ghaffari",
+        "ckb": "al-Ghaffari"
+      },
+      {
+        "en": "Khaybar",
+        "ar": "Khaybar",
+        "ckb": "Khaybar"
+      },
+      {
+        "en": "Hunain",
+        "ar": "Hunain",
+        "ckb": "Hunain"
+      }
     ]
   },
   "parents": [],
@@ -39,34 +80,64 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "11213",
       "name": "Muhammad bin Ibrahim bin al-Harith محمد بن إبراهيم بن الحارث",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "10614",
       "name": "Muhammad bin Zayd bin al-Mhajr محمد بن زيد بن المهاجر بن قنفذ",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11234",
       "name": "Yazid bin 'Abdullah bin Usama B. al-Haad يزيد بن عبد الله بن أسامة بن الهاد",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11450",
       "name": "Yazid bin Abi 'Ubaid يزيد بن أبي عبيد",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "hadiths": [
@@ -85,7 +156,12 @@
         "30212",
         "11217",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-1168",
@@ -104,7 +180,12 @@
         "11234",
         "11213",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2730",
@@ -120,7 +201,12 @@
         "20212",
         "11217",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-557",
@@ -138,7 +224,12 @@
         "11169",
         "11318",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1557",
@@ -154,7 +245,12 @@
         "20212",
         "11217",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-1514",
@@ -172,7 +268,12 @@
         "11169",
         "11318",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-2385",
@@ -188,8 +289,18 @@
         "20317",
         "11217",
         "3141"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 7
+  "total_hadiths": 7,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

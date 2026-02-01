@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Hijaz",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -30,6 +40,47 @@
       "Female",
       "B.Ghifar",
       "Khaybar"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ د  -  صحابي ]",
+        "ar": "Narrator [ د  -  صحابي ]",
+        "ckb": "Narrator [ د  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      },
+      {
+        "en": "B.Ghifar",
+        "ar": "B.Ghifar",
+        "ckb": "B.Ghifar"
+      },
+      {
+        "en": "Khaybar",
+        "ar": "Khaybar",
+        "ckb": "Khaybar"
+      }
     ]
   },
   "parents": [],
@@ -40,16 +91,31 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "11855",
       "name": "Sulaiman bin Sahaym سليمان بن سحيم",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

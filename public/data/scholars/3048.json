@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Yemen"
+      "place": "Yemen",
+      "place_display": {
+        "en": "Yemen",
+        "ar": "اليمن",
+        "ckb": "یەمەن"
+      }
     },
     "death": {
       "date_hijri": "91",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medina",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "places_of_stay": [
       "Yemen",
@@ -30,13 +40,59 @@
       "al-Kundi",
       "Child",
       "Farewell Hajj"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ ع  -  صحابة ]",
+        "ar": "Narrator [ ع  -  صحابة ]",
+        "ckb": "Narrator [ ع  -  صحابة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Yemen",
+        "ar": "اليمن",
+        "ckb": "یەمەن"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Kundi",
+        "ar": "al-Kundi",
+        "ckb": "al-Kundi"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      },
+      {
+        "en": "Farewell Hajj",
+        "ar": "Farewell Hajj",
+        "ckb": "Farewell Hajj"
+      }
     ]
   },
   "parents": [
     {
       "id": "3047",
       "name": "Yazid bin Sa'id bin Thamama ( يزيد بن سعيد بن ثمامة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [],
@@ -45,126 +101,246 @@
     {
       "id": "12216",
       "name": "'Abdullah bin al-Sa'ib عبد الله بن السائب بن يزيد الكندي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "2600",
       "name": "Huwaytib bin 'Abdul 'Uzza ( حويطب بن عبد العزى القرشي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3",
       "name": "'Umar ibn al-Khattab ( عمر بن الخطاب بن نفيل ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "4",
       "name": "'Uthman ibn 'Affaan ( عثمان بن عفان ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "2605",
       "name": "'Abdullah bin al-Sa'di ( عبد الله بن السعدي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3047",
       "name": "Yazid bin Sa'id bin Thamama ( يزيد بن سعيد بن ثمامة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "586",
       "name": "al-'Ala' bin al-Hadrami ( العلاء بن الحضرمي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "6",
       "name": "Talha ibn 'Ubaidullah ( طلحة بن عبيد الله ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "9",
       "name": "Sa'd ibn Abi Waqqas ( سعد بن أبي وقاص ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "5065",
       "name": "Sufyan bin Abi Zuhyr ( سفيان بن أبي زهير الأزدي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3195",
       "name": "'Abdur Rahman bin 'Abd al-Qari ( عبد الرحمن بن عبد القاري ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "27",
       "name": "Mu'awiya ibn Abu Sufyan ( معاوية بن أبي سفيان ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "53",
       "name": "'Aisha bint Abi Bakr ( أمّ المؤمنين عائشة بنت أبي بكر الصديق ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "12216",
       "name": "'Abdullah bin al-Sa'ib عبد الله بن السائب بن يزيد الكندي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "10888",
       "name": "Ibrahim bin 'Abdullah bin Qariz إبراهيم بن عبد الله بن قارظ",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10561",
       "name": "Humaid bin 'Abdur Rahman حميد بن عبد الرحمن بن عوف الزهرى",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "11193",
       "name": "'Abdur Rahman bin Humaid bin 'AR عبد الرحمن بن حميد بن عبد الرحمن",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "14091",
       "name": "Hamza bin Sfynh al-'Abbassri حمزة بن سفينة البصري",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "10654",
       "name": "'Umar bin 'Ata'a bin Abi al-Khawar عمر بن عطاء بن أبي الخوار",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11013",
       "name": "al-Zuhri ابن شهاب الزهري‎, محمد بن مسلم",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11539",
       "name": "Muhammad bin Yusuf B. 'Abdullah al-Kundi محمد بن يوسف بن عبد الله الكندي",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11062",
       "name": "Yahya bin Sa'id al-Ansari يحيى بن سعيد الأنصاري",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11235",
       "name": "Yazid bin 'Abdullah bin Khusayfa يزيد بن عبد الله بن خصيفة",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "hadiths": [
@@ -182,7 +358,12 @@
         "20159",
         "11580",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-470",
@@ -199,7 +380,12 @@
         "11679",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-912",
@@ -215,7 +401,12 @@
         "20177",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-913",
@@ -231,7 +422,12 @@
         "20026",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-915",
@@ -248,7 +444,12 @@
         "11207",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-916",
@@ -265,7 +466,12 @@
         "20475",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1889",
@@ -281,7 +487,12 @@
         "20159",
         "30388",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2323",
@@ -297,7 +508,12 @@
         "20001",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2824",
@@ -313,7 +529,12 @@
         "20159",
         "30388",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3083",
@@ -329,7 +550,12 @@
         "20005",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3325",
@@ -345,7 +571,12 @@
         "20160",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3581",
@@ -361,7 +592,12 @@
         "20159",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4111",
@@ -377,7 +613,12 @@
         "20159",
         "30388",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4470",
@@ -393,7 +634,12 @@
         "20005",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5732",
@@ -409,7 +655,12 @@
         "20159",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6426",
@@ -425,7 +676,12 @@
         "20159",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6797",
@@ -441,7 +697,12 @@
         "20350",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6866",
@@ -457,7 +718,12 @@
         "11679",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7251",
@@ -475,7 +741,12 @@
         "3048",
         "2600",
         "2605"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7416",
@@ -491,7 +762,12 @@
         "20350",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7424",
@@ -507,7 +783,12 @@
         "20428",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-1746",
@@ -524,7 +805,12 @@
         "3048",
         "5295",
         "54"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-1779",
@@ -545,7 +831,12 @@
         "3048",
         "3195",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-2454",
@@ -562,7 +853,12 @@
         "3048",
         "2605",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3366",
@@ -581,7 +877,12 @@
         "10561",
         "3048",
         "586"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4094",
@@ -598,7 +899,12 @@
         "30388",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4095",
@@ -616,7 +922,12 @@
         "11449",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4097",
@@ -634,7 +945,12 @@
         "11449",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4119",
@@ -649,7 +965,12 @@
         "30399",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4120",
@@ -666,7 +987,12 @@
         "20208",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-6233",
@@ -683,7 +1009,12 @@
         "20159",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-1087",
@@ -700,7 +1031,12 @@
         "20475",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1088",
@@ -717,7 +1053,12 @@
         "11107",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1089",
@@ -734,7 +1075,12 @@
         "11107",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1090",
@@ -752,7 +1098,12 @@
         "11176",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1313",
@@ -770,7 +1121,12 @@
         "20475",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1492",
@@ -787,7 +1143,12 @@
         "18203",
         "3048",
         "3047"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2590",
@@ -803,7 +1164,12 @@
         "20012",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2779",
@@ -819,7 +1185,12 @@
         "20005",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3421",
@@ -837,7 +1208,12 @@
         "10888",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4836",
@@ -854,7 +1230,12 @@
         "20012",
         "11028",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-373",
@@ -872,7 +1253,12 @@
         "11013",
         "3048",
         "5295"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-516",
@@ -889,7 +1275,12 @@
         "20177",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-581",
@@ -907,7 +1298,12 @@
         "3048",
         "3195",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-774",
@@ -929,7 +1325,12 @@
         "10888",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-925",
@@ -945,7 +1346,12 @@
         "20159",
         "30388",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-949",
@@ -962,7 +1368,12 @@
         "11193",
         "3048",
         "586"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1275",
@@ -981,7 +1392,12 @@
         "10888",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1718",
@@ -998,7 +1414,12 @@
         "20005",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2161-2",
@@ -1013,7 +1434,12 @@
         "20159",
         "30388",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-4004",
@@ -1029,7 +1455,12 @@
         "20159",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-Grade-29",
@@ -1046,7 +1477,12 @@
         "20475",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-Grade-30",
@@ -1064,7 +1500,12 @@
         "11176",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-Grade-31",
@@ -1081,7 +1522,12 @@
         "11289",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1454",
@@ -1100,7 +1546,12 @@
         "10561",
         "3048",
         "586"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1455",
@@ -1117,7 +1568,12 @@
         "11193",
         "3048",
         "586"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1658",
@@ -1135,7 +1591,12 @@
         "3048",
         "5295",
         "54"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1783",
@@ -1152,7 +1613,12 @@
         "20475",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1790",
@@ -1170,7 +1636,12 @@
         "3048",
         "3195",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2519",
@@ -1186,7 +1657,12 @@
         "20350",
         "11679",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2605",
@@ -1203,7 +1679,12 @@
         "3048",
         "2600",
         "2605"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2606",
@@ -1222,7 +1703,12 @@
         "3048",
         "2600",
         "2605"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2607",
@@ -1242,7 +1728,12 @@
         "3048",
         "2600",
         "2605"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4285",
@@ -1258,7 +1749,12 @@
         "20155",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4294",
@@ -1274,7 +1770,12 @@
         "30388",
         "3048",
         "1986"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-5708",
@@ -1292,7 +1793,12 @@
         "11013",
         "3048",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-30",
@@ -1309,7 +1815,12 @@
         "20022",
         "11062",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1126",
@@ -1325,7 +1836,12 @@
         "20159",
         "3048",
         "586"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1189",
@@ -1344,7 +1860,12 @@
         "11107",
         "11013",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1404",
@@ -1362,7 +1883,12 @@
         "3048",
         "3195",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2375",
@@ -1380,7 +1906,12 @@
         "10739",
         "11028",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2913",
@@ -1396,7 +1927,12 @@
         "20005",
         "11235",
         "3048"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3327",
@@ -1414,8 +1950,18 @@
         "11235",
         "3048",
         "5065"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 73
+  "total_hadiths": 73,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

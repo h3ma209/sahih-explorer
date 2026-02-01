@@ -11,14 +11,24 @@
       "date_display": [
         "7 BH"
       ],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "54",
       "date_gregorian": "663",
       "date_display": null,
       "place": "Medinah",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -35,25 +45,96 @@
       "Born Muslim",
       "Client",
       "Freed Slave"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ ع  -  صحابي ]",
+        "ar": "Narrator [ ع  -  صحابي ]",
+        "ckb": "Narrator [ ع  -  صحابي ]"
+      },
+      {
+        "en": "Commander",
+        "ar": "قائد",
+        "ckb": "سەركردە"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Kinana",
+        "ar": "al-Kinana",
+        "ckb": "al-Kinana"
+      },
+      {
+        "en": "al-Kalbi",
+        "ar": "al-Kalbi",
+        "ckb": "al-Kalbi"
+      },
+      {
+        "en": "Born Muslim",
+        "ar": "Born Muslim",
+        "ckb": "Born Muslim"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "Freed Slave",
+        "ar": "Freed Slave",
+        "ckb": "Freed Slave"
+      }
     ]
   },
   "parents": [
     {
       "id": "15",
       "name": "Zayd ibn Harithah ( زيد بن حارثة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "202",
       "name": "Umm Ayman, Barakah ( أم أيمن مولاة النبي صلى الله عليه وسلم ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [
     {
       "id": "224",
       "name": "Fatima bint Qays ( فاطمة بنت قيس ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "siblings": [],
@@ -61,91 +142,176 @@
     {
       "id": "12446",
       "name": "Muhammad bin Usamah bin Zayd محمد بن أسامة بن زيد بن حارثة",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "12052",
       "name": "al-Hasan bin Usamah bin Zayd الحسن بن أسامة بن زيد",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "15",
       "name": "Zayd ibn Harithah ( زيد بن حارثة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "56",
       "name": "Umm Salamah ( أم سلمة بنت أبي أمية ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "12446",
       "name": "Muhammad bin Usamah bin Zayd محمد بن أسامة بن زيد بن حارثة",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "12052",
       "name": "al-Hasan bin Usamah bin Zayd الحسن بن أسامة بن زيد",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "17",
       "name": "ibn Abbas ( عبد الله بن العباس بن عبد المطلب الحبر ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "13",
       "name": "Abu Hurairah ( أبو هريرة - عبد الرحمن بن صخر الدوسي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "10511",
       "name": "'Urwa ibn al-Zubayr عروة بن الزبير",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11113",
       "name": "Abu 'Uthman al-Nahdi عبد الرحمن بن مل - أبو عثمان النهدي",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "10581",
       "name": "'Amr bin 'Uthman عمرو بن عثمان بن عفان",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11353",
       "name": "Shaqayq bin Salmah al-Asadi شقيق بن سلمة الأسدي أبو وائل الكوفي",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "10554",
       "name": "'Amir bin Sa'd ibn Abi Waqqas عامر بن سعد بن أبي وقاص",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10511",
       "name": "'Urwa ibn al-Zubayr عروة بن الزبير",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11016",
       "name": "al-Hasan al-Basri الحسن البصري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "18293",
       "name": "al-Zbrqan bin 'Amr bin Umayya الزبرقان بن عمرو بن أمية",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "hadiths": [
@@ -164,7 +330,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-181",
@@ -182,7 +353,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1284",
@@ -200,7 +376,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1613",
@@ -219,7 +400,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1693",
@@ -237,7 +423,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1695",
@@ -254,7 +445,12 @@
         "11535",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1698",
@@ -271,7 +467,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1911",
@@ -288,7 +489,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2467",
@@ -305,7 +511,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2987",
@@ -323,7 +534,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3058",
@@ -342,7 +558,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3640",
@@ -359,7 +580,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3781",
@@ -376,7 +602,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3792",
@@ -393,7 +624,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4314",
@@ -409,7 +645,12 @@
         "20468",
         "15097",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4327",
@@ -427,7 +668,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4608",
@@ -444,7 +690,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5152",
@@ -461,7 +712,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5251",
@@ -478,7 +734,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5716",
@@ -495,7 +756,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5725",
@@ -513,7 +779,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5787",
@@ -531,7 +802,12 @@
         "20150",
         "50",
         "9"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6030",
@@ -549,7 +825,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6069",
@@ -568,7 +849,12 @@
         "11597",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6278",
@@ -589,7 +875,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6327",
@@ -607,7 +898,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6627",
@@ -624,7 +920,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6682",
@@ -641,7 +942,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6736",
@@ -658,7 +964,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6850",
@@ -676,7 +987,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6956",
@@ -692,7 +1008,12 @@
         "20468",
         "15097",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7060",
@@ -710,7 +1031,12 @@
         "10554",
         "50",
         "9"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7147",
@@ -731,7 +1057,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7466",
@@ -748,7 +1079,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7538",
@@ -765,7 +1101,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-287",
@@ -784,7 +1125,12 @@
         "11060",
         "19301",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-288",
@@ -800,7 +1146,12 @@
         "20468",
         "15097",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-2119",
@@ -817,7 +1168,12 @@
         "50",
         "11686",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-2174",
@@ -834,7 +1190,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3146",
@@ -854,7 +1215,12 @@
         "11535",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3159",
@@ -870,7 +1236,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3160",
@@ -888,7 +1259,12 @@
         "11106",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3161",
@@ -906,7 +1282,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3163",
@@ -923,7 +1304,12 @@
         "20012",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3164",
@@ -940,7 +1326,12 @@
         "20115",
         "11013",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3166",
@@ -960,7 +1351,12 @@
         "11065",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3301",
@@ -977,7 +1373,12 @@
         "20277",
         "11070",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3360",
@@ -996,7 +1397,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3361",
@@ -1018,7 +1424,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3362",
@@ -1037,7 +1448,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3429",
@@ -1054,7 +1470,12 @@
         "50",
         "11846",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3640",
@@ -1074,7 +1495,12 @@
         "20390",
         "10554",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4173",
@@ -1095,7 +1521,12 @@
         "11258",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4174",
@@ -1116,7 +1547,12 @@
         "11053",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4225",
@@ -1135,7 +1571,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4660",
@@ -1158,7 +1599,12 @@
         "30492",
         "20029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4760",
@@ -1178,7 +1624,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4999",
@@ -1197,7 +1648,12 @@
         "50",
         "10893",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5904",
@@ -1213,7 +1669,12 @@
         "11164",
         "10554",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5905",
@@ -1231,7 +1692,12 @@
         "11048",
         "10554",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5908",
@@ -1248,7 +1714,12 @@
         "11013",
         "10554",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5912",
@@ -1267,7 +1738,12 @@
         "20150",
         "410",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5913",
@@ -1286,7 +1762,12 @@
         "11276",
         "10557",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-5971",
@@ -1302,7 +1783,12 @@
         "20029",
         "50",
         "11014"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-6110",
@@ -1319,7 +1805,12 @@
         "50",
         "11172",
         "399"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-6596",
@@ -1343,7 +1834,12 @@
         "20150",
         "11014",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-6707",
@@ -1358,7 +1854,12 @@
         "20029",
         "50",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-7121",
@@ -1376,7 +1877,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-7122",
@@ -1396,7 +1902,12 @@
         "11113",
         "50",
         "11"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-7427",
@@ -1417,7 +1928,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-7674",
@@ -1434,7 +1950,12 @@
         "11060",
         "11353",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-78",
@@ -1449,7 +1970,12 @@
         "30352",
         "20032",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-252",
@@ -1465,7 +1991,12 @@
         "50",
         "11168",
         "56"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-347",
@@ -1483,7 +2014,12 @@
         "19934",
         "19911",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-676",
@@ -1502,7 +2038,12 @@
         "11526",
         "10511",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1602",
@@ -1519,7 +2060,12 @@
         "50",
         "19934",
         "19911"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1921",
@@ -1538,7 +2084,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1924",
@@ -1556,7 +2107,12 @@
         "11107",
         "11125",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1925",
@@ -1572,7 +2128,12 @@
         "20001",
         "11106",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1937",
@@ -1589,7 +2150,12 @@
         "50",
         "11029",
         "34"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2010",
@@ -1608,7 +2174,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2643",
@@ -1625,7 +2196,12 @@
         "11060",
         "19301",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2811",
@@ -1641,7 +2217,12 @@
         "50",
         "11014",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2909",
@@ -1659,7 +2240,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2967",
@@ -1681,7 +2267,12 @@
         "50",
         "11013",
         "5030"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2977",
@@ -1697,7 +2288,12 @@
         "30101",
         "20159",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3094",
@@ -1715,7 +2311,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3125",
@@ -1732,7 +2333,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3136",
@@ -1750,7 +2356,12 @@
         "50",
         "11013",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3137",
@@ -1767,7 +2378,12 @@
         "50",
         "11013",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3540",
@@ -1785,7 +2401,12 @@
         "19934",
         "19911",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3584",
@@ -1802,7 +2423,12 @@
         "50",
         "11864",
         "56"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3585",
@@ -1819,7 +2445,12 @@
         "50",
         "11864",
         "56"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4170",
@@ -1837,7 +2468,12 @@
         "19897",
         "11028",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4243",
@@ -1853,7 +2489,12 @@
         "30232",
         "50",
         "15"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4487",
@@ -1870,7 +2511,12 @@
         "50",
         "11013",
         "2216"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4489",
@@ -1887,7 +2533,12 @@
         "50",
         "11013",
         "2216"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4839",
@@ -1905,7 +2556,12 @@
         "50",
         "11013",
         "10511"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-5120",
@@ -1922,7 +2578,12 @@
         "50",
         "11002",
         "471"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-5255",
@@ -1938,7 +2599,12 @@
         "30296",
         "20029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-966",
@@ -1955,7 +2621,12 @@
         "11220",
         "11020",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1016",
@@ -1972,7 +2643,12 @@
         "50",
         "11013",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1065",
@@ -1989,7 +2665,12 @@
         "11081",
         "10554",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1413",
@@ -2005,7 +2686,12 @@
         "50",
         "19934",
         "19911"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2121",
@@ -2021,7 +2707,12 @@
         "50",
         "11168",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2167",
@@ -2037,7 +2728,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2253",
@@ -2058,7 +2754,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2702-2",
@@ -2076,7 +2777,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2976",
@@ -2093,7 +2799,12 @@
         "19934",
         "19911",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2988",
@@ -2109,7 +2820,12 @@
         "50",
         "19934",
         "19911"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3007",
@@ -2126,7 +2842,12 @@
         "11113",
         "50",
         "11"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3008",
@@ -2143,7 +2864,12 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3363",
@@ -2160,7 +2886,12 @@
         "50",
         "11176",
         "189"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3445-2",
@@ -2176,7 +2907,12 @@
         "50",
         "11168",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-4000",
@@ -2194,7 +2930,12 @@
         "11013",
         "10511",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-4190",
@@ -2210,7 +2951,12 @@
         "20040",
         "20469",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-4211",
@@ -2226,7 +2972,12 @@
         "20229",
         "50",
         "11864"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-120",
@@ -2242,7 +2993,12 @@
         "11163",
         "11020",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-616",
@@ -2261,7 +3017,12 @@
         "11211",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-1868",
@@ -2278,7 +3039,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2177",
@@ -2296,7 +3062,12 @@
         "11213",
         "10567",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2357",
@@ -2313,7 +3084,12 @@
         "239",
         "11212",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2358",
@@ -2330,7 +3106,12 @@
         "239",
         "11212",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2359",
@@ -2348,7 +3129,12 @@
         "11212",
         "13",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2909",
@@ -2364,7 +3150,12 @@
         "11070",
         "11029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2914",
@@ -2381,7 +3172,12 @@
         "10945",
         "11029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2915",
@@ -2398,7 +3194,12 @@
         "11368",
         "11029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2916",
@@ -2415,7 +3216,12 @@
         "11368",
         "11029",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2917",
@@ -2432,7 +3238,12 @@
         "11029",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3018",
@@ -2449,7 +3260,12 @@
         "11029",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3023",
@@ -2466,7 +3282,12 @@
         "11065",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3024",
@@ -2483,7 +3304,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3025",
@@ -2501,7 +3327,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3031",
@@ -2519,7 +3350,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4100",
@@ -2539,7 +3375,12 @@
         "20475",
         "11014",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4335",
@@ -2560,7 +3401,12 @@
         "11016",
         "30351",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4580",
@@ -2577,7 +3423,12 @@
         "11258",
         "17",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4807",
@@ -2595,7 +3446,12 @@
         "19934",
         "19911",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-413",
@@ -2610,7 +3466,12 @@
         "30285",
         "20157",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-498",
@@ -2627,7 +3488,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-570",
@@ -2643,7 +3509,12 @@
         "20254",
         "50",
         "19934"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-795",
@@ -2658,7 +3529,12 @@
         "20733",
         "20177",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1001",
@@ -2675,7 +3551,12 @@
         "50",
         "15",
         "56"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1058",
@@ -2694,7 +3575,12 @@
         "11526",
         "10511",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1125",
@@ -2712,7 +3598,12 @@
         "11053",
         "11053",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1277",
@@ -2730,7 +3621,12 @@
         "11189",
         "11218",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1656",
@@ -2747,7 +3643,12 @@
         "11080",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1659",
@@ -2763,7 +3664,12 @@
         "50",
         "11014",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1735",
@@ -2780,7 +3686,12 @@
         "50",
         "11013",
         "10567"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1760",
@@ -2797,7 +3708,12 @@
         "50",
         "11168",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1816",
@@ -2813,7 +3729,12 @@
         "20167",
         "11213",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1878",
@@ -2831,7 +3752,12 @@
         "50",
         "15",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-1896",
@@ -2850,7 +3776,12 @@
         "19934",
         "19911",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2154",
@@ -2867,7 +3798,12 @@
         "50",
         "10535",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2834",
@@ -2886,7 +3822,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2835",
@@ -2899,7 +3840,12 @@
       "usc_msa_ref": "",
       "chain": [
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2876",
@@ -2916,7 +3862,12 @@
         "50",
         "11168",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2951",
@@ -2934,7 +3885,12 @@
         "11013",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3055",
@@ -2953,7 +3909,12 @@
         "11045",
         "10581",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3132",
@@ -2970,7 +3931,12 @@
         "11065",
         "10511",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3134",
@@ -2988,7 +3954,12 @@
         "11125",
         "11211",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3164",
@@ -3005,7 +3976,12 @@
         "50",
         "11029",
         "34"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3168",
@@ -3021,7 +3997,12 @@
         "50",
         "11029",
         "34"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3198",
@@ -3038,7 +4019,12 @@
         "50",
         "11221",
         "4052"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3281",
@@ -3055,7 +4041,12 @@
         "50",
         "11014",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3733",
@@ -3072,7 +4063,12 @@
         "50",
         "11181",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3784",
@@ -3090,7 +4086,12 @@
         "10530",
         "10535",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3843",
@@ -3107,7 +4108,12 @@
         "50",
         "11048",
         "34"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-4133",
@@ -3127,8 +4133,18 @@
         "11289",
         "11113",
         "50"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 169
+  "total_hadiths": 169,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

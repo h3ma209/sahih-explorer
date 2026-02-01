@@ -26,6 +26,27 @@
     ],
     "tags": [
       "Female"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ م  د  س  -  صحبة ]",
+        "ar": "Narrator [ م  د  س  -  صحبة ]",
+        "ckb": "Narrator [ م  د  س  -  صحبة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "NA",
+        "ar": "NA",
+        "ckb": "NA"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      }
     ]
   },
   "parents": [],
@@ -34,7 +55,12 @@
     {
       "id": "41",
       "name": "Abu Musa al-Asha'ari ( أبو موسى الأشعري ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "children": [],
@@ -42,39 +68,74 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "41",
       "name": "Abu Musa al-Asha'ari ( أبو موسى الأشعري ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "17337",
       "name": "Ayad al-Ash'ry عياض الأشعري",
-      "grade": "Follower(Tabi')"
+      "grade": "Follower(Tabi')",
+      "grade_display": {
+        "en": "Follower (Tabi')",
+        "ar": "تابعي",
+        "ckb": "شوێنكەوتوو (تابعی)"
+      }
     },
     {
       "id": "15464",
       "name": "Qrth' al-Dby al-Kwfy قرثع الضبي الكوفي",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "15634",
       "name": "Yazid bin Aws يزيد بن أوس",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11196",
       "name": "'Abdur Rahman bin Abi Layla عبد الرحمن بن أبي ليلى",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "239",
       "name": "Thabit bin Qays b. Shammas ( ثابت بن قيس بن الشماس الأنصاري ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "hadiths": [
@@ -94,7 +155,12 @@
         "17337",
         "5392",
         "41"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-an-nasai-1866",
@@ -114,8 +180,18 @@
         "15634",
         "5392",
         "41"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

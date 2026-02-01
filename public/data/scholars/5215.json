@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medina"
+      "place": "Medina",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "death": {
       "date_hijri": "NA",
@@ -26,6 +31,27 @@
     ],
     "tags": [
       "Ansar"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ ق  -  صحابي ]",
+        "ar": "Narrator [ ق  -  صحابي ]",
+        "ckb": "Narrator [ ق  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ansar",
+        "ar": "الأنصار",
+        "ckb": "ئەنسار"
+      }
     ]
   },
   "parents": [],
@@ -36,14 +62,24 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "639",
       "name": "'Abbad bin Tameem Mazni ( عباد بن تميم بن غزية الأنصاري ( رضي الله عنه",
-      "grade": "Comp.(RA) [3rd Generation]"
+      "grade": "Comp.(RA) [3rd Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [3rd Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الثالث]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -62,7 +98,12 @@
         "11013",
         "399",
         "5215"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-ibn-majah-3273",
@@ -79,8 +120,18 @@
         "11062",
         "639",
         "5215"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

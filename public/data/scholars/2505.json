@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "63",
       "date_gregorian": "683",
       "date_display": null,
       "place": "Medina, al-Harrah",
-      "reason": "NA"
+      "reason": "NA",
+      "place_display": {
+        "en": "Medina, al-Harrah",
+        "ar": "المدينة المنورة, al-Harrah",
+        "ckb": "مەدینە, al-Harrah"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -29,18 +39,64 @@
       "Quraish",
       "B.'Adi",
       "Child"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "B.'Adi",
+        "ar": "B.'Adi",
+        "ckb": "B.'Adi"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      }
     ]
   },
   "parents": [
     {
       "id": "2500",
       "name": "Abu Jahm bin Hudhayfa ( أبو جهم بن حذيفة بن غانم ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "580",
       "name": "Khawla bint al-Qa'Qa' ( خولة بنت القعقاع بن معبد ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "spouses": [],
@@ -48,7 +104,12 @@
     {
       "id": "2506",
       "name": "'Abdullah bin Abu Jahm bin Hudhayfa ( عبد الله بن أبي الجهم بن حذيفة ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [],
@@ -56,10 +117,20 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medinah"
+      "place": "Medinah",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medinah",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -31,18 +41,74 @@
       "B.Hashim",
       "Child",
       "Died Young"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      },
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "Banu Hashim",
+        "ar": "بنو هاشم",
+        "ckb": "بەنی هاشم"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      },
+      {
+        "en": "Died Young",
+        "ar": "Died Young",
+        "ckb": "Died Young"
+      }
     ]
   },
   "parents": [
     {
       "id": "20",
       "name": "Hamza ibn 'Abd al-Muttalib ( حمزة بن عبد المطلب أسد الله ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "1261",
       "name": "Khawla bint Qays bin Qahd ( خولة بنت قيس بن قهد بن قيس بن ثعلبة ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [],
@@ -50,17 +116,32 @@
     {
       "id": "547",
       "name": "Ya'la bin Hamza ( يعلى بن حمزة بن عبد المطلب ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "546",
       "name": "'Umara bin Hamza ( عمارة بن حمزة بن عبد المطلب ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "549",
       "name": "Ammtullah bint Hamza ( أمة الله/أم الفضل بنت حمزة بن عبد المطلب ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [],
@@ -68,10 +149,20 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

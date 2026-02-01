@@ -27,6 +27,32 @@
     "tags": [
       "al-Juhni",
       "Hijazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ ت  عس  ق  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ ت  عس  ق  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ ت  عس  ق  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Juhni",
+        "ar": "al-Juhni",
+        "ckb": "al-Juhni"
+      },
+      {
+        "en": "Hijazi",
+        "ar": "Hijazi",
+        "ckb": "Hijazi"
+      }
     ]
   },
   "parents": [],
@@ -37,14 +63,24 @@
     {
       "id": "19942",
       "name": "Muhammad bin 'Umar bin 'Ali B. Abi Talib محمد بن عمر بن علي بن أبي طالب",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20029",
       "name": "'Abdullah bin Wahb عبد الله بن وهب بن مسلم القرشي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -64,7 +100,12 @@
         "19942",
         "19933",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1075",
@@ -82,7 +123,12 @@
         "19942",
         "19933",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-ibn-majah-1553",
@@ -100,8 +146,18 @@
         "19942",
         "19933",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 3
+  "total_hadiths": 3,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [7th Generation]",
+    "ar": "تابع التابعين [الجيل السابع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+  }
 }

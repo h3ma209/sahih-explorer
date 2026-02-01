@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Makkah",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -31,18 +41,74 @@
       "B.'Abd al-Dar",
       "al-Hajb",
       "Child"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator",
+        "ar": "Narrator",
+        "ckb": "Narrator"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "B.'Abd al-Dar",
+        "ar": "B.'Abd al-Dar",
+        "ckb": "B.'Abd al-Dar"
+      },
+      {
+        "en": "al-Hajb",
+        "ar": "al-Hajb",
+        "ckb": "al-Hajb"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      }
     ]
   },
   "parents": [
     {
       "id": "2801",
       "name": "Shayba bin 'Uthman ( شيبة بن عثمان الحجبي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "2805",
       "name": "Umm 'Uthman or Umm Walad Shayba ( أم عثمان بنت سفيان/ أم ولد شيبة ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [],
@@ -50,12 +116,22 @@
     {
       "id": "2802",
       "name": "Safiyya bint Shayba bin 'Uthman ( صفية بنت شيبة بن عثمان العبدرية ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "2803",
       "name": "'Abdur Rahman bin Shayba ( عبد الرحمن بن شيبة بن عثمان الحجبي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "children": [],
@@ -63,15 +139,30 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "2801",
       "name": "Shayba bin 'Uthman ( شيبة بن عثمان الحجبي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

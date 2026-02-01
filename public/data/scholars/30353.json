@@ -28,6 +28,37 @@
       "al-Mervazi",
       "Zahid",
       "Hafiz"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ خ  ت  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ خ  ت  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ خ  ت  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Merv",
+        "ar": "Merv",
+        "ckb": "Merv"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Mervazi",
+        "ar": "al-Mervazi",
+        "ckb": "al-Mervazi"
+      },
+      {
+        "en": "Zahid",
+        "ar": "Zahid",
+        "ckb": "Zahid"
+      },
+      {
+        "en": "Hafiz",
+        "ar": "Hafiz",
+        "ckb": "Hafiz"
+      }
     ]
   },
   "parents": [],
@@ -38,44 +69,84 @@
     {
       "id": "30283",
       "name": "Ishaq bin Ibrahim bin Yazid إسحاق بن إبراهيم بن يزيد",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "20232",
       "name": "Sa'id bin 'Amir al-Dab'ai سعيد بن عامر الضبعي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20244",
       "name": "'Abdullah bin Bakr عبد الله بن بكر بن حبيب السهمي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20472",
       "name": "Yazid bin Harun يزيد بن هارون",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20471",
       "name": "Yazid bin Abi Hkym يزيد بن أبي حكيم",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30001",
       "name": "al-Bukhari محمد بن اسماعيل البخاري",
-      "grade": "3rd Century AH [11th generation] [Shafi'ee]"
+      "grade": "3rd Century AH [11th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30005",
       "name": "Imam Tirmidhi الترمذي محمد بن عيسى بن سورة",
-      "grade": "3rd Century AH [12th generation]"
+      "grade": "3rd Century AH [12th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [12th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+      }
     },
     {
       "id": "30006",
       "name": "Imam Nasa'i أحمد بن شعيب بن علي بن سنان النسائي",
-      "grade": "3rd Century AH [12th generation]"
+      "grade": "3rd Century AH [12th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [12th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -93,7 +164,12 @@
         "20244",
         "11279",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1430",
@@ -111,7 +187,12 @@
         "11183",
         "11161",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1533",
@@ -128,7 +209,12 @@
         "11163",
         "11260",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1935",
@@ -147,7 +233,12 @@
         "20173",
         "11250",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2036",
@@ -164,7 +255,12 @@
         "11449",
         "10567",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2653",
@@ -181,7 +277,12 @@
         "20020",
         "11436",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2892",
@@ -198,7 +299,12 @@
         "20439",
         "11172",
         "399"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3616",
@@ -214,7 +320,12 @@
         "20472",
         "11279",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4520",
@@ -230,7 +341,12 @@
         "20244",
         "11279",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4541",
@@ -246,7 +362,12 @@
         "20244",
         "11279",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4607",
@@ -264,7 +385,12 @@
         "11183",
         "11161",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5475",
@@ -279,7 +405,12 @@
         "30353",
         "11071",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5490",
@@ -296,7 +427,12 @@
         "11071",
         "11270",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-6556",
@@ -314,7 +450,12 @@
         "11183",
         "11161",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "jami-al-tirmidhi-254",
@@ -332,7 +473,12 @@
         "11013",
         "11003",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-268",
@@ -353,7 +499,12 @@
         "10778",
         "19941",
         "3045"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-479",
@@ -368,7 +519,12 @@
         "30353",
         "20244",
         "5115"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1034",
@@ -383,7 +539,12 @@
         "30353",
         "20232",
         "20297"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1295",
@@ -399,8 +560,18 @@
         "20241",
         "15223",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     }
   ],
-  "total_hadiths": 19
+  "total_hadiths": 19,
+  "grade_display": {
+    "en": "3rd Century AH [11th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+  }
 }

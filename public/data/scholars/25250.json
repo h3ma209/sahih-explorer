@@ -30,13 +30,59 @@
       "Client",
       "Judge",
       "al-Kufi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ س  -  ثقة ]"
+      },
+      {
+        "en": "Qadhi(Judge)",
+        "ar": "Qadhi(Judge)",
+        "ckb": "Qadhi(Judge)"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-'Absi",
+        "ar": "al-'Absi",
+        "ckb": "al-'Absi"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "Judge (Qadi)",
+        "ar": "قاضي",
+        "ckb": "دادوەر"
+      },
+      {
+        "en": "al-Kufi",
+        "ar": "al-Kufi",
+        "ckb": "al-Kufi"
+      }
     ]
   },
   "parents": [
     {
       "id": "25007",
       "name": "Ibrahim bin 'Uthman bin Khuwasti إبراهيم بن عثمان بن خواستي أبو شيبة",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "spouses": [],
@@ -45,17 +91,32 @@
     {
       "id": "30201",
       "name": "Abu Bakr bin Abi Shayba أبو بكر بن أبي شيبة",
-      "grade": "3rd Century AH"
+      "grade": "3rd Century AH",
+      "grade_display": {
+        "en": "3rd Century AH",
+        "ar": "القرن الثالث الهجري",
+        "ckb": "سەدەی سێیەمی كۆچی"
+      }
     },
     {
       "id": "30203",
       "name": "'Uthman bin Muhammad عثمان بن محمد بن إبراهيم / بن أبي شيبة",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "39913",
       "name": "al-Qasim bin Abi Shayba القاسم بن أبي شيبة",
-      "grade": "3rd Century AH"
+      "grade": "3rd Century AH",
+      "grade_display": {
+        "en": "3rd Century AH",
+        "ar": "القرن الثالث الهجري",
+        "ckb": "سەدەی سێیەمی كۆچی"
+      }
     }
   ],
   "teachers": [],
@@ -63,12 +124,22 @@
     {
       "id": "30201",
       "name": "Abu Bakr bin Abi Shayba أبو بكر بن أبي شيبة",
-      "grade": "3rd Century AH"
+      "grade": "3rd Century AH",
+      "grade_display": {
+        "en": "3rd Century AH",
+        "ar": "القرن الثالث الهجري",
+        "ckb": "سەدەی سێیەمی كۆچی"
+      }
     },
     {
       "id": "30203",
       "name": "'Uthman bin Muhammad عثمان بن محمد بن إبراهيم / بن أبي شيبة",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -89,7 +160,12 @@
         "11346",
         "4046",
         "39"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1654",
@@ -108,7 +184,12 @@
         "11011",
         "11211",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-ibn-majah-2141",
@@ -125,7 +206,12 @@
         "11060",
         "10750",
         "10511"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3210",
@@ -143,7 +229,12 @@
         "912",
         "17",
         "5"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3831",
@@ -160,8 +251,18 @@
         "11060",
         "11161",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 5
+  "total_hadiths": 5,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [9th Generation]",
+    "ar": "تابع التابعين [الجيل التاسع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+  }
 }

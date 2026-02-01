@@ -28,13 +28,49 @@
       "al-Asbahi",
       "Ally B.Taym",
       "al-Madni"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah]",
+        "ar": "Narrator[Grade:Thiqah]",
+        "ckb": "Narrator[Grade:Thiqah]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Asbahi",
+        "ar": "al-Asbahi",
+        "ckb": "al-Asbahi"
+      },
+      {
+        "en": "Ally B.Taym",
+        "ar": "Ally B.Taym",
+        "ckb": "Ally B.Taym"
+      },
+      {
+        "en": "al-Madni",
+        "ar": "al-Madni",
+        "ckb": "al-Madni"
+      }
     ]
   },
   "parents": [
     {
       "id": "11443",
       "name": "Malik bin Abi 'Amir مالك بن أبي عامر الأصبحي",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     }
   ],
   "spouses": [],
@@ -42,38 +78,68 @@
     {
       "id": "11445",
       "name": "Nafi' bin Malik bin Abi 'Amir نافع بن مالك بن أبي عامر الأصبحي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "21679",
       "name": "Uvais bin Malik bin Abi 'Amir أويس بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     },
     {
       "id": "21725",
       "name": "al-Rabi' bin Malik bin Abi 'Amir الربيع بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     }
   ],
   "children": [
     {
       "id": "20001",
       "name": "Imam Maalik مالك بن أنس بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]"
+      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "11443",
       "name": "Malik bin Abi 'Amir مالك بن أبي عامر الأصبحي",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20001",
       "name": "Imam Maalik مالك بن أنس بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]"
+      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -91,7 +157,12 @@
         "20001",
         "25510",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-1508",
@@ -108,7 +179,12 @@
         "20001",
         "25510",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3296",
@@ -124,7 +200,12 @@
         "20001",
         "25510",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-259-3",
@@ -140,7 +221,12 @@
         "20001",
         "25510",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-3835",
@@ -157,7 +243,12 @@
         "25510",
         "13",
         "35"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-6709",
@@ -173,7 +264,12 @@
         "20001",
         "25510",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-4117",
@@ -189,7 +285,12 @@
         "20001",
         "25510",
         "11811"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4199",
@@ -205,7 +306,12 @@
         "20001",
         "25510",
         "20507"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2991",
@@ -222,7 +328,12 @@
         "20001",
         "25510",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-651",
@@ -239,7 +350,12 @@
         "20001",
         "25510",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2474",
@@ -256,7 +372,12 @@
         "20001",
         "25510",
         "38"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-5028",
@@ -273,8 +394,18 @@
         "20001",
         "25510",
         "6"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 12
+  "total_hadiths": 12,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi')",
+    "ar": "تابع التابعين",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو"
+  }
 }

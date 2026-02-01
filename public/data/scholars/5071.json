@@ -27,6 +27,32 @@
     "tags": [
       "al-Hadhli",
       "al-Basra"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ د  س  ق  -  صحابي ]",
+        "ar": "Narrator [ د  س  ق  -  صحابي ]",
+        "ckb": "Narrator [ د  س  ق  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Hadhli",
+        "ar": "al-Hadhli",
+        "ckb": "al-Hadhli"
+      },
+      {
+        "en": "al-Basra",
+        "ar": "al-Basra",
+        "ckb": "al-Basra"
+      }
     ]
   },
   "parents": [],
@@ -36,46 +62,86 @@
     {
       "id": "6758",
       "name": "Sinan bin Salma bin al-Mahbaq ( سنان بن سلمة بن المحبق الهذلي ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "10723",
       "name": "Musa bin Salmah bin al-Mahbaq موسى بن سلمة بن المحبق",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "14319",
       "name": "Qbys'h bin Hryth قبيصة بن حريث ويقال حريث بن قبيصة",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "14062",
       "name": "Jwn bin Qtad'h bin al-A'wr جون بن قتادة بن الأعور",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "11016",
       "name": "al-Hasan al-Basri الحسن البصري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "19551",
       "name": "Umm 'Asim أم عاصم",
-      "grade": "Follower(Tabi')"
+      "grade": "Follower(Tabi')",
+      "grade_display": {
+        "en": "Follower (Tabi')",
+        "ar": "تابعي",
+        "ckb": "شوێنكەوتوو (تابعی)"
+      }
     }
   ],
   "hadiths": [
@@ -92,7 +158,12 @@
         "20250",
         "20258",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4125",
@@ -111,7 +182,12 @@
         "11016",
         "14062",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4417",
@@ -130,7 +206,12 @@
         "11016",
         "5071",
         "40"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4460",
@@ -149,7 +230,12 @@
         "11016",
         "14319",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4461",
@@ -166,7 +252,12 @@
         "11019",
         "11016",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1452",
@@ -185,7 +276,12 @@
         "274",
         "5071",
         "20278"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-3363",
@@ -204,7 +300,12 @@
         "11016",
         "14319",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3364",
@@ -222,7 +323,12 @@
         "11019",
         "11016",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4243",
@@ -241,7 +347,12 @@
         "11016",
         "14062",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-2649",
@@ -258,7 +369,12 @@
         "11311",
         "11016",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2704",
@@ -276,8 +392,18 @@
         "11016",
         "14319",
         "5071"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 11
+  "total_hadiths": 11,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

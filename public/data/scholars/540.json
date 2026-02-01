@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medinah",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -32,32 +42,103 @@
       "B.Hashim",
       "Nephew",
       "Child"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator",
+        "ar": "Narrator",
+        "ckb": "Narrator"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      },
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "Banu Hashim",
+        "ar": "بنو هاشم",
+        "ckb": "بەنی هاشم"
+      },
+      {
+        "en": "Nephew",
+        "ar": "Nephew",
+        "ckb": "Nephew"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      }
     ]
   },
   "parents": [
     {
       "id": "117",
       "name": "Abu Sufyan ibn al-Harith ( أبو سفيان بن الحارث بن عبد المطلب ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "541",
       "name": "Umm 'Amr bint al-Muqawwim ( ‎أم عمرو بنت المقوم بن عبد المطلب ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "spouses": [
     {
       "id": "430",
       "name": "Mu'attib bin Abi Lahab ( معتب بن أبي لهب بن عبد المطلب بن هاشم ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "siblings": [
     {
       "id": "118",
       "name": "Ja'far ibn Abi Sufyan ( ‎جعفر بن أبي سفيان بن الحارث ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [],
@@ -65,10 +146,20 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

@@ -28,6 +28,37 @@
       "al-Tamimi",
       "al-Sa'di",
       "al-Kufi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Sadooq] [ خت  ت  -  صدوق ]",
+        "ar": "Narrator[Grade:Sadooq] [ خت  ت  -  صدوق ]",
+        "ckb": "Narrator[Grade:Sadooq] [ خت  ت  -  صدوق ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Tamimi",
+        "ar": "al-Tamimi",
+        "ckb": "al-Tamimi"
+      },
+      {
+        "en": "al-Sa'di",
+        "ar": "al-Sa'di",
+        "ckb": "al-Sa'di"
+      },
+      {
+        "en": "al-Kufi",
+        "ar": "al-Kufi",
+        "ckb": "al-Kufi"
+      }
     ]
   },
   "parents": [],
@@ -38,44 +69,84 @@
     {
       "id": "11060",
       "name": "Sulaiman al-A'mash الأعمش / سليمان بن مهران",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "11368",
       "name": "'Abdul Malik bin 'Umayr al-Qabti عبد الملك بن عمير بن سويد القبطي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10957",
       "name": "al-Lyth bin Abi Sulaym الليث بن أبي سليم",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30199",
       "name": "'Aabad bin Y'aqub al-Rwajny عباد بن يعقوب الرواجني",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "38495",
       "name": "Muhammad bin Hmyd bin Hyan محمد بن حميد بن حيان",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "36649",
       "name": "Muhammad bin 'Isa bin al-Tibaa' محمد بن عيسى بن الطباع",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "31366",
       "name": "''Aabadh bin Ziyad Shykh عبادة بن زياد",
-      "grade": "3rd Century AH"
+      "grade": "3rd Century AH",
+      "grade_display": {
+        "en": "3rd Century AH",
+        "ar": "القرن الثالث الهجري",
+        "ckb": "سەدەی سێیەمی كۆچی"
+      }
     },
     {
       "id": "20392",
       "name": "al-Walid bin Salah al-Nakhas/al-Nahas الوليد بن صالح النخاس",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -91,7 +162,12 @@
       "chain": [
         "36649",
         "25147"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2212-2",
@@ -108,7 +184,12 @@
         "11060",
         "10835",
         "123"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-4058",
@@ -125,8 +206,18 @@
         "11060",
         "11381",
         "16"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     }
   ],
-  "total_hadiths": 3
+  "total_hadiths": 3,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [9th Generation]",
+    "ar": "تابع التابعين [الجيل التاسع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+  }
 }

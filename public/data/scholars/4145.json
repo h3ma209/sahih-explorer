@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medina"
+      "place": "Medina",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "death": {
       "date_hijri": "70",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Kufa",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
     },
     "places_of_stay": [
       "Medina",
@@ -31,13 +41,64 @@
       "al-'Ajli",
       "Ally B.Zuhrah",
       "Child"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ خ  م  د  س  ق  -  ثقة ]",
+        "ar": "Narrator [ خ  م  د  س  ق  -  ثقة ]",
+        "ckb": "Narrator [ خ  م  د  س  ق  -  ثقة ]"
+      },
+      {
+        "en": "Fiqh",
+        "ar": "فقه",
+        "ckb": "فیقهـ"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Hadhli",
+        "ar": "al-Hadhli",
+        "ckb": "al-Hadhli"
+      },
+      {
+        "en": "al-'Ajli",
+        "ar": "al-'Ajli",
+        "ckb": "al-'Ajli"
+      },
+      {
+        "en": "Ally B.Zuhrah",
+        "ar": "Ally B.Zuhrah",
+        "ckb": "Ally B.Zuhrah"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      }
     ]
   },
   "parents": [
     {
       "id": "765",
       "name": "'Utba ibn Mas'ud ( عتبة بن مسعود بن غافل ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "spouses": [],
@@ -46,81 +107,156 @@
     {
       "id": "11004",
       "name": "'Ubaydullah bin 'Abdullah bin 'Utba عبيد الله بن عبد الله بن عتبة بن مسعود",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10806",
       "name": "'Awn bin 'Abdullah bin 'Utba عون بن عبد الله بن عتبة بن مسعود الهذلي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "16",
       "name": "ibn Mas'ud ( عبد الله بن مسعود ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3",
       "name": "'Umar ibn al-Khattab ( عمر بن الخطاب بن نفيل ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "25",
       "name": "'Ammar ibn Yasir ( عمار بن ياسر بن عامر ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "13",
       "name": "Abu Hurairah ( أبو هريرة - عبد الرحمن بن صخر الدوسي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "11004",
       "name": "'Ubaydullah bin 'Abdullah bin 'Utba عبيد الله بن عبد الله بن عتبة بن مسعود",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10806",
       "name": "'Awn bin 'Abdullah bin 'Utba عون بن عبد الله بن عتبة بن مسعود الهذلي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "10561",
       "name": "Humaid bin 'Abdur Rahman حميد بن عبد الرحمن بن عوف الزهرى",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "19017",
       "name": "Mua'wiya bin 'Abdullah bin Ja'far معاوية بن عبد الله بن جعفر بن أبي طالب",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11049",
       "name": "Abu Ishaq al-Sabay'ai' أبو إسحاق السبيعي عمرو بن عبد الله",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11052",
       "name": "'Amir al-Sha'bi عامر الشعبي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10697",
       "name": "'Abdullah bin Ma'bd عبد الله بن معبد الزماني",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11035",
       "name": "Ibn Sirin محمد بن سيرين الأنصاري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -140,7 +276,12 @@
         "10561",
         "4145",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4959",
@@ -157,7 +298,12 @@
         "11015",
         "20278",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-5376",
@@ -174,7 +320,12 @@
         "20472",
         "11004",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-7735",
@@ -192,7 +343,12 @@
         "10806",
         "4145",
         "16"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-7742",
@@ -211,7 +367,12 @@
         "11019",
         "10697",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-2116",
@@ -229,7 +390,12 @@
         "11019",
         "11283",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3284",
@@ -246,7 +412,12 @@
         "20724",
         "10806",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-an-nasai-317",
@@ -266,7 +437,12 @@
         "11004",
         "4145",
         "25"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-988",
@@ -283,7 +459,12 @@
         "11197",
         "19017",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3029",
@@ -300,7 +481,12 @@
         "11013",
         "11004",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3684",
@@ -323,7 +509,12 @@
         "11338",
         "11052",
         "4145"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-609",
@@ -341,8 +532,18 @@
         "11004",
         "4145",
         "25"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 12
+  "total_hadiths": 12,
+  "grade_display": {
+    "en": "Companion (RA) [2nd Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الثاني]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی دووەم]"
+  }
 }

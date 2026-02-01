@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medinah"
+      "place": "Medinah",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medina",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "places_of_stay": [
       "Medinah"
@@ -31,6 +41,52 @@
       "B.'Ady B.al-Najjar",
       "Uhud",
       "Khandaq"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ بخ  م  4  -  صحابي ]",
+        "ar": "Narrator [ بخ  م  4  -  صحابي ]",
+        "ckb": "Narrator [ بخ  م  4  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ansar",
+        "ar": "الأنصار",
+        "ckb": "ئەنسار"
+      },
+      {
+        "en": "Khazraj",
+        "ar": "الخزرج",
+        "ckb": "خەزرەج"
+      },
+      {
+        "en": "B.'Ady B.al-Najjar",
+        "ar": "B.'Ady B.al-Najjar",
+        "ckb": "B.'Ady B.al-Najjar"
+      },
+      {
+        "en": "Battle of Uhud",
+        "ar": "غزوة أحد",
+        "ckb": "جەنگی ئوحود"
+      },
+      {
+        "en": "Battle of the Trench",
+        "ar": "غزوة الخندق",
+        "ckb": "جەنگی خەندەق"
+      }
     ]
   },
   "parents": [],
@@ -41,46 +97,91 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "33",
       "name": "Abu Ayyub al-Ansari ( أبو أيوب الأنصاري خالد بن زيد ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "11221",
       "name": "Muhammad bin Ka'b bin Sulaym al-Qarzi محمد بن كعب بن سليم بن أسد القرظي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10617",
       "name": "Muhammad bin Qays al-Madni محمد بن قيس المدني القاص",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "11253",
       "name": "'Abdullah bin Mahayraz عبد الله بن محيريز",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "16032",
       "name": "Ziyad bin Rabi'a bin Na'eem زياد بن ربيعة بن نعيم",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "19519",
       "name": "Lu'lu'h Mwlah al-Ansar لؤلؤة مولاة الأنصار",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

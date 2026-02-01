@@ -16,7 +16,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Kufa",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
     },
     "places_of_stay": [
       "Nejd",
@@ -30,13 +35,59 @@
     "tags": [
       "Ghatafan",
       "al-Ashja'"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ د  -  صحبة ]",
+        "ar": "Narrator [ د  -  صحبة ]",
+        "ckb": "Narrator [ د  -  صحبة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Nejd",
+        "ar": "Nejd",
+        "ckb": "Nejd"
+      },
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      },
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ghatafan",
+        "ar": "Ghatafan",
+        "ckb": "Ghatafan"
+      },
+      {
+        "en": "al-Ashja'",
+        "ar": "al-Ashja'",
+        "ckb": "al-Ashja'"
+      }
     ]
   },
   "parents": [
     {
       "id": "463",
       "name": "Nua'ym ibn Mas'ud ( نعيم بن مسعود الأشجعي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "spouses": [],
@@ -44,7 +95,12 @@
     {
       "id": "456",
       "name": "Umm Sabir bint Nua'ym ibn Mas'ud ( أم صابر بنت نعيم بن مسعود الأشجعي ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [],
@@ -52,21 +108,41 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "11342",
       "name": "Salm bin Abi al-Ja'd سالم بن أبي الجعد",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10766",
       "name": "Sa'd bin Tariq, Abu Malik سعد بن طارق بن أشيم أبو مالك الأشجعي",
-      "grade": "Follower(Tabi')"
+      "grade": "Follower(Tabi')",
+      "grade_display": {
+        "en": "Follower (Tabi')",
+        "ar": "تابعي",
+        "ckb": "شوێنكەوتوو (تابعی)"
+      }
     }
   ],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medina",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -30,13 +40,59 @@
       "Quraish",
       "B.Hashim",
       "Cousin"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      },
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "Banu Hashim",
+        "ar": "بنو هاشم",
+        "ckb": "بەنی هاشم"
+      },
+      {
+        "en": "Cousin",
+        "ar": "Cousin",
+        "ckb": "Cousin"
+      }
     ]
   },
   "parents": [
     {
       "id": "9993",
       "name": "Abu Lahab ibn 'Abd al-Muttalib أبو لهب",
-      "grade": "Prophet's Relative [Non-Muslim]"
+      "grade": "Prophet's Relative [Non-Muslim]",
+      "grade_display": {
+        "en": "Prophet's Relative [Non-Muslim]",
+        "ar": "قريب النبي [غير مسلم]",
+        "ckb": "خزمى پێغەمبەر [غیر موسڵمان]"
+      }
     }
   ],
   "spouses": [],
@@ -44,22 +100,42 @@
     {
       "id": "428",
       "name": "'Utba bin Abi Lahab ( عتبة بن أبي لهب ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "430",
       "name": "Mu'attib bin Abi Lahab ( معتب بن أبي لهب بن عبد المطلب بن هاشم ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "453",
       "name": "Durrah bint Abi Lahab ( درة بنت أبي لهب بن عبد المطلب الهاشمية ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "537",
       "name": "Khalida bint Abi Lahab ( خالدة بنت أبي لهب بن عبد المطلب الهاشمية ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [],
@@ -67,10 +143,20 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

@@ -11,14 +11,24 @@
       "date_display": [
         "60 BH"
       ],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "62",
       "date_gregorian": "680",
       "date_display": null,
       "place": "Medina",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -35,6 +45,62 @@
       "Conquest",
       "Hunain",
       "Hijazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ خ  م  س  -  صحابي ]",
+        "ar": "Narrator [ خ  م  س  -  صحابي ]",
+        "ckb": "Narrator [ خ  م  س  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "B. Kinan",
+        "ar": "B. Kinan",
+        "ckb": "B. Kinan"
+      },
+      {
+        "en": "B. al-Dayl",
+        "ar": "B. al-Dayl",
+        "ckb": "B. al-Dayl"
+      },
+      {
+        "en": "Late Mulsim",
+        "ar": "Late Mulsim",
+        "ckb": "Late Mulsim"
+      },
+      {
+        "en": "Conquest",
+        "ar": "Conquest",
+        "ckb": "Conquest"
+      },
+      {
+        "en": "Hunain",
+        "ar": "Hunain",
+        "ckb": "Hunain"
+      },
+      {
+        "en": "Hijazi",
+        "ar": "Hijazi",
+        "ckb": "Hijazi"
+      }
     ]
   },
   "parents": [],
@@ -45,34 +111,64 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "11820",
       "name": "'Abdur Rahman bin Muti' bin al-Aswad عبد الرحمن بن مطيع بن الأسود",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "11204",
       "name": "'Arak bin Malik عراك بن مالك الغفاري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11717",
       "name": "'Auf bin al-Harith bin al-Tufayl عوف بن الحارث بن الطفيل بن سخبرة",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11003",
       "name": "Abu Bakr bin 'Abdur Rahman أبو بكر بن عبد الرحمن بن الحارث بن هشام",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -95,7 +191,12 @@
         "11003",
         "11820",
         "43"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-an-nasai-478",
@@ -113,7 +214,12 @@
         "11407",
         "11204",
         "43"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-479",
@@ -130,7 +236,12 @@
         "11411",
         "11204",
         "43"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-480",
@@ -147,8 +258,18 @@
         "11204",
         "43",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

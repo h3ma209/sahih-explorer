@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "NA",
@@ -28,6 +33,37 @@
     "tags": [
       "al-Khuza'i",
       "Makkah"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ د  ت  س  -  صحابي ]",
+        "ar": "Narrator [ د  ت  س  -  صحابي ]",
+        "ckb": "Narrator [ د  ت  س  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Khuza'i",
+        "ar": "al-Khuza'i",
+        "ckb": "al-Khuza'i"
+      },
+      {
+        "en": "Makkah",
+        "ar": "Makkah",
+        "ckb": "Makkah"
+      }
     ]
   },
   "parents": [],
@@ -38,14 +74,24 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "13074",
       "name": "'Abdul 'Aziz bin Abd عبد العزيز بن عبد الله بن خالد",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -61,7 +107,12 @@
       "chain": [
         "30367",
         "5277"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-935",
@@ -79,7 +130,12 @@
         "13116",
         "30105",
         "5277"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-2863",
@@ -96,7 +152,12 @@
         "13116",
         "30105",
         "5277"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2864",
@@ -113,8 +174,18 @@
         "11417",
         "13074",
         "5277"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

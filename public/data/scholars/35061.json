@@ -27,6 +27,32 @@
     "tags": [
       "al-Zubaidi",
       "al-Kufa"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ د  عس  ق  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ د  عس  ق  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ د  عس  ق  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Zubaidi",
+        "ar": "al-Zubaidi",
+        "ckb": "al-Zubaidi"
+      },
+      {
+        "en": "al-Kufa",
+        "ar": "al-Kufa",
+        "ckb": "al-Kufa"
+      }
     ]
   },
   "parents": [],
@@ -37,39 +63,74 @@
     {
       "id": "20406",
       "name": "Ibrahim bin Yusuf bin Ishaq إبراهيم بن يوسف بن إسحاق",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "25186",
       "name": "'Ubaid'h bin al-'Aswad عبيدة بن الأسود",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     },
     {
       "id": "28108",
       "name": "al-Husain bin Zayd bin 'Ali الحسين بن زيد بن علي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20032",
       "name": "Waki' bin al-Jarrah وكيع بن الجراح",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20340",
       "name": "'Ubaidullah bin Musa bin Abi al-Mukhtar عبيد الله بن موسى بن أبي المختار باذام",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30002",
       "name": "Abu Da'ud أبو داود السجستاني الأزدي",
-      "grade": "3rd Century AH [11th generation] [Hanafi]"
+      "grade": "3rd Century AH [11th generation] [Hanafi]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30004",
       "name": "Ibn Maja ابن ماجة",
-      "grade": "3rd Century AH [12th generation]"
+      "grade": "3rd Century AH [12th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [12th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -88,7 +149,12 @@
         "10530",
         "10535",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sunan-abi-daud-4242",
@@ -104,7 +170,12 @@
         "35061",
         "11415",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-5222",
@@ -121,8 +192,18 @@
         "20473",
         "11049",
         "400"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     }
   ],
-  "total_hadiths": 3
+  "total_hadiths": 3,
+  "grade_display": {
+    "en": "3rd Century AH [11th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+  }
 }

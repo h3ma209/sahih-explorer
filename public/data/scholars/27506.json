@@ -28,6 +28,37 @@
       "Quraish",
       "Client",
       "al-Damashqi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ د  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ د  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ د  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Damascus",
+        "ar": "دمشق",
+        "ckb": "دیمەشق"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Damashqi",
+        "ar": "al-Damashqi",
+        "ckb": "al-Damashqi"
+      }
     ]
   },
   "parents": [],
@@ -38,34 +69,64 @@
     {
       "id": "17084",
       "name": "Yahya bin Yahya bin Qays يحيى بن يحيى بن قيس",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "17510",
       "name": "Zayd bin Artah زيد بن أرطاة",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20024",
       "name": "'Abdur Rahman bin 'Amr al-Awza'i عبد الرحمن بن عمرو أبو عمرو الأوزاعي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20732",
       "name": "Muhammad bin Shu'aib bin Shabur محمد بن شعيب بن شابور",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20398",
       "name": "Sdqh bin Khalid al-Amwy صدقة بن خالد الأموي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20733",
       "name": "al-Walid bin Muslim al-Quraishi الوليد بن مسلم القرشي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -82,7 +143,12 @@
         "38659",
         "20732",
         "27506"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4271",
@@ -98,8 +164,18 @@
         "27506",
         "17084",
         "30002"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [7th Generation]",
+    "ar": "تابع التابعين [الجيل السابع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+  }
 }

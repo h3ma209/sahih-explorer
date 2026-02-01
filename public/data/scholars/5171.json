@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "50",
@@ -28,6 +33,37 @@
     ],
     "tags": [
       "al-Kundi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator [ م  د  س  ق  -  صحابي ]",
+        "ar": "Narrator [ م  د  س  ق  -  صحابي ]",
+        "ckb": "Narrator [ م  د  س  ق  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      },
+      {
+        "en": "Jazira",
+        "ar": "Jazira",
+        "ckb": "Jazira"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Kundi",
+        "ar": "al-Kundi",
+        "ckb": "al-Kundi"
+      }
     ]
   },
   "parents": [],
@@ -36,33 +72,58 @@
     {
       "id": "5173",
       "name": "al-'Ars bin 'Umayra al-Kindi ( العرس بن عميرة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "children": [
     {
       "id": "18721",
       "name": "'Ady bin 'Ady bin 'Umayra عدي بن عدي بن عميرة",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "11046",
       "name": "Qays bin Abi Hazim قيس بن أبي حازم",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "10910",
       "name": "Rja'a bin Hywh رجاء بن حيوة",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -81,7 +142,12 @@
         "11418",
         "11046",
         "5171"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-4850",
@@ -98,7 +164,12 @@
         "11418",
         "11046",
         "5171"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-3581",
@@ -115,7 +186,12 @@
         "11418",
         "11046",
         "5171"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-ibn-majah-1945",
@@ -132,8 +208,18 @@
         "11251",
         "18721",
         "5171"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

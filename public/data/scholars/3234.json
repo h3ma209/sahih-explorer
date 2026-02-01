@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Yemen/al-Ta'if"
+      "place": "Yemen/al-Ta'if",
+      "place_display": {
+        "en": "Yemen/al-Ta'if",
+        "ar": "اليمن/al-Ta'if",
+        "ckb": "یەمەن/al-Ta'if"
+      }
     },
     "death": {
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Taif/Medina",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Taif/Medina",
+        "ar": "Taif/المدينة المنورة",
+        "ckb": "Taif/مەدینە"
+      }
     },
     "places_of_stay": [
       "Yemen",
@@ -32,6 +42,57 @@
       "Ta'if",
       "Slave",
       "Client"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Yemen",
+        "ar": "اليمن",
+        "ckb": "یەمەن"
+      },
+      {
+        "en": "al-Taif",
+        "ar": "al-Taif",
+        "ckb": "al-Taif"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Female",
+        "ar": "أنثى",
+        "ckb": "مێ"
+      },
+      {
+        "en": "B.Thaqif",
+        "ar": "B.Thaqif",
+        "ckb": "B.Thaqif"
+      },
+      {
+        "en": "Ta'if",
+        "ar": "Ta'if",
+        "ckb": "Ta'if"
+      },
+      {
+        "en": "Slave",
+        "ar": "Slave",
+        "ckb": "Slave"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      }
     ]
   },
   "parents": [],
@@ -39,7 +100,12 @@
     {
       "id": "3230",
       "name": "al-Harith bin Kulda al-Thaqafi ( الحارث بن كلدة بن عمرو ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "siblings": [],
@@ -47,27 +113,52 @@
     {
       "id": "3231",
       "name": "Nafi' bin al-Harith al-Thaqafi ( نافع بن الحارث بن كلدة الثقفي ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3229",
       "name": "Abu Bakra al-Thaqafi ( أبو بكرة الثقفي الطائفي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3232",
       "name": "Azdah bint al-Harith al-Thaqafi ( أزدة/أروة بنت الحارث بن كلدة الثقفية ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

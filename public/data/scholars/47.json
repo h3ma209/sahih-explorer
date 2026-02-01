@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medinah"
+      "place": "Medinah",
+      "place_display": {
+        "en": "Medinah",
+        "ar": "المدينة المنورةh",
+        "ckb": "مەدینەh"
+      }
     },
     "death": {
       "date_hijri": "32",
@@ -33,6 +38,62 @@
       "Badr",
       "Uhud",
       "Khandaq"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ عخ  4  -  صحابي ]",
+        "ar": "Narrator [ عخ  4  -  صحابي ]",
+        "ckb": "Narrator [ عخ  4  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ansar",
+        "ar": "الأنصار",
+        "ckb": "ئەنسار"
+      },
+      {
+        "en": "Khazraj",
+        "ar": "الخزرج",
+        "ckb": "خەزرەج"
+      },
+      {
+        "en": "B.al-Harith B.al-Khazraj",
+        "ar": "B.al-Harith B.al-Khazraj",
+        "ckb": "B.al-Harith B.al-Khazraj"
+      },
+      {
+        "en": "Aqaba 2",
+        "ar": "Aqaba 2",
+        "ckb": "Aqaba 2"
+      },
+      {
+        "en": "Battle of Badr",
+        "ar": "غزوة بدر",
+        "ckb": "جەنگی بەدر"
+      },
+      {
+        "en": "Battle of Uhud",
+        "ar": "غزوة أحد",
+        "ckb": "جەنگی ئوحود"
+      },
+      {
+        "en": "Battle of the Trench",
+        "ar": "غزوة الخندق",
+        "ckb": "جەنگی خەندەق"
+      }
     ]
   },
   "parents": [],
@@ -41,58 +102,108 @@
     {
       "id": "283",
       "name": "Hurayth bin Zayd ( حريث بن زيد بن ثعلبة ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "296",
       "name": "Qurayba bint Zayd ( قريبة بنت زيد بن عبد ربه الأنصارية ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [
     {
       "id": "10615",
       "name": "Muhammad bin 'Abdullah bin Zayd محمد بن عبد الله بن زيد بن عبد ربه",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "4",
       "name": "'Uthman ibn 'Affaan ( عثمان بن عفان ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "10615",
       "name": "Muhammad bin 'Abdullah bin Zayd محمد بن عبد الله بن زيد بن عبد ربه",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "12245",
       "name": "'Abdullah bin Muh.b. 'Abdullah b. Zayd عبد الله بن محمد بن عبد الله بن زيد",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "11002",
       "name": "Sa'id ibn al-Musayyib سعيد بن المسيب بن حزن أبو محمد القرشي",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "11196",
       "name": "'Abdur Rahman bin Abi Layla عبد الرحمن بن أبي ليلى",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     },
     {
       "id": "11239",
       "name": "Abu Bakr bin Muhammad bin 'Amr bin Hazm أبو بكر بن محمد بن عمرو بن حزم",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "hadiths": [
@@ -112,7 +223,12 @@
         "11213",
         "10615",
         "47"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-ibn-majah-706-2",
@@ -129,8 +245,18 @@
         "11213",
         "10615",
         "47"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

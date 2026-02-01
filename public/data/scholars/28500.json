@@ -26,6 +26,27 @@
     ],
     "tags": [
       "al-Sana'i"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ د  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ د  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ د  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Sana'",
+        "ar": "Sana'",
+        "ckb": "Sana'"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Sana'i",
+        "ar": "al-Sana'i",
+        "ckb": "al-Sana'i"
+      }
     ]
   },
   "parents": [],
@@ -36,44 +57,84 @@
     {
       "id": "20115",
       "name": "Ma'mar bin Rashid معمر بن راشد",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "11070",
       "name": "Ibn Jurayj ابن جريج",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "11298",
       "name": "'Awf bin Abi Jamila al-A'rabi عوف بن أبي جميلة الأعرابي",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "28635",
       "name": "Yahya bin al-'Ala al-Bijly يحيى بن العلاء البجلي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20200",
       "name": "Fadayl bin 'Iyyad bin Mas'ud فضيل بن عياض بن مسعود",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20121",
       "name": "'Abdur-Razzaq عبد الرزاق بن همام",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "30449",
       "name": "Muhammad bin 'Abdul A'la محمد بن عبد الأعلى",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30451",
       "name": "Muhammad bin 'Ubaid bin Hsab محمد بن عبيد بن حساب",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -93,7 +154,12 @@
         "11013",
         "10511",
         "2201"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-2964",
@@ -109,7 +175,12 @@
         "28500",
         "20115",
         "11013"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3439",
@@ -127,7 +198,12 @@
         "11433",
         "11053",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4101",
@@ -144,7 +220,12 @@
         "20115",
         "2802",
         "56"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4107",
@@ -163,7 +244,12 @@
         "11065",
         "10511",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4655",
@@ -181,7 +267,12 @@
         "11013",
         "10511",
         "2201"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4683",
@@ -199,7 +290,12 @@
         "11013",
         "10554",
         "9"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-an-nasai-2035",
@@ -217,7 +313,12 @@
         "11013",
         "11002",
         "2070"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-2771",
@@ -235,7 +336,12 @@
         "11013",
         "10511",
         "2201"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3426",
@@ -253,7 +359,12 @@
         "11013",
         "1134",
         "390"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3440",
@@ -271,7 +382,12 @@
         "11013",
         "10511",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4992",
@@ -289,8 +405,18 @@
         "11013",
         "10554",
         "9"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 12
+  "total_hadiths": 12,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [9th Generation]",
+    "ar": "تابع التابعين [الجيل التاسع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+  }
 }

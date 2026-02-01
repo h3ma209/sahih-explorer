@@ -16,7 +16,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Baghdad",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Baghdad",
+        "ar": "بغداد",
+        "ckb": "بەغداد"
+      }
     },
     "places_of_stay": [
       "Masri",
@@ -30,6 +35,47 @@
       "Quraish",
       "Client",
       "al-Masri"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ ل  ت  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ ل  ت  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ ل  ت  -  ثقة ]"
+      },
+      {
+        "en": "Fiqh",
+        "ar": "فقه",
+        "ckb": "فیقهـ"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Masri",
+        "ar": "Masri",
+        "ckb": "Masri"
+      },
+      {
+        "en": "Baghdad",
+        "ar": "بغداد",
+        "ckb": "بەغداد"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Masri",
+        "ar": "al-Masri",
+        "ckb": "al-Masri"
+      }
     ]
   },
   "parents": [],
@@ -40,51 +86,101 @@
     {
       "id": "20029",
       "name": "'Abdullah bin Wahb عبد الله بن وهب بن مسلم القرشي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20002",
       "name": "Imam Shafi'ee ابو عبد الله محمد بن إدريس الشافعي",
-      "grade": "Succ. (Taba' Tabi') [9th generation] [Shafi'ee]"
+      "grade": "Succ. (Taba' Tabi') [9th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30583",
       "name": "al-Rabi' bin Sulaiman الربيع بن سليمان",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "33031",
       "name": "Musa bin Abi al-Jarwd موسى بن أبي الجارود أبو الوليد المكي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "36514",
       "name": "Ahmed bin Mansur al-Ramadi أحمد بن منصور الرمادي",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "36621",
       "name": "Muhammad bin Isma'il bin Yusuf محمد بن إسماعيل بن يوسف",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "38522",
       "name": "Muhammad bin 'Amir al-Antaky محمد بن عامر الأنطاكي نزيل الرملة",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "39127",
       "name": "Ibrahim bin Ishaq al-Hrby إبراهيم بن إسحاق الحربي",
-      "grade": "3rd Century AH"
+      "grade": "3rd Century AH",
+      "grade_display": {
+        "en": "3rd Century AH",
+        "ar": "القرن الثالث الهجري",
+        "ckb": "سەدەی سێیەمی كۆچی"
+      }
     },
     {
       "id": "36066",
       "name": "Yahya bin 'Uthman bin Salah يحيى بن عثمان بن صالح",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     }
   ],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "3rd Century AH [10th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل العاشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+  }
 }

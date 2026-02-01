@@ -28,6 +28,37 @@
       "al-Aqayli",
       "al-Kalabi",
       "al-Hirani"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ ق  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ ق  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ ق  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Hiran",
+        "ar": "Hiran",
+        "ckb": "Hiran"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Aqayli",
+        "ar": "al-Aqayli",
+        "ckb": "al-Aqayli"
+      },
+      {
+        "en": "al-Kalabi",
+        "ar": "al-Kalabi",
+        "ckb": "al-Kalabi"
+      },
+      {
+        "en": "al-Hirani",
+        "ar": "al-Hirani",
+        "ckb": "al-Hirani"
+      }
     ]
   },
   "parents": [],
@@ -36,7 +67,12 @@
     {
       "id": "28523",
       "name": "Muhammad bin 'Abdullah bin 'Alatha محمد بن عبد الله بن علاثة",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "children": [],
@@ -44,34 +80,64 @@
     {
       "id": "18655",
       "name": "'Abdul al-Kareem bin Malik عبد الكريم بن مالك الجزري أبو سعيد",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "12532",
       "name": "Musa bin Muhammad bin Ibrahim موسى بن محمد بن إبراهيم بن الحارث",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "28523",
       "name": "Muhammad bin 'Abdullah bin 'Alatha محمد بن عبد الله بن علاثة",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20390",
       "name": "Hashim bin al-Qasim bin Muslim هاشم بن القاسم أبو النضر - قيصر",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "26523",
       "name": "Mzfr Btshdyd al-Fa'a مظفر بتشديد الفاء",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "30279",
       "name": "Mansur bin Salma bin 'Abdul 'Aziz منصور بن سلمة بن عبد العزيز",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -91,7 +157,12 @@
         "12532",
         "34",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-ibn-majah-3342",
@@ -108,8 +179,18 @@
         "28189",
         "34",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [8th Generation]",
+    "ar": "تابع التابعين [الجيل الثامن]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+  }
 }

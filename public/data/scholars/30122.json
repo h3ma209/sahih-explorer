@@ -28,6 +28,37 @@
       "Ally B.Hashim",
       "Client",
       "al-Basri"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Sadooq] [ خ  د  س  -  صدوق ]",
+        "ar": "Narrator[Grade:Sadooq] [ خ  د  س  -  صدوق ]",
+        "ckb": "Narrator[Grade:Sadooq] [ خ  د  س  -  صدوق ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ally B.Hashim",
+        "ar": "Ally B.Hashim",
+        "ckb": "Ally B.Hashim"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Basri",
+        "ar": "al-Basri",
+        "ckb": "al-Basri"
+      }
     ]
   },
   "parents": [],
@@ -38,39 +69,74 @@
     {
       "id": "20259",
       "name": "'Abdul Wahab bin 'Abdul Majeed al-Thaqaf عبد الوهاب بن عبد المجيد الثقفي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20226",
       "name": "Khalid bin al-Harith bin 'Ubaid خالد بن الحارث بن عبيد",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20005",
       "name": "Sufyan bin 'Uyaynah سفيان بن عيينة",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20217",
       "name": "Hatm bin Wrdan bin Mrwan حاتم بن وردان بن مروان",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20288",
       "name": "Ma'tmar bin Sulaiman-al-Taufayl معتمر بن سليمان - الطفيل",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30001",
       "name": "al-Bukhari محمد بن اسماعيل البخاري",
-      "grade": "3rd Century AH [11th generation] [Shafi'ee]"
+      "grade": "3rd Century AH [11th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30006",
       "name": "Imam Nasa'i أحمد بن شعيب بن علي بن سنان النسائي",
-      "grade": "3rd Century AH [12th generation]"
+      "grade": "3rd Century AH [12th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [12th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -88,7 +154,12 @@
         "20259",
         "11282",
         "11023"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sunan-an-nasai-2554",
@@ -105,7 +176,12 @@
         "20020",
         "11383",
         "10831"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-3463",
@@ -122,7 +198,12 @@
         "11282",
         "11023",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4000",
@@ -139,7 +220,12 @@
         "20020",
         "11655",
         "11050"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4864",
@@ -156,7 +242,12 @@
         "20020",
         "11655",
         "11050"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-5498",
@@ -173,8 +264,18 @@
         "20020",
         "11080",
         "3245"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 6
+  "total_hadiths": 6,
+  "grade_display": {
+    "en": "3rd Century AH [10th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل العاشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+  }
 }

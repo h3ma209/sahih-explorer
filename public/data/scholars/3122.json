@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Hijaz"
+      "place": "Hijaz",
+      "place_display": {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
     },
     "death": {
       "date_hijri": "21",
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Kufa, Nahawand",
-      "reason": "NA"
+      "reason": "NA",
+      "place_display": {
+        "en": "Kufa, Nahawand",
+        "ar": "الكوفة, Nahawand",
+        "ckb": "كوفە, Nahawand"
+      }
     },
     "places_of_stay": [
       "Hijaz",
@@ -33,6 +43,62 @@
       "Khandaq",
       "Ridwan",
       "Kufi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ 4  -  صحابي ]",
+        "ar": "Narrator [ 4  -  صحابي ]",
+        "ckb": "Narrator [ 4  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      },
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Mazni",
+        "ar": "al-Mazni",
+        "ckb": "al-Mazni"
+      },
+      {
+        "en": "Battle of the Trench",
+        "ar": "غزوة الخندق",
+        "ckb": "جەنگی خەندەق"
+      },
+      {
+        "en": "Ridwan",
+        "ar": "Ridwan",
+        "ckb": "Ridwan"
+      },
+      {
+        "en": "Kufi",
+        "ar": "Kufi",
+        "ckb": "Kufi"
+      }
     ]
   },
   "parents": [],
@@ -41,78 +107,148 @@
     {
       "id": "3121",
       "name": "Ma'qil bin Maqrn al-Mazni ( معقل بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3123",
       "name": "Suwayd bin Muqarrin al-Mazni ( سويد بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3124",
       "name": "Aqeel bin Maqrn al-Mazni ( عقيل بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3125",
       "name": "Sinan bin Maqrn al-Mazni ( سنان بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3126",
       "name": "Marda bin Maqrn al-Mazni ( مرضى بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3127",
       "name": "Darar bin Maqrn al-Mazni ( ضرار بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3128",
       "name": "Sa'id bin Maqrn al-Mazni ( سعيد بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3129",
       "name": "Na'im bin Maqrn al-Mazni ( نعيم بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [
     {
       "id": "3115",
       "name": "'Amr bin al-Nu'ma al-Mazni ( عمرو بن النعمان بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [
     {
       "id": "3115",
       "name": "'Amr bin al-Nu'ma al-Mazni ( عمرو بن النعمان بن مقرن المزني ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "3225",
       "name": "Jubayr bin Hayya al-Thaqafi ( جبير بن حية الثقفي ( رضي الله عنه",
-      "grade": "Comp.(RA) [3rd Generation]"
+      "grade": "Comp.(RA) [3rd Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [3rd Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الثالث]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "15670",
       "name": "Abu Khalid al-Walbi أبو خالد الوالبي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -132,7 +268,12 @@
         "19855",
         "3120",
         "3122"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1612",
@@ -149,7 +290,12 @@
         "20295",
         "11019",
         "3122"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-ibn-majah-2968",
@@ -163,8 +309,18 @@
       "chain": [
         "10964",
         "3122"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 3
+  "total_hadiths": 3,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

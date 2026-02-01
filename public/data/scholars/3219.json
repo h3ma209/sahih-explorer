@@ -16,7 +16,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medina/al-Ta'if",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina/al-Ta'if",
+        "ar": "المدينة المنورة/al-Ta'if",
+        "ckb": "مەدینە/al-Ta'if"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -30,6 +35,47 @@
     "tags": [
       "B.Thaqif",
       "al-Ta'if"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator [ ت  ق  -  صحابي ]",
+        "ar": "Narrator [ ت  ق  -  صحابي ]",
+        "ckb": "Narrator [ ت  ق  -  صحابي ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Taif",
+        "ar": "الطائف",
+        "ckb": "تائیف"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "B.Thaqif",
+        "ar": "B.Thaqif",
+        "ckb": "B.Thaqif"
+      },
+      {
+        "en": "al-Ta'if",
+        "ar": "al-Ta'if",
+        "ckb": "al-Ta'if"
+      }
     ]
   },
   "parents": [],
@@ -40,29 +86,54 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     },
     {
       "id": "5",
       "name": "Ali ibn Abi Talib ( علي بن أبي طالب بن عبد المطلب ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "18713",
       "name": "'Uthman bin 'Abdullah عثمان بن عبد الله بن أوس بن أبي أوس",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10972",
       "name": "al-Nu'man bin Salm al-Ta'ify النعمان بن سالم الطائفي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11437",
       "name": "'Amr bin Aws bin Abi Aws عمرو بن أوس بن أبي أوس",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     }
   ],
   "hadiths": [
@@ -83,8 +154,18 @@
         "20658",
         "18713",
         "3219"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     }
   ],
-  "total_hadiths": 1
+  "total_hadiths": 1,
+  "grade_display": {
+    "en": "Companion (RA) [1st Generation]",
+    "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+  }
 }

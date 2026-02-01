@@ -16,7 +16,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Medina/al-Ta'if",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Medina/al-Ta'if",
+        "ar": "المدينة المنورة/al-Ta'if",
+        "ckb": "مەدینە/al-Ta'if"
+      }
     },
     "places_of_stay": [
       "al-Taif",
@@ -31,13 +36,64 @@
       "Ta'if",
       "Child",
       "Hijazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Narrator",
+        "ar": "Narrator",
+        "ckb": "Narrator"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "al-Taif",
+        "ar": "al-Taif",
+        "ckb": "al-Taif"
+      },
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "B.Thaqif",
+        "ar": "B.Thaqif",
+        "ckb": "B.Thaqif"
+      },
+      {
+        "en": "Ta'if",
+        "ar": "Ta'if",
+        "ckb": "Ta'if"
+      },
+      {
+        "en": "Child (Young Companion)",
+        "ar": "صغير الصحابة",
+        "ckb": "منداڵ"
+      },
+      {
+        "en": "Hijazi",
+        "ar": "Hijazi",
+        "ckb": "Hijazi"
+      }
     ]
   },
   "parents": [
     {
       "id": "3227",
       "name": "'Abdullah bin Qarib al-Thaqafi ( عبد الله بن قارب الثقفى ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "spouses": [],
@@ -47,10 +103,20 @@
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

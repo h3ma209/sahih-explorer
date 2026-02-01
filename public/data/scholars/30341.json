@@ -30,6 +30,37 @@
       "al-Laithi",
       "Client",
       "al-Mervazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ خ  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ خ  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ خ  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Merv",
+        "ar": "Merv",
+        "ckb": "Merv"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Laithi",
+        "ar": "al-Laithi",
+        "ckb": "al-Laithi"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Mervazi",
+        "ar": "al-Mervazi",
+        "ckb": "al-Mervazi"
+      }
     ]
   },
   "parents": [],
@@ -40,44 +71,84 @@
     {
       "id": "20025",
       "name": "'Abdullah bin Mubarak عبد الله بن المبارك",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20110",
       "name": "'Ali bin Mujahd bin Muslim علي بن مجاهد بن مسلم",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20200",
       "name": "Fadayl bin 'Iyyad bin Mas'ud فضيل بن عياض بن مسعود",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "11265",
       "name": "Abu al-Juza' - Aws bin 'Abdullah أبو الجوزاء - أوس بن عبد الله الربعي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30379",
       "name": "Muhammad bin 'Abdul 'Aziz bin Abi Razma محمد بن عبد العزيز بن أبي رزمة",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "38435",
       "name": "'Amr bin Yahya bin al-Harith عمرو بن يحيى بن الحارث الحمصي",
-      "grade": "3rd Century AH [12th generation]"
+      "grade": "3rd Century AH [12th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [12th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+      }
     },
     {
       "id": "30021",
       "name": "Ishaq bin Rahwaya إسحاق بن راهويه",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "38555",
       "name": "Muhammad bin 'Ali bin Hamza محمد بن علي بن حمزة",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -102,8 +173,18 @@
         "20475",
         "11013",
         "10511"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     }
   ],
-  "total_hadiths": 1
+  "total_hadiths": 1,
+  "grade_display": {
+    "en": "3rd Century AH [10th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل العاشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+  }
 }

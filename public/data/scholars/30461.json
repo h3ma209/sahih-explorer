@@ -27,6 +27,32 @@
     "tags": [
       "al-Hanfi",
       "al-Kufa"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ م  د  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ م  د  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ م  د  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Hanfi",
+        "ar": "al-Hanfi",
+        "ckb": "al-Hanfi"
+      },
+      {
+        "en": "al-Kufa",
+        "ar": "al-Kufa",
+        "ckb": "al-Kufa"
+      }
     ]
   },
   "parents": [],
@@ -37,44 +63,84 @@
     {
       "id": "20327",
       "name": "Abu al-Ahwus, Salam bin Sulaym al-Hanafi أبو الأحوص سلام بن سليم الحنفي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20102",
       "name": "'Abdullah bin Idris bin Yazid al-Audi عبد الله بن إدريس بن يزيد الأودي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20025",
       "name": "'Abdullah bin Mubarak عبد الله بن المبارك",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20354",
       "name": "Muhammad bin Khazim al-Darir محمد بن خازم أبو معاوية الضرير",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20373",
       "name": "Abu Bakr bin 'Ayyash al-Asadi أبو بكر بن عياش بن سالم الأسدي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30003",
       "name": "Imam Muslim أبو الحسين مسلم بن الحجاج بن مسلم",
-      "grade": "3rd Century AH [Shafi'ee]"
+      "grade": "3rd Century AH [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [Shafi'i]",
+        "ar": "القرن الثالث الهجري [شافعي]",
+        "ckb": "سەدەی سێیەمی كۆچی [شافیعی]"
+      }
     },
     {
       "id": "30002",
       "name": "Abu Da'ud أبو داود السجستاني الأزدي",
-      "grade": "3rd Century AH [11th generation] [Hanafi]"
+      "grade": "3rd Century AH [11th generation] [Hanafi]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30554",
       "name": "Abu Zara' al-Razi أبو زرعة الرازي",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -92,7 +158,12 @@
         "20327",
         "11430",
         "10784"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-1689",
@@ -109,7 +180,12 @@
         "20012",
         "11389",
         "34"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sahih-muslim-1913",
@@ -127,7 +203,12 @@
         "11361",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-1425",
@@ -145,8 +226,18 @@
         "11049",
         "19840",
         "30"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "3rd Century AH [10th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل العاشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+  }
 }

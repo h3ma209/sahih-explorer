@@ -26,6 +26,27 @@
     ],
     "tags": [
       "Judge"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Weak] [ د  -  ضعيف ]",
+        "ar": "Narrator[Grade:Weak] [ د  -  ضعيف ]",
+        "ckb": "Narrator[Grade:Weak] [ د  -  ضعيف ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "NA",
+        "ar": "NA",
+        "ckb": "NA"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Judge (Qadi)",
+        "ar": "قاضي",
+        "ckb": "دادوەر"
+      }
     ]
   },
   "parents": [],
@@ -36,34 +57,64 @@
     {
       "id": "28326",
       "name": "'Abdur Rahman bin Ziyad عبد الرحمن بن زياد بن أنعم",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20001",
       "name": "Imam Maalik مالك بن أنس بن مالك بن أبي عامر",
-      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]"
+      "grade": "Succ. (Taba' Tabi') [7th generation] [Maliki]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20311",
       "name": "Isra'il bin Yonus bin Abi Ishaq إسرائيل بن يونس بن أبي إسحاق",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "11845",
       "name": "Da'ud bin Qays al-Fra'a داود بن قيس الفراء الدباغ",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "20003",
       "name": "Imam Abu Yusuf أبو يوسف القاضي",
-      "grade": "Succ. (Taba' Tabi') [Hanafi]"
+      "grade": "Succ. (Taba' Tabi') [Hanafi]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [Hanafi]",
+        "ar": "تابع التابعين [حنفي]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [حەنەفی]"
+      }
     }
   ],
   "students": [
     {
       "id": "20164",
       "name": "'Abdullah bin Muslima al-Qa'nabi عبد الله بن مسلمة بن قعنب القعنبي",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -82,7 +133,12 @@
         "28326",
         "18770",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-514",
@@ -98,7 +154,12 @@
         "28296",
         "16032",
         "5042"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-593",
@@ -115,7 +176,12 @@
         "28326",
         "16081",
         "29"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-1630",
@@ -132,8 +198,18 @@
         "28326",
         "16032",
         "5042"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [9th Generation]",
+    "ar": "تابع التابعين [الجيل التاسع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+  }
 }

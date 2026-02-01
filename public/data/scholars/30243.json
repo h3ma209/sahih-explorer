@@ -28,6 +28,37 @@
     "tags": [
       "al-Baghdadi",
       "Nisapur"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Sadooq] [ خ  كد  -  صدوق ]",
+        "ar": "Narrator[Grade:Sadooq] [ خ  كد  -  صدوق ]",
+        "ckb": "Narrator[Grade:Sadooq] [ خ  كد  -  صدوق ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "al-Baghdad",
+        "ar": "al-Baghdad",
+        "ckb": "al-Baghdad"
+      },
+      {
+        "en": "Nisapur",
+        "ar": "Nisapur",
+        "ckb": "Nisapur"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Baghdadi",
+        "ar": "al-Baghdadi",
+        "ckb": "al-Baghdadi"
+      },
+      {
+        "en": "Nisapur",
+        "ar": "Nisapur",
+        "ckb": "Nisapur"
+      }
     ]
   },
   "parents": [],
@@ -38,24 +69,44 @@
     {
       "id": "20365",
       "name": "Yahya bin Abi Bkyr يحيى بن أبي بكير واسمه نسر",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20472",
       "name": "Yazid bin Harun يزيد بن هارون",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "30026",
       "name": "'Ali bin al-Madini علي بن المديني",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30001",
       "name": "al-Bukhari محمد بن اسماعيل البخاري",
-      "grade": "3rd Century AH [11th generation] [Shafi'ee]"
+      "grade": "3rd Century AH [11th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -73,7 +124,12 @@
         "20365",
         "20321",
         "11049"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-4789",
@@ -91,8 +147,18 @@
         "11371",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "3rd Century AH [11th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+  }
 }

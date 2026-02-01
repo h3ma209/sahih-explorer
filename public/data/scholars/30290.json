@@ -16,7 +16,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Egypt",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Egypt",
+        "ar": "مصر",
+        "ckb": "میسر"
+      }
     },
     "places_of_stay": [
       "Kufa",
@@ -29,6 +34,42 @@
       "al-Hadrami",
       "Kufi",
       "Egypt"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah Thiqah] [ خ  -  ثقة حافظ ]",
+        "ar": "Narrator[Grade:Thiqah Thiqah] [ خ  -  ثقة حافظ ]",
+        "ckb": "Narrator[Grade:Thiqah Thiqah] [ خ  -  ثقة حافظ ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      },
+      {
+        "en": "Egypt",
+        "ar": "مصر",
+        "ckb": "میسر"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Hadrami",
+        "ar": "al-Hadrami",
+        "ckb": "al-Hadrami"
+      },
+      {
+        "en": "Kufi",
+        "ar": "Kufi",
+        "ckb": "Kufi"
+      },
+      {
+        "en": "Egypt",
+        "ar": "Egypt",
+        "ckb": "Egypt"
+      }
     ]
   },
   "parents": [],
@@ -39,34 +80,64 @@
     {
       "id": "20356",
       "name": "Muhammad bin Fadayl bin Ghazwan محمد بن فضيل بن غزوان",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20373",
       "name": "Abu Bakr bin 'Ayyash al-Asadi أبو بكر بن عياش بن سالم الأسدي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20587",
       "name": "Sharayk bin 'Abdullah شريك بن عبد الله النخعي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30001",
       "name": "al-Bukhari محمد بن اسماعيل البخاري",
-      "grade": "3rd Century AH [11th generation] [Shafi'ee]"
+      "grade": "3rd Century AH [11th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "38473",
       "name": "Abu Hatim al-Razi أبو حاتم الرازي",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "38719",
       "name": "Y'aqub bin Sufyan يعقوب بن سفيان",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -84,7 +155,12 @@
         "20356",
         "11647",
         "11394"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7166",
@@ -101,7 +177,12 @@
         "20349",
         "11023",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7658",
@@ -118,8 +199,18 @@
         "11379",
         "11406",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     }
   ],
-  "total_hadiths": 3
+  "total_hadiths": 3,
+  "grade_display": {
+    "en": "3rd Century AH [11th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+  }
 }

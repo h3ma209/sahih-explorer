@@ -28,6 +28,37 @@
     "tags": [
       "al-Ra'",
       "al-Sana'i"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [د  ت  ق  أبي  داود  والترمذي  وابن  ماجة]",
+        "ar": "Narrator[Grade:Thiqah] [د  ت  ق  أبي  داود  والترمذي  وابن  ماجة]",
+        "ckb": "Narrator[Grade:Thiqah] [د  ت  ق  أبي  داود  والترمذي  وابن  ماجة]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "al-Ray",
+        "ar": "al-Ray",
+        "ckb": "al-Ray"
+      },
+      {
+        "en": "Sana'",
+        "ar": "Sana'",
+        "ckb": "Sana'"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Ra'",
+        "ar": "al-Ra'",
+        "ckb": "al-Ra'"
+      },
+      {
+        "en": "al-Sana'i",
+        "ar": "al-Sana'i",
+        "ckb": "al-Sana'i"
+      }
     ]
   },
   "parents": [],
@@ -38,29 +69,54 @@
     {
       "id": "18653",
       "name": "'Abdur Rahman bin Yazid عبد الرحمن بن يزيد اليماني أبو محمد",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "18727",
       "name": "'Urwa bin Muhammad bin Atyh عروة بن محمد بن عطية السعدي",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "38072",
       "name": "Abu Thaur al-Kalbi إبراهيم بن خالد أبو ثور الكلبي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "20467",
       "name": "Hisham bin Yusuf al-Sana'i هشام بن يوسف الصنعاني أبو عبد الرحمن",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20121",
       "name": "'Abdur-Razzaq عبد الرزاق بن همام",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -78,7 +134,12 @@
         "20295",
         "28278",
         "4"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4784",
@@ -94,7 +155,12 @@
         "30",
         "38072",
         "28278"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2308-2",
@@ -110,7 +176,12 @@
         "30020",
         "20467",
         "28278"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3653",
@@ -127,8 +198,18 @@
         "28278",
         "11055",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     }
   ],
-  "total_hadiths": 4
+  "total_hadiths": 4,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [8th Generation]",
+    "ar": "تابع التابعين [الجيل الثامن]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+  }
 }

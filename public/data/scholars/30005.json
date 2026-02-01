@@ -12,14 +12,24 @@
         "209 AH",
         "824 CE"
       ],
-      "place": "Tirmidh,Balkh"
+      "place": "Tirmidh,Balkh",
+      "place_display": {
+        "en": "Tirmidh,Balkh",
+        "ar": "Tirmidh,بلخ",
+        "ckb": "Tirmidh,بەڵخ"
+      }
     },
     "death": {
       "date_hijri": "279",
       "date_gregorian": "892",
       "date_display": null,
       "place": "Tirmidh, Balkh",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Tirmidh, Balkh",
+        "ar": "Tirmidh, بلخ",
+        "ckb": "Tirmidh, بەڵخ"
+      }
     },
     "places_of_stay": [
       "Kufa",
@@ -36,6 +46,62 @@
       "Imam",
       "Hafiz",
       "Hadith Compiler"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Hadith",
+        "ar": "حديث",
+        "ckb": "فەرموودە"
+      },
+      {
+        "en": "Narrator[Grade:No Doubt] [تمييز]",
+        "ar": "Narrator[Grade:No Doubt] [تمييز]",
+        "ckb": "Narrator[Grade:No Doubt] [تمييز]"
+      },
+      {
+        "en": "History",
+        "ar": "تاريخ",
+        "ckb": "مێژوو"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      },
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      },
+      {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Salmi",
+        "ar": "al-Salmi",
+        "ckb": "al-Salmi"
+      },
+      {
+        "en": "Imam",
+        "ar": "Imam",
+        "ckb": "Imam"
+      },
+      {
+        "en": "Hafiz",
+        "ar": "Hafiz",
+        "ckb": "Hafiz"
+      },
+      {
+        "en": "Hadith Compiler",
+        "ar": "Hadith Compiler",
+        "ckb": "Hadith Compiler"
+      }
     ]
   },
   "parents": [],
@@ -46,120 +112,240 @@
     {
       "id": "30001",
       "name": "al-Bukhari محمد بن اسماعيل البخاري",
-      "grade": "3rd Century AH [11th generation] [Shafi'ee]"
+      "grade": "3rd Century AH [11th generation] [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30003",
       "name": "Imam Muslim أبو الحسين مسلم بن الحجاج بن مسلم",
-      "grade": "3rd Century AH [Shafi'ee]"
+      "grade": "3rd Century AH [Shafi'ee]",
+      "grade_display": {
+        "en": "3rd Century AH [Shafi'i]",
+        "ar": "القرن الثالث الهجري [شافعي]",
+        "ckb": "سەدەی سێیەمی كۆچی [شافیعی]"
+      }
     },
     {
       "id": "30002",
       "name": "Abu Da'ud أبو داود السجستاني الأزدي",
-      "grade": "3rd Century AH [11th generation] [Hanafi]"
+      "grade": "3rd Century AH [11th generation] [Hanafi]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30367",
       "name": "Qutayba bin Sa'id bin Jamil قتيبة بن سعيد بن جميل",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30021",
       "name": "Ishaq bin Rahwaya إسحاق بن راهويه",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30277",
       "name": "Mahmud bin Ghaylan محمود بن غيلان العدوي مولاهم أبو أحمد",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30242",
       "name": "Ahmed bin Manay' أحمد بن منيع",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30100",
       "name": "Ahmed bin Abi Bakr أبو مصعب أحمد بن أبي بكر",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "34041",
       "name": "Bashr bin Mua'dh al-Qdy بشر بن معاذ العقدي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30216",
       "name": "Abu Karayb, Muhammad bin al-'Ala' محمد بن العلاء - أبو كريب",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "20387",
       "name": "'Ali bin Hujr bin Iyas bin Maqatil علي بن حجر بن إياس بن مقاتل",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "35093",
       "name": "'Ali bin Sa'id bin Msrwq علي بن سعيد بن مسروق الكندي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30153",
       "name": "'Amr bin 'Ali bin Bahr al-Bahli عمرو بن علي بن بحر الباهلي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "34170",
       "name": "'Imran bin Musa عمران بن موسى",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "38495",
       "name": "Muhammad bin Hmyd bin Hyan محمد بن حميد بن حيان",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30375",
       "name": "Muhammad bin Rafa'i محمد بن رافع",
-      "grade": "3rd Century AH [11th generation]"
+      "grade": "3rd Century AH [11th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [11th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل الحادي عشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی یازدەیەم]"
+      }
     },
     {
       "id": "30450",
       "name": "Ibn Abi al-Shuwarab محمد بن عبد الملك بن أبي الشوارب",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30395",
       "name": "Nasr bin 'Ali bin Nasr bin 'Ali نصر بن علي بن نصر بن علي الجهضمي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30524",
       "name": "Harun bin 'Abdullah al-Hamal هارون بن عبد الله بن مروان الحمال",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30480",
       "name": "Hanad bin al-Sari bin Mus'ab هناد بن السري بن مصعب",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30482",
       "name": "al-Walid bin Shuja' bin al-Sakuni الوليد بن شجاع بن الوليد بن قيس السكوني",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30459",
       "name": "Yahya bin Habib bin Arby يحيى بن حبيب بن عربي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "30573",
       "name": "Yusuf bin Hmad يوسف بن حماد",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "3rd Century AH [12th Generation]",
+    "ar": "القرن الثالث الهجري [الجيل الثاني عشر]",
+    "ckb": "سەدەی سێیەمی كۆچی [نەوەی دوازدەیەم]"
+  }
 }
