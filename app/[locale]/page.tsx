@@ -36,24 +36,11 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Load statistics
-    Promise.all([
-      fetch("/data/search-index.json").then(res => res.json()),
-      fetch("/data/hadith-index.json").then(res => res.json())
-    ])
-      .then(([scholars, hadiths]) => {
-        // Count hadiths by book
-        const hadithsByBook: { [key: string]: number } = {};
-        hadiths.forEach((h: any) => {
-          const book = h.book.trim();
-          hadithsByBook[book] = (hadithsByBook[book] || 0) + 1;
-        });
-
-        setStats({
-          totalScholars: scholars.length,
-          totalHadiths: hadiths.length,
-          hadithsByBook
-        });
+    // Load pre-calculated statistics
+    fetch("/data/stats.json")
+      .then(res => res.json())
+      .then((data) => {
+        setStats(data);
         setLoading(false);
       })
       .catch((error) => {
@@ -95,7 +82,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-background" />
+          <div className="absolute inset-0 bg-linear-to-br from-background via-accent/5 to-background" />
           <motion.div
             className="absolute top-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"
             animate={{
@@ -125,7 +112,7 @@ export default function Home() {
               Explore the Golden Chain of Islamic Scholarship
             </Badge>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-linear-to-r from-amber-500 via-amber-600 to-amber-700 bg-clip-text text-transparent">
               Sahih Explorer
             </h1>
             
@@ -156,7 +143,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="lg"
-                className="gap-2 bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800"
+                className="gap-2 bg-linear-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800"
                 onClick={() => {
                   const event = new KeyboardEvent('keydown', {
                     key: 'k',
@@ -215,7 +202,7 @@ export default function Home() {
                 <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-2 hover:border-amber-500/50">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
-                      <div className={`text-4xl p-3 rounded-xl bg-gradient-to-br ${collection.color} bg-opacity-10`}>
+                      <div className={`text-4xl p-3 rounded-xl bg-linear-to-br ${collection.color} bg-opacity-10`}>
                         {collection.icon}
                       </div>
                       <div className="flex-1">
@@ -296,7 +283,7 @@ export default function Home() {
       <footer className="border-t border-border bg-card/50 py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
-            <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
+            <h3 className="text-xl font-bold mb-2 bg-linear-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent">
               Sahih Explorer
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
