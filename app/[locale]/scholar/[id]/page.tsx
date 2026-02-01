@@ -27,10 +27,19 @@ const getScholarData = cache(async (id: string, depth = 0) => {
 
   // 2. Fallback to Fetch (For Vercel Runtime)
   try {
-    // Attempt to determine base URL dynamically if not set
-    const port = process.env.PORT || 3000;
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${port}`;
-    console.log(`Fetching scholar ${id} data from: ${baseUrl}/data/scholars/${id}.json`);
+    // Determine the base URL robustly:
+    // 1. Explicit Env Var (Production/Custom)
+    // 2. Vercel System Var (Preview/Deployments) - default is host without protocol
+    // 3. Localhost fallback
+    let baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!baseUrl && process.env.VERCEL_URL) {
+        baseUrl = `https://${process.env.VERCEL_URL}`;
+    }
+    if (!baseUrl) {
+        baseUrl = `http://localhost:${process.env.PORT || 3000}`;
+    }
+
+    console.log(`[ScholarFetch] Attempting fetch for ${id} from: ${baseUrl}/data/scholars/${id}.json`);
     
     const res = await fetch(`${baseUrl}/data/scholars/${id}.json`, { 
         next: { revalidate: 3600 } 
