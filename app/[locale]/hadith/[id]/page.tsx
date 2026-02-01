@@ -90,7 +90,7 @@ export async function generateStaticParams() {
          const hadiths: Hadith[] = JSON.parse(fileContents);
          // Limit static generation to top 100 to reduce build time significantly (from hours to minutes)
          // The rest will be statically generated on demand (ISR)
-         return hadiths.slice(0, 20).map((h) => ({ id: h.id }));
+         return hadiths.slice(0, 10).map((h) => ({ id: h.id }));
      }
    } catch (error) {
      console.error("Error generating static params:", error);
@@ -98,8 +98,11 @@ export async function generateStaticParams() {
    return [];
 }
 
+import { setRequestLocale } from 'next-intl/server';
+
 export default async function HadithPage({ params }: PageProps) {
   const resolvedParams = await params;
+  setRequestLocale(resolvedParams.locale);
   const locale = resolvedParams.locale;
   const data = await getHadithData(resolvedParams.id);
 

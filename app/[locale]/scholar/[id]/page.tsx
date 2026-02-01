@@ -6,24 +6,15 @@ import ScholarProfile from '@/components/features/ScholarProfile';
 import { cache } from 'react';
 
 // Cached data fetcher to deduplicate requests
+// Cached data fetcher to deduplicate requests
 const getScholarData = cache(async (id: string, depth = 0) => {
-  if (depth > 1) return null; // Prevent deep recursion
+  if (depth > 1) return null;
 
-  // 1. Try Filesystem (Fastest for Local Dev & Build Time)
-  try {
-    // Use string concatenation to avoid Next.js build tracer creating overly broad globs
-    const filePath = `${process.cwd()}/public/data/scholars/${id}.json`;
-    if (fs.existsSync(filePath)) {
-         const fileContents = fs.readFileSync(filePath, 'utf8');
-         const data = JSON.parse(fileContents);
-         // Hydration logic removed for performance
-         return data;
-    }
-  } catch (e) {
-    // Filesystem access failed (likely on Vercel where files are excluded)
-  }
-
-  // 2. Fallback to Fetch (For Vercel Runtime where files are static assets)
+  // FETCH ONLY STRATEGY (STRICT)
+  // We explicitly removed the filesystem fallback here. 
+  // This ensures Vercel's bundler does NOT see a dependency on the 'scholars' directory.
+  // We rely fully on runtime fetching from the public assets.
+  
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
     const res = await fetch(`${baseUrl}/data/scholars/${id}.json`, { 
@@ -84,33 +75,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export async function generateStaticParams() {
-  if (process.env.NODE_ENV === 'development') {
-    return []; 
-  }
-
-  // Read from search-index.json to avoid tracing the entire scholars directory
-  const indexPath = path.join(process.cwd(), 'public/data/search-index.json');
-  try {
-      if (fs.existsSync(indexPath)) {
-          const fileContent = fs.readFileSync(indexPath, 'utf8');
-          const scholars = JSON.parse(fileContent);
-          
-          // Limit for build performance
-          return scholars
-            .slice(0, 20) 
-            .map((s: any) => ({
-              id: s.id,
-            }));
-      }
-      return [];
-  } catch(e) {
-      console.error("Error generating static params:", e);
-      return [];
-  }
+  // DISABLE build-time static generation to support Fetch-Only strategy.
+  // Since we removed FS access, we cannot generate pages during build (no server running to fetch from).
+  // Pages will be generated On-Demand (ISR) at runtime.
+  return [];
 }
 
-export default async function ScholarPage({ params }: PageProps) {
+import { setRequestLocale } from 'next-intl/server';
+
+// ... existing imports ...
+
+export default async function ScholarPage({ params }: PageProps & { params: Promise<{ locale: string }> }) {
   const resolvedParams = await params;
+  setRequestLocale(resolvedParams.locale || 'en');
   
   // Parallel data fetching
   const [data, searchIndex] = await Promise.all([
