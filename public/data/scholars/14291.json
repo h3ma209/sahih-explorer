@@ -26,6 +26,27 @@
     ],
     "tags": [
       "al-Basri"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Weak] [ ت  ق  -  ضعيف ]",
+        "ar": "Narrator[Grade:Weak] [ ت  ق  -  ضعيف ]",
+        "ckb": "Narrator[Grade:Weak] [ ت  ق  -  ضعيف ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Basri",
+        "ar": "al-Basri",
+        "ckb": "al-Basri"
+      }
     ]
   },
   "parents": [],
@@ -36,44 +57,84 @@
     {
       "id": "11011",
       "name": "Salim bin 'Abdullah bin 'Umar سالم بن عبد الله بن عمر بن الخطاب",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "18446",
       "name": "Syfy bin S'hyb bin Snan صيفي بن صهيب بن سنان",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20543",
       "name": "Sa'id bin Zayd bin Darham سعيد بن زيد بن درهم",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20258",
       "name": "'Abdul Warith bin Sa'id bin Dhakwan عبد الوارث بن سعيد بن ذكوان",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "28147",
       "name": "Kharjh bin Mus'ab bin Kharjh خارجة بن مصعب بن خارجة",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20288",
       "name": "Ma'tmar bin Sulaiman-al-Taufayl معتمر بن سليمان - الطفيل",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "20021",
       "name": "Hammad bin Salama حماد بن سلمة",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20022",
       "name": "Hammad bin Zayd حماد بن زيد بن درهم الأزدي الأزرق",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -94,7 +155,12 @@
         "11011",
         "18",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3412",
@@ -113,8 +179,18 @@
         "11011",
         "18",
         "3"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

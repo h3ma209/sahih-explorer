@@ -27,6 +27,32 @@
     "tags": [
       "al-Hanfi",
       "al-Kufa"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ قد  س  ق  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ قد  س  ق  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ قد  س  ق  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Hanfi",
+        "ar": "al-Hanfi",
+        "ckb": "al-Hanfi"
+      },
+      {
+        "en": "al-Kufa",
+        "ar": "al-Kufa",
+        "ckb": "al-Kufa"
+      }
     ]
   },
   "parents": [],
@@ -37,39 +63,74 @@
     {
       "id": "19864",
       "name": "Jmy' bin 'Umayr bin Afaq جميع بن عمير بن عفاق",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "15048",
       "name": "Bilal bin al-Mndhr al-Hnfy بلال بن المنذر الحنفي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "10658",
       "name": "Mus'ab bin Shayba bin Jbyr مصعب بن شيبة بن جبير بن شيبة",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20012",
       "name": "Sufyan bin Sa‘id Ath-Thawri سفيان الثوري",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20320",
       "name": "Za'ida bin Qadama al-Thaqifi زائدة بن قدامة الثقفي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20373",
       "name": "Abu Bakr bin 'Ayyash al-Asadi أبو بكر بن عياش بن سالم الأسدي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20256",
       "name": "'Abdul Wahid bin Ziyad عبد الواحد بن زياد العبدي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -87,7 +148,12 @@
         "20256",
         "15242",
         "19864"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-2325",
@@ -104,8 +170,18 @@
         "15242",
         "19864",
         "18"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

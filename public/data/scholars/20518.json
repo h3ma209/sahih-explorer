@@ -28,6 +28,37 @@
       "B.Zuhrah",
       "Client",
       "al-Madni"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ م  ت  فق  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ م  ت  فق  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ م  ت  فق  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Banu Zuhrah",
+        "ar": "بنو زهرة",
+        "ckb": "بەنی زوهرە"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Madni",
+        "ar": "al-Madni",
+        "ckb": "al-Madni"
+      }
     ]
   },
   "parents": [],
@@ -36,7 +67,12 @@
     {
       "id": "11832",
       "name": "Bakayr bin Masmar بكير بن مسمار",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "children": [],
@@ -44,34 +80,64 @@
     {
       "id": "10559",
       "name": "'Aisha bint Sa'd ibn Abi Waqqas عائشة بنت سعد بن أبي وقاص الزهرية",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20177",
       "name": "Muhammad bin 'Abdur Rahman b. Abi Dh'ab محمد بن عبد الرحمن بن أبي ذئب",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20706",
       "name": "Musa bin Y'aqub bin 'Abdullah bin Wahb موسى بن يعقوب بن عبد الله بن وهب",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "22239",
       "name": "Y'aqub bin Ja'far bin Abi Kathir يعقوب بن جعفر بن أبي كثير الأنصاري",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "22048",
       "name": "Khalid bin Ilyas خالد بن إلياس",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20159",
       "name": "Hatm bin Isma'il al-Madni حاتم بن إسماعيل المدني",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -90,8 +156,18 @@
         "20177",
         "20518",
         "10554"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     }
   ],
-  "total_hadiths": 1
+  "total_hadiths": 1,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [7th Generation]",
+    "ar": "تابع التابعين [الجيل السابع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+  }
 }

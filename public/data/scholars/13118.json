@@ -32,6 +32,57 @@
       "al-Basri",
       "al-Makki",
       "Zahid"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah Thiqah] [ د  س  ق  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah Thiqah] [ د  س  ق  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah Thiqah] [ د  س  ق  -  ثقة ]"
+      },
+      {
+        "en": "Fiqh",
+        "ar": "فقه",
+        "ckb": "فیقهـ"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      },
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "Ally B.Umayya",
+        "ar": "Ally B.Umayya",
+        "ckb": "Ally B.Umayya"
+      },
+      {
+        "en": "al-Basri",
+        "ar": "al-Basri",
+        "ckb": "al-Basri"
+      },
+      {
+        "en": "al-Makki",
+        "ar": "al-Makki",
+        "ckb": "al-Makki"
+      },
+      {
+        "en": "Zahid",
+        "ar": "Zahid",
+        "ckb": "Zahid"
+      }
     ]
   },
   "parents": [],
@@ -41,26 +92,46 @@
     {
       "id": "14643",
       "name": "'Abdullah bin Muslim bin Yasar عبد الله بن مسلم بن يسار",
-      "grade": "Follower(Tabi')"
+      "grade": "Follower(Tabi')",
+      "grade_display": {
+        "en": "Follower (Tabi')",
+        "ar": "تابعي",
+        "ckb": "شوێنكەوتوو (تابعی)"
+      }
     }
   ],
   "teachers": [
     {
       "id": "17",
       "name": "ibn Abbas ( عبد الله بن العباس بن عبد المطلب الحبر ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "18",
       "name": "ibn Umar ( عبد الله بن عمر بن الخطاب ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "14643",
       "name": "'Abdullah bin Muslim bin Yasar عبد الله بن مسلم بن يسار",
-      "grade": "Follower(Tabi')"
+      "grade": "Follower(Tabi')",
+      "grade_display": {
+        "en": "Follower (Tabi')",
+        "ar": "تابعي",
+        "ckb": "شوێنكەوتوو (تابعی)"
+      }
     }
   ],
   "hadiths": [
@@ -80,7 +151,12 @@
         "10861",
         "13118",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "sunan-abi-daud-3349",
@@ -100,7 +176,12 @@
         "13118",
         "10917",
         "40"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-3657",
@@ -117,7 +198,12 @@
         "10850",
         "13118",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4704",
@@ -133,7 +219,12 @@
         "11340",
         "11190",
         "13118"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-an-nasai-4560",
@@ -150,7 +241,12 @@
         "11593",
         "11035",
         "13118"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4561",
@@ -166,7 +262,12 @@
         "11593",
         "11035",
         "13118"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4562",
@@ -183,7 +284,12 @@
         "11593",
         "11035",
         "13118"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4563",
@@ -201,7 +307,12 @@
         "13118",
         "10917",
         "40"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4564",
@@ -222,7 +333,12 @@
         "13118",
         "10917",
         "40"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-2339",
@@ -241,8 +357,18 @@
         "11593",
         "11035",
         "13118"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 10
+  "total_hadiths": 10,
+  "grade_display": {
+    "en": "Follower (Tabi') [4th Generation]",
+    "ar": "تابعي [الجيل الرابع]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+  }
 }

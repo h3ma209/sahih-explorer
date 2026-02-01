@@ -27,6 +27,32 @@
     "tags": [
       "al-Rawasi",
       "al-Kufi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ خ  م  ت  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ خ  م  ت  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ خ  م  ت  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Rawasi",
+        "ar": "al-Rawasi",
+        "ckb": "al-Rawasi"
+      },
+      {
+        "en": "al-Kufi",
+        "ar": "al-Kufi",
+        "ckb": "al-Kufi"
+      }
     ]
   },
   "parents": [],
@@ -35,7 +61,12 @@
     {
       "id": "20590",
       "name": "'Abdur Rahman bin Hameed bin 'AR عبد الرحمن بن حميد بن عبد الرحمن الرؤاسي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "children": [],
@@ -43,34 +74,64 @@
     {
       "id": "11418",
       "name": "Isma'il bin Abi Khalid al-Ahmsi إسماعيل بن أبي خالد الأحمسي",
-      "grade": "Follower(Tabi') [4th generation]"
+      "grade": "Follower(Tabi') [4th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [4th Generation]",
+        "ar": "تابعي [الجيل الرابع]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی چوارەم]"
+      }
     },
     {
       "id": "11065",
       "name": "Hisham bin 'Urwa هشام بن عروة",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "20415",
       "name": "Thaur bin Yazid al-Rahbi ثور بن يزيد",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30196",
       "name": "Shahab bin 'Aabad al-'Abdi شهاب بن عباد العبدي أبو عمر الكوفي",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     },
     {
       "id": "20364",
       "name": "Yahya bin Aadm bin Sulaiman يحيى بن آدم بن سليمان",
-      "grade": "Succ. (Taba' Tabi') [9th generation]"
+      "grade": "Succ. (Taba' Tabi') [9th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [9th Generation]",
+        "ar": "تابع التابعين [الجيل التاسع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+      }
     },
     {
       "id": "30464",
       "name": "Zakaria bin 'Ady bin Zarayn زكريا بن عدي بن زريق",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [
@@ -89,7 +150,12 @@
         "11418",
         "11046",
         "402"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2532",
@@ -105,7 +171,12 @@
         "20308",
         "11418",
         "11046"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7228",
@@ -122,7 +193,12 @@
         "11418",
         "11046",
         "16"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7402",
@@ -139,7 +215,12 @@
         "11418",
         "11046",
         "16"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-7549",
@@ -156,7 +237,12 @@
         "11418",
         "11046",
         "166"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-7565",
@@ -173,7 +259,12 @@
         "11418",
         "11046",
         "166"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1274",
@@ -191,7 +282,12 @@
         "11065",
         "11213",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-4672",
@@ -208,8 +304,18 @@
         "11065",
         "11213",
         "19"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 8
+  "total_hadiths": 8,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [8th Generation]",
+    "ar": "تابع التابعين [الجيل الثامن]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+  }
 }

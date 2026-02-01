@@ -29,6 +29,42 @@
       "Client",
       "al-Kufa",
       "al-Jazirah"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ 4  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ 4  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ 4  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      },
+      {
+        "en": "Bahrain",
+        "ar": "Bahrain",
+        "ckb": "Bahrain"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Kufa",
+        "ar": "al-Kufa",
+        "ckb": "al-Kufa"
+      },
+      {
+        "en": "al-Jazirah",
+        "ar": "al-Jazirah",
+        "ckb": "al-Jazirah"
+      }
     ]
   },
   "parents": [],
@@ -39,19 +75,34 @@
     {
       "id": "400",
       "name": "al-Bara' bin Azib bin al-Harith ( البراء بن عازب بن الحارث ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "19896",
       "name": "al-Qasim bin 'Abdur Rahman القاسم بن عبد الرحمن",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "27354",
       "name": "al-Qasim Abu 'Abdur Rahman القاسم أبو عبد الرحمن ويقال بن عبد الرحم",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     }
   ],
   "hadiths": [
@@ -69,7 +120,12 @@
         "20020",
         "30587",
         "19876"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1497",
@@ -88,7 +144,12 @@
         "30587",
         "19876",
         "400"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1497-2",
@@ -106,7 +167,12 @@
         "30587",
         "19876",
         "400"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-4370",
@@ -123,7 +189,12 @@
         "20020",
         "30587",
         "19876"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-4371",
@@ -141,7 +212,12 @@
         "20023",
         "19876",
         "400"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-3264",
@@ -160,8 +236,18 @@
         "20020",
         "30587",
         "19876"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 6
+  "total_hadiths": 6,
+  "grade_display": {
+    "en": "Follower (Tabi') [3rd Generation]",
+    "ar": "تابعي [الجيل الثالث]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+  }
 }

@@ -27,6 +27,32 @@
     "tags": [
       "al-Fazari",
       "al-Damashqi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah] [ د  ت  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah] [ د  ت  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah] [ د  ت  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Damascus",
+        "ar": "دمشق",
+        "ckb": "دیمەشق"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Fazari",
+        "ar": "al-Fazari",
+        "ckb": "al-Fazari"
+      },
+      {
+        "en": "al-Damashqi",
+        "ar": "al-Damashqi",
+        "ckb": "al-Damashqi"
+      }
     ]
   },
   "parents": [],
@@ -37,39 +63,74 @@
     {
       "id": "4097",
       "name": "Jubayr bin Nufayr al-Hadrami ( جبير بن نفير الحضرمي ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "405",
       "name": "Abu Umama bin Sahl ( أسعد أبو أمامة بن سهل بن حنيف ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "37",
       "name": "Abu al-Darda ( أبو الدرداء عويمر بن زيد بن قيس الأنصاري ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20395",
       "name": "'Abdur Rahman bin Yazid bin Jabir عبد الرحمن بن يزيد بن جابر الأزدي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "10884",
       "name": "al-Ala' bin al-Harith bin 'Abdul Warith العلاء بن الحارث بن عبد الوارث",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "10957",
       "name": "al-Lyth bin Abi Sulaym الليث بن أبي سليم",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "11063",
       "name": "Sa'd bin Ibrahim سعد بن إبراهيم بن عبد الرحمن",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "hadiths": [
@@ -87,7 +148,12 @@
         "20733",
         "17510",
         "4097"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-abi-daud-4298",
@@ -104,7 +170,12 @@
         "17510",
         "4097",
         "37"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "jami-al-tirmidhi-1702",
@@ -122,7 +193,12 @@
         "17510",
         "4097",
         "37"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3159",
@@ -140,7 +216,12 @@
         "10957",
         "17510",
         "405"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "jami-al-tirmidhi-3160",
@@ -154,7 +235,12 @@
       "chain": [
         "17510",
         "4097"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-3179",
@@ -169,8 +255,18 @@
         "27536",
         "17510",
         "4097"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 6
+  "total_hadiths": 6,
+  "grade_display": {
+    "en": "Follower (Tabi') [5th Generation]",
+    "ar": "تابعي [الجيل الخامس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+  }
 }

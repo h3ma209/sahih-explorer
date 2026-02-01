@@ -72,7 +72,11 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
       {/* Hero Section */}
       <HeroSection
         scholarName={name}
-        scholarTitle={grade ? `${grade}` : tHero('scholarTitleFallback')}
+        scholarTitle={
+            initialData.grade_display && initialData.grade_display[locale] 
+                ? initialData.grade_display[locale] 
+                : (grade ? `${grade}` : tHero('scholarTitleFallback'))
+        }
       />
       
       {/* Wikipedia Summary */}
@@ -125,7 +129,9 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                       <p className="text-sm text-muted-foreground">{tStats('place')}</p>
                       <p className="font-medium flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {translateValue(biography.birth.place, locale, 'city')}
+                        {biography.birth.place_display && biography.birth.place_display[locale] 
+                            ? biography.birth.place_display[locale] 
+                            : translateValue(biography.birth.place, locale, 'city')}
                       </p>
                     </div>
                   )}
@@ -154,7 +160,9 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                       <p className="text-sm text-muted-foreground">{tStats('place')}</p>
                       <p className="font-medium flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
-                        {translateValue(biography.death.place, locale, 'city')}
+                        {biography.death.place_display && biography.death.place_display[locale]
+                            ? biography.death.place_display[locale]
+                            : translateValue(biography.death.place, locale, 'city')}
                       </p>
                     </div>
                   )}
@@ -187,7 +195,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
             </div>
 
             {/* Tags */}
-            {biography.tags.length > 0 && (
+            {(biography.tags_display?.length > 0 || biography.tags.length > 0) && (
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -197,13 +205,16 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {biography.tags.map((tag: string, index: number) => (
+                    {(biography.tags_display 
+                        ? biography.tags_display.map((t: any) => t[locale] || t.en)
+                        : translateArray(biography.tags, locale, 'tag')
+                     ).map((tag: string, index: number) => (
                       <Badge
                         key={index}
                         variant="outline"
                         className="px-3 py-1.5 border-amber-500/30 text-amber-600 dark:text-amber-400"
                       >
-                        {translateValue(tag, locale, 'tag')}
+                        {tag}
                       </Badge>
                     ))}
                   </div>
@@ -211,7 +222,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
               </Card>
             )}
 
-              {biography.places_of_stay && biography.places_of_stay.length > 0 && (
+            {(biography.places_of_stay_display?.length > 0 || (biography.places_of_stay && biography.places_of_stay.length > 0)) && (
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
@@ -221,7 +232,10 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {translateArray(biography.places_of_stay, locale, 'city').map((place: string, index: number) => (
+                      {(biography.places_of_stay_display
+                          ? biography.places_of_stay_display.map((p: any) => p[locale] || p.en)
+                          : translateArray(biography.places_of_stay, locale, 'city')
+                       ).map((place: string, index: number) => (
                         <Badge
                           key={index}
                           variant="secondary"
@@ -233,7 +247,7 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                     </div>
                   </CardContent>
                 </Card>
-              )}
+            )}
           </motion.div>
         </div>
       </section>

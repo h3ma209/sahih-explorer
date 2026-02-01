@@ -9,7 +9,12 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Medina"
+      "place": "Medina",
+      "place_display": {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
     },
     "death": {
       "date_hijri": "NA",
@@ -29,13 +34,54 @@
       "B.Zurayq",
       "Client",
       "Madni"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ س  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ س  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ س  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Ansar",
+        "ar": "الأنصار",
+        "ckb": "ئەنسار"
+      },
+      {
+        "en": "B.Zurayq",
+        "ar": "B.Zurayq",
+        "ckb": "B.Zurayq"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "Madni",
+        "ar": "Madni",
+        "ckb": "Madni"
+      }
     ]
   },
   "parents": [
     {
       "id": "29225",
       "name": "Ja'far bin Abi Kathir al-Ansari جعفر بن أبي كثير الأنصاري",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     }
   ],
   "spouses": [],
@@ -43,22 +89,42 @@
     {
       "id": "20155",
       "name": "Isma'il bin Ja'far bin Abi Kathir إسماعيل بن جعفر بن أبي كثير الأنصاري",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "20173",
       "name": "Muhammad bin Ja'far bin Abi Kathir محمد بن جعفر بن أبي كثير",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "22700",
       "name": "Yahya bin Ja'far bin Abi Kathir يحيى بن جعفر بن أبي كثير",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     },
     {
       "id": "23595",
       "name": "Kathir bin Ja'far bin Abi Kathir كثير بن جعفر بن أبي كثير",
-      "grade": "Succ. (Taba' Tabi')"
+      "grade": "Succ. (Taba' Tabi')",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi')",
+        "ar": "تابع التابعين",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو"
+      }
     }
   ],
   "children": [],
@@ -66,16 +132,31 @@
     {
       "id": "20706",
       "name": "Musa bin Y'aqub bin 'Abdullah bin Wahb موسى بن يعقوب بن عبد الله بن وهب",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "30421",
       "name": "Muhammad bin Yahya bin Abi 'Umar محمد بن يحيى بن أبي عمر العدني",
-      "grade": "3rd Century AH [10th generation]"
+      "grade": "3rd Century AH [10th generation]",
+      "grade_display": {
+        "en": "3rd Century AH [10th Generation]",
+        "ar": "القرن الثالث الهجري [الجيل العاشر]",
+        "ckb": "سەدەی سێیەمی كۆچی [نەوەی دەیەم]"
+      }
     }
   ],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [9th Generation]",
+    "ar": "تابع التابعين [الجيل التاسع]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی نۆیەم]"
+  }
 }

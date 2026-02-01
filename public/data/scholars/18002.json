@@ -26,6 +26,27 @@
     ],
     "tags": [
       "al-Bajli"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Sadooq] [ د  س  ق  -  صدوق ]",
+        "ar": "Narrator[Grade:Sadooq] [ د  س  ق  -  صدوق ]",
+        "ckb": "Narrator[Grade:Sadooq] [ د  س  ق  -  صدوق ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "NA",
+        "ar": "NA",
+        "ckb": "NA"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Bajli",
+        "ar": "al-Bajli",
+        "ckb": "al-Bajli"
+      }
     ]
   },
   "parents": [],
@@ -36,29 +57,54 @@
     {
       "id": "11406",
       "name": "Abu Zara' bin 'Amr /Harm أبو زرعة بن عمرو/هرم",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11046",
       "name": "Qays bin Abi Hazim قيس بن أبي حازم",
-      "grade": "Follower(Tabi') [1st Generation]"
+      "grade": "Follower(Tabi') [1st Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [1st Generation]",
+        "ar": "تابعي [الجيل الأول]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی یەكەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20721",
       "name": "Aban bin 'Abdullah bin Abi Hazam أبان بن عبد الله بن أبي حازم",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "20587",
       "name": "Sharayk bin 'Abdullah شريك بن عبد الله النخعي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     },
     {
       "id": "11386",
       "name": "Qays bin Muslim al-Jadli قيس بن مسلم الجدلي",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "hadiths": [
@@ -82,7 +128,12 @@
         "166",
         "30554",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-an-nasai-50",
@@ -100,7 +151,12 @@
         "18002",
         "11406",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-an-nasai-51",
@@ -115,7 +171,12 @@
         "20194",
         "20721",
         "18002"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     },
     {
       "id": "sunan-ibn-majah-387",
@@ -134,7 +195,12 @@
         "18002",
         "11406",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-389",
@@ -149,7 +215,12 @@
         "11222",
         "20348",
         "18002"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-511",
@@ -168,8 +239,18 @@
         "18002",
         "11406",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 6
+  "total_hadiths": 6,
+  "grade_display": {
+    "en": "Follower (Tabi') [3rd Generation]",
+    "ar": "تابعي [الجيل الثالث]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+  }
 }

@@ -29,6 +29,42 @@
       "Client",
       "al-Madni",
       "Hijazi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ م  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ م  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ م  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Medina",
+        "ar": "المدينة المنورة",
+        "ckb": "مەدینە"
+      },
+      {
+        "en": "Hijaz",
+        "ar": "الحجاز",
+        "ckb": "حیجاز"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "al-Madni",
+        "ar": "al-Madni",
+        "ckb": "al-Madni"
+      },
+      {
+        "en": "Hijazi",
+        "ar": "Hijazi",
+        "ckb": "Hijazi"
+      }
     ]
   },
   "parents": [],
@@ -40,12 +76,22 @@
     {
       "id": "11841",
       "name": "Hameed bin Ziyad حميد بن زياد أبو صخر",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     },
     {
       "id": "20500",
       "name": "Usamah bin Zayd al-Lythy أسامة بن زيد الليثي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -63,7 +109,12 @@
         "20029",
         "11895",
         "13"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "jami-al-tirmidhi-2968",
@@ -78,8 +129,18 @@
         "30313",
         "20248",
         "11895"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

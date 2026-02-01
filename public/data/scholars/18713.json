@@ -27,6 +27,32 @@
     "tags": [
       "al-Thaqifi",
       "al-Ta'ifi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ د  ق  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ د  ق  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ د  ق  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "al-Ta'if",
+        "ar": "al-Ta'if",
+        "ckb": "al-Ta'if"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Thaqifi",
+        "ar": "al-Thaqifi",
+        "ckb": "al-Thaqifi"
+      },
+      {
+        "en": "al-Ta'ifi",
+        "ar": "al-Ta'ifi",
+        "ckb": "al-Ta'ifi"
+      }
     ]
   },
   "parents": [],
@@ -37,34 +63,64 @@
     {
       "id": "166",
       "name": "al-Mughira ibn Shu'ba ( المغيرة بن شعبة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "3219",
       "name": "Aus bin Hudhayfa al-Thaqafi ( أوس بن حذيفة ( رضي الله عنه",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     },
     {
       "id": "11437",
       "name": "'Amr bin Aws bin Abi Aws عمرو بن أوس بن أبي أوس",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "11240",
       "name": "Ibrahim bin Maysara al-Ta'ifi إبراهيم بن ميسرة الطائفي",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     },
     {
       "id": "20658",
       "name": "'Abdullah bin 'Abdur Rahman bin Ya'la عبد الله بن عبد الرحمن بن يعلى",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     },
     {
       "id": "18910",
       "name": "Muhammad bin Sa'id al-Ta'ify محمد بن سعيد الطائفي أبو سعيد المؤذن",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "hadiths": [
@@ -85,7 +141,12 @@
         "20658",
         "18713",
         "3219"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-ibn-majah-1406",
@@ -100,8 +161,18 @@
         "30201",
         "20326",
         "18713"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [3rd Generation]",
+    "ar": "تابعي [الجيل الثالث]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+  }
 }

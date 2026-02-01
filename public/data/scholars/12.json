@@ -9,14 +9,24 @@
       "date_hijri": "NA",
       "date_gregorian": "NA",
       "date_display": [],
-      "place": "Makkah"
+      "place": "Makkah",
+      "place_display": {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      }
     },
     "death": {
       "date_hijri": "3",
       "date_gregorian": "625",
       "date_display": null,
       "place": "Medinah, Uhud",
-      "reason": "Martyred"
+      "reason": "Martyred",
+      "place_display": {
+        "en": "Medinah, Uhud",
+        "ar": "المدينة المنورةh, Uhud",
+        "ckb": "مەدینەh, Uhud"
+      }
     },
     "places_of_stay": [
       "Makkah",
@@ -39,6 +49,92 @@
       "Uhud",
       "Envoy",
       "Emigrant"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Recitation/Quran",
+        "ar": "تلاوة القرآن",
+        "ckb": "خوێندنەوە/قورئان"
+      },
+      {
+        "en": "Preacher",
+        "ar": "Preacher",
+        "ckb": "Preacher"
+      },
+      {
+        "en": "Fiqh",
+        "ar": "فقه",
+        "ckb": "فیقهـ"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Makkah",
+        "ar": "مكة المكرمة",
+        "ckb": "مەككە"
+      },
+      {
+        "en": "Abyssinia",
+        "ar": "Abyssinia",
+        "ckb": "Abyssinia"
+      },
+      {
+        "en": "Medinah",
+        "ar": "Medinah",
+        "ckb": "Medinah"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "Quraish",
+        "ar": "قريش",
+        "ckb": "قوڕەیش"
+      },
+      {
+        "en": "B.'Abd al-Dar",
+        "ar": "B.'Abd al-Dar",
+        "ckb": "B.'Abd al-Dar"
+      },
+      {
+        "en": "Early Muslim",
+        "ar": "من السابقين الأولين",
+        "ckb": "موسڵمانی سەرەتا"
+      },
+      {
+        "en": "Tortured",
+        "ar": "Tortured",
+        "ckb": "Tortured"
+      },
+      {
+        "en": "Abyssinia 1",
+        "ar": "Abyssinia 1",
+        "ckb": "Abyssinia 1"
+      },
+      {
+        "en": "Abyssinia 2",
+        "ar": "Abyssinia 2",
+        "ckb": "Abyssinia 2"
+      },
+      {
+        "en": "Battle of Badr",
+        "ar": "غزوة بدر",
+        "ckb": "جەنگی بەدر"
+      },
+      {
+        "en": "Battle of Uhud",
+        "ar": "غزوة أحد",
+        "ckb": "جەنگی ئوحود"
+      },
+      {
+        "en": "Envoy",
+        "ar": "Envoy",
+        "ckb": "Envoy"
+      },
+      {
+        "en": "Emigrant",
+        "ar": "Emigrant",
+        "ckb": "Emigrant"
+      }
     ]
   },
   "parents": [],
@@ -46,36 +142,66 @@
     {
       "id": "72",
       "name": "Hamnah bint Jahsh ( حمنة بنت جحش الأسدية ( رضي الله عنها",
-      "grade": "Comp.(RA) [1st Generation]"
+      "grade": "Comp.(RA) [1st Generation]",
+      "grade_display": {
+        "en": "Companion (RA) [1st Generation]",
+        "ar": "صحابي (رضي الله عنه) [الجيل الأول]",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت) [نەوەی یەكەم]"
+      }
     }
   ],
   "siblings": [
     {
       "id": "553",
       "name": "Abu al-Rome ibn 'Umair ( أبو الروم بن عمير ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     },
     {
       "id": "484",
       "name": "Abu 'Aziz ibn 'Umair ( أبو عزيز بن عمير بن هاشم ( رضي الله عنه",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "children": [
     {
       "id": "554",
       "name": "Zaynab bint Mus'ab ibn 'Umair ( زينب بنت مصعب بن عمير ( رضي الله عنها",
-      "grade": "Comp.(RA)"
+      "grade": "Comp.(RA)",
+      "grade_display": {
+        "en": "Companion (RA)",
+        "ar": "صحابي (رضي الله عنه)",
+        "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+      }
     }
   ],
   "teachers": [
     {
       "id": "1",
       "name": "Prophet Muhammad ( محمّد صلّی اللہ علیہ وآلہ وسلّم ( رضي الله عنه",
-      "grade": "Rasool Allah"
+      "grade": "Rasool Allah",
+      "grade_display": {
+        "en": "Messenger of Allah",
+        "ar": "رسول الله",
+        "ckb": "پێغەمبەری خودا"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Companion (RA)",
+    "ar": "صحابي (رضي الله عنه)",
+    "ckb": "هاوەڵ (رەزای خوای لێبێت)"
+  }
 }

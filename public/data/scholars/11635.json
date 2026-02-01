@@ -30,13 +30,59 @@
       "al-Walbi",
       "Client",
       "Kufi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Thiqah Thiqah] [ خ  م  ت  س  -  ثقة ]",
+        "ar": "Narrator[Grade:Thiqah Thiqah] [ خ  م  ت  س  -  ثقة ]",
+        "ckb": "Narrator[Grade:Thiqah Thiqah] [ خ  م  ت  س  -  ثقة ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Asadi",
+        "ar": "al-Asadi",
+        "ckb": "al-Asadi"
+      },
+      {
+        "en": "B.Khuzayma",
+        "ar": "B.Khuzayma",
+        "ckb": "B.Khuzayma"
+      },
+      {
+        "en": "al-Walbi",
+        "ar": "al-Walbi",
+        "ckb": "al-Walbi"
+      },
+      {
+        "en": "Client (Mawla)",
+        "ar": "مولى",
+        "ckb": "مەولا"
+      },
+      {
+        "en": "Kufi",
+        "ar": "Kufi",
+        "ckb": "Kufi"
+      }
     ]
   },
   "parents": [
     {
       "id": "11050",
       "name": "Sa'id bin Jubayr سعيد بن جبير الأسدي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "spouses": [],
@@ -44,7 +90,12 @@
     {
       "id": "11639",
       "name": "'Abdul Malik bin Sa'id عبد الملك بن سعيد بن جبير الأسدي",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "children": [],
@@ -52,14 +103,24 @@
     {
       "id": "11050",
       "name": "Sa'id bin Jubayr سعيد بن جبير الأسدي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "11015",
       "name": "Ayoub al-Sakhtiyani أيوب السختياني",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "hadiths": [
@@ -79,7 +140,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-2004",
@@ -97,7 +163,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3362",
@@ -116,7 +187,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-bukhari-3397",
@@ -134,7 +210,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Bukhari",
+        "ar": "صحيح البخاري",
+        "ckb": "سەحیحی بوخاری"
+      }
     },
     {
       "id": "sahih-muslim-2714",
@@ -152,7 +233,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sahih Muslim",
+        "ar": "صحيح مسلم",
+        "ckb": "سەحیحی موسليم"
+      }
     },
     {
       "id": "jami-al-tirmidhi-866",
@@ -170,7 +256,12 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Jami' al-Tirmidhi",
+        "ar": "جامع الترمذي",
+        "ckb": "جاميعي تیرمیزی"
+      }
     },
     {
       "id": "sunan-an-nasai-806",
@@ -188,8 +279,18 @@
         "11635",
         "11050",
         "17"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 7
+  "total_hadiths": 7,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

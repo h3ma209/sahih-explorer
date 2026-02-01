@@ -155,7 +155,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
@@ -170,7 +170,7 @@ export default function HeroSection({ scholarName, scholarTitle }: HeroSectionPr
             <span className="text-sm font-medium group-hover:text-amber-500 transition-colors">{t('scroll')}</span>
             <ChevronDown className="w-5 h-5 group-hover:text-amber-500 transition-colors" />
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
     </section>

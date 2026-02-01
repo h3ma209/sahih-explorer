@@ -11,6 +11,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { BookOpen, ChevronDown, ChevronUp, Quote } from "lucide-react";
 import { resolveIsnadChainSync } from "@/lib/isnad";
 import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
+import { translateValue } from "@/lib/translations";
 
 interface Hadith {
   hadith_no: string;
@@ -76,7 +77,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                 {/* Metadata */}
                 <div className="flex flex-wrap gap-2 text-xs text-muted-foreground mb-4 items-center">
                   <Badge variant="outline" className="bg-amber-500/10 text-amber-600 border-amber-200 dark:border-amber-800">
-                    {hadith.source.trim()}
+                    {translateValue(hadith.source.trim(), locale, 'tag')}
                   </Badge>
                   <Badge variant="secondary" className="font-mono">
                     {t('label')} {hadith.hadith_no}
@@ -116,18 +117,39 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                          {t('isnad')}
                        </div>
                        <Badge variant="outline" className="text-xs">
-                         {hadith.chain.length} {hadith.chain.length === 1 ? 'narrator' : 'narrators'}
+                         {t('narratorCount', {count: hadith.chain.length})}
                        </Badge>
                      </div>
                      
                      {/* Vertical Chain Layout */}
                       <div className="space-y-2">
-                        {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain.map(id => ({ id, name: id, grade: '', reliability_grade: '' }))).slice().reverse().map((narrator, idx, arr) => {
-                          const originalIdx = arr.length - 1 - idx; // Get original index for ID lookup
-                          const narratorName = typeof narrator === 'string' ? narrator : narrator.name;
-                          const narratorGrade = typeof narrator === 'object' ? narrator.grade : '';
-                          const reliabilityGrade = typeof narrator === 'object' ? narrator.reliability_grade : '';
-                          const displayGrade = [reliabilityGrade, narratorGrade].filter(Boolean).join(' - ');
+                        {/* Wrapper for chain resolution to handle types correctly */}
+                        {(searchIndex ? resolveIsnadChainSync(hadith.chain, searchIndex) : hadith.chain.map(id => ({ id, name: id, grade: '', reliability_grade: '', grade_display: undefined }))).slice().reverse().map((narrator, idx, arr) => {
+                          const originalIdx = arr.length - 1 - idx;
+                          // Handle string vs object (fallback)
+                          const rawName = typeof narrator === 'string' ? narrator : narrator.name;
+                          
+                          // Localized Name Logic
+                          let narratorName = rawName;
+                          if (locale === 'en') {
+                             narratorName = rawName.split('(')[0].trim();
+                          }
+                          // For Ar/Ckb, we keep the full name if it contains Arabic, 
+                          // or if we could parse it better we would. 
+                          // The raw name often contains "English ( Arabic )".
+
+                          const narratorGradeObj = typeof narrator === 'object' ? narrator : null;
+                          const reliability = narratorGradeObj?.reliability_grade || '';
+                          const grade = narratorGradeObj?.grade || '';
+                          
+                          // Use translated grade if available
+                          let displayGrade = '';
+                          if (narratorGradeObj?.grade_display && narratorGradeObj.grade_display[locale]) {
+                              displayGrade = narratorGradeObj.grade_display[locale];
+                          } else {
+                              displayGrade = [reliability, grade].filter(Boolean).join(' - ');
+                          }
+                          
                           const narratorId = typeof narrator === 'object' ? narrator.id : hadith.chain[hadith.chain.length - 1 - idx];
                           
                           return (
@@ -159,7 +181,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                     {narratorName}
                                     {displayGrade && (
                                       <span className="text-xs text-muted-foreground ml-2">
-                                        [Grade: {displayGrade}]
+                                        [{t('gradePrefix')}{displayGrade}]
                                       </span>
                                     )}
                                   </span>
@@ -168,7 +190,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                   </svg>
                                 </div>
                                 <div className="text-xs text-muted-foreground mt-1 opacity-70 group-hover/narrator:opacity-100 transition-opacity">
-                                  {idx === 0 ? 'First Narrator' : idx === arr.length - 1 ? 'Final Narrator' : `Narrator ${idx + 1}`}
+                                  {idx === 0 ? t('firstNarrator') : idx === arr.length - 1 ? t('finalNarrator') : t('narratorNum', { num: idx + 1 })}
                                 </div>
                               </button>
                             </div>
@@ -181,7 +203,7 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                        </svg>
-                       Chain of transmission from the Prophet ﷺ to the final narrator
+                       {t('chainDescription')}
                      </p>
                    </div>
               </CardContent>

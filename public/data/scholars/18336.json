@@ -27,6 +27,32 @@
     "tags": [
       "al-Kula'i",
       "al-Himsi"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Maqbool] [ د  س  -  مقبول ]",
+        "ar": "Narrator[Grade:Maqbool] [ د  س  -  مقبول ]",
+        "ckb": "Narrator[Grade:Maqbool] [ د  س  -  مقبول ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "al-Hims",
+        "ar": "al-Hims",
+        "ckb": "al-Hims"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Kula'i",
+        "ar": "al-Kula'i",
+        "ckb": "al-Kula'i"
+      },
+      {
+        "en": "al-Himsi",
+        "ar": "al-Himsi",
+        "ckb": "al-Himsi"
+      }
     ]
   },
   "parents": [],
@@ -37,14 +63,24 @@
     {
       "id": "10878",
       "name": "Ma'dan bin Abi Talha معدان بن أبي طلحة ويقال بن طلحة",
-      "grade": "Follower(Tabi') [2nd Generation]"
+      "grade": "Follower(Tabi') [2nd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [2nd Generation]",
+        "ar": "تابعي [الجيل الثاني]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی دووەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20320",
       "name": "Za'ida bin Qadama al-Thaqifi زائدة بن قدامة الثقفي",
-      "grade": "Succ. (Taba' Tabi') [7th generation]"
+      "grade": "Succ. (Taba' Tabi') [7th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [7th Generation]",
+        "ar": "تابع التابعين [الجيل السابع]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی حەوتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -63,7 +99,12 @@
         "18336",
         "10878",
         "37"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Abi Da'ud",
+        "ar": "سنن أبي داود",
+        "ckb": "سونەنی ئەبی داود"
+      }
     },
     {
       "id": "sunan-an-nasai-847",
@@ -80,8 +121,18 @@
         "20320",
         "18336",
         "10878"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan an-Nasa'i",
+        "ar": "سنن النسائي",
+        "ckb": "سونەنی نەسائی"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

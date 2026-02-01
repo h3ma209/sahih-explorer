@@ -29,6 +29,42 @@
       "al-Azdi",
       "al-Shami",
       "Jordan"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Narrator[Grade:Weak] [ ق  -  ضعيف ]",
+        "ar": "Narrator[Grade:Weak] [ ق  -  ضعيف ]",
+        "ckb": "Narrator[Grade:Weak] [ ق  -  ضعيف ]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Syria",
+        "ar": "الشام",
+        "ckb": "شام"
+      },
+      {
+        "en": "Jordon",
+        "ar": "Jordon",
+        "ckb": "Jordon"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-Azdi",
+        "ar": "al-Azdi",
+        "ckb": "al-Azdi"
+      },
+      {
+        "en": "al-Shami",
+        "ar": "al-Shami",
+        "ckb": "al-Shami"
+      },
+      {
+        "en": "Jordan",
+        "ar": "Jordan",
+        "ckb": "Jordan"
+      }
     ]
   },
   "parents": [],
@@ -39,24 +75,44 @@
     {
       "id": "11016",
       "name": "al-Hasan al-Basri الحسن البصري",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "19893",
       "name": "'Aabadh bin Nsy عبادة بن نسي",
-      "grade": "Follower(Tabi') [3rd Generation]"
+      "grade": "Follower(Tabi') [3rd Generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [3rd Generation]",
+        "ar": "تابعي [الجيل الثالث]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی سێیەم]"
+      }
     },
     {
       "id": "11066",
       "name": "Makhul al-Shami/al-Damashiqi مكحول الشامي",
-      "grade": "Follower(Tabi') [5th generation]"
+      "grade": "Follower(Tabi') [5th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [5th Generation]",
+        "ar": "تابعي [الجيل الخامس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی پێنجەم]"
+      }
     }
   ],
   "students": [
     {
       "id": "20733",
       "name": "al-Walid bin Muslim al-Quraishi الوليد بن مسلم القرشي",
-      "grade": "Succ. (Taba' Tabi') [8th generation]"
+      "grade": "Succ. (Taba' Tabi') [8th generation]",
+      "grade_display": {
+        "en": "Successor (Taba' Tabi') [8th Generation]",
+        "ar": "تابع التابعين [الجيل الثامن]",
+        "ckb": "شوێنكەوتووی شوێنكەوتوو [نەوەی هەشتەم]"
+      }
     }
   ],
   "hadiths": [
@@ -74,7 +130,12 @@
         "17064",
         "11066",
         "53"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     },
     {
       "id": "sunan-ibn-majah-3497",
@@ -89,8 +150,18 @@
         "20733",
         "17064",
         "149"
-      ]
+      ],
+      "source_display": {
+        "en": "Sunan Ibn Majah",
+        "ar": "سنن ابن ماجه",
+        "ckb": "سونەنی ئیبن ماجە"
+      }
     }
   ],
-  "total_hadiths": 2
+  "total_hadiths": 2,
+  "grade_display": {
+    "en": "Follower (Tabi') [6th Generation]",
+    "ar": "تابعي [الجيل السادس]",
+    "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+  }
 }

@@ -18,7 +18,12 @@
       "date_gregorian": "NA",
       "date_display": null,
       "place": "Basra",
-      "reason": "Natural"
+      "reason": "Natural",
+      "place_display": {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      }
     },
     "places_of_stay": [
       "al-Kufa",
@@ -35,6 +40,62 @@
       "al-Kufi",
       "al-Bulki",
       "Asbahan"
+    ],
+    "area_of_interest_display": [
+      {
+        "en": "Fiqh",
+        "ar": "فقه",
+        "ckb": "فیقهـ"
+      },
+      {
+        "en": "Narrator[Grade:Thiqah]",
+        "ar": "Narrator[Grade:Thiqah]",
+        "ckb": "Narrator[Grade:Thiqah]"
+      }
+    ],
+    "places_of_stay_display": [
+      {
+        "en": "Kufa",
+        "ar": "الكوفة",
+        "ckb": "كوفە"
+      },
+      {
+        "en": "Bulkh",
+        "ar": "Bulkh",
+        "ckb": "Bulkh"
+      },
+      {
+        "en": "Asbahan",
+        "ar": "Asbahan",
+        "ckb": "Asbahan"
+      },
+      {
+        "en": "Basra",
+        "ar": "البصرة",
+        "ckb": "بەسرە"
+      }
+    ],
+    "tags_display": [
+      {
+        "en": "al-'Anbari",
+        "ar": "al-'Anbari",
+        "ckb": "al-'Anbari"
+      },
+      {
+        "en": "al-Kufi",
+        "ar": "al-Kufi",
+        "ckb": "al-Kufi"
+      },
+      {
+        "en": "al-Bulki",
+        "ar": "al-Bulki",
+        "ckb": "al-Bulki"
+      },
+      {
+        "en": "Asbahan",
+        "ar": "Asbahan",
+        "ckb": "Asbahan"
+      }
     ]
   },
   "parents": [],
@@ -45,10 +106,20 @@
     {
       "id": "11001",
       "name": "Abu Hanifa أبو حنيفة‎‎",
-      "grade": "Follower(Tabi') [6th generation]"
+      "grade": "Follower(Tabi') [6th generation]",
+      "grade_display": {
+        "en": "Follower (Tabi') [6th Generation]",
+        "ar": "تابعي [الجيل السادس]",
+        "ckb": "شوێنكەوتوو (تابعی) [نەوەی شەشەم]"
+      }
     }
   ],
   "students": [],
   "hadiths": [],
-  "total_hadiths": 0
+  "total_hadiths": 0,
+  "grade_display": {
+    "en": "Successor (Taba' Tabi') [Hanafi]",
+    "ar": "تابع التابعين [حنفي]",
+    "ckb": "شوێنكەوتووی شوێنكەوتوو [حەنەفی]"
+  }
 }

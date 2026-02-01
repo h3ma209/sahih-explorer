@@ -169,9 +169,9 @@ export default function NetworkGraph({ scholar, teachers, students }: NetworkGra
         formatter: (params: any) => {
             if (params.dataType === 'node') {
                 return `<div class="font-bold text-sm">${params.data.originalName || params.name}</div>
-                        ${params.data.category === 0 ? '<div class="text-xs text-amber-500 mt-1">Scholar</div>' : ''}
-                        ${params.data.category === 1 ? '<div class="text-xs text-blue-500 mt-1">Teacher</div>' : ''}
-                        ${params.data.category === 2 ? '<div class="text-xs text-emerald-500 mt-1">Student</div>' : ''}`;
+                        ${params.data.category === 0 ? `<div class="text-xs text-amber-500 mt-1">${t('scholar')}</div>` : ''}
+                        ${params.data.category === 1 ? `<div class="text-xs text-blue-500 mt-1">${t('teacher')}</div>` : ''}
+                        ${params.data.category === 2 ? `<div class="text-xs text-emerald-500 mt-1">${t('student')}</div>` : ''}`;
             }
             return '';
         }

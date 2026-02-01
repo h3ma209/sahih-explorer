@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   PieChart,
   Pie,
@@ -17,11 +17,14 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BarChart3, TrendingUp, Users, BookOpen } from "lucide-react";
+import { translateValue } from "@/lib/translations";
 
 interface AnalyticsDashboardProps {
   biography: {
     area_of_interest: string[];
+    area_of_interest_display?: Record<string, string>[];
     tags: string[];
+    tags_display?: Record<string, string>[];
   };
   teachers: any[];
   students: any[];
@@ -40,9 +43,14 @@ export default function AnalyticsDashboard({
   const tNetwork = useTranslations('Network');
   const tStats = useTranslations('Stats');
   const tBio = useTranslations('Biography');
+  const locale = useLocale();
   
   // Expertise Radar Data
-  const expertiseData = biography.area_of_interest.slice(0, 6).map((area) => ({
+  const interests = (biography.area_of_interest_display 
+        ? biography.area_of_interest_display.map((area: any) => area[locale] || area.en)
+        : biography.area_of_interest);
+
+  const expertiseData = interests.slice(0, 6).map((area) => ({
     subject: area.length > 15 ? area.substring(0, 15) + "..." : area,
     value: Math.floor(Math.random() * 40) + 60, // Placeholder - would be real data
   }));
@@ -192,7 +200,10 @@ export default function AnalyticsDashboard({
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
-            {biography.tags.map((tag, index) => (
+            {(biography.tags_display 
+                  ? biography.tags_display.map((t: any) => t[locale] || t.en) 
+                  : biography.tags
+             ).map((tag, index) => (
               <Badge
                 key={index}
                 variant="outline"
@@ -202,7 +213,7 @@ export default function AnalyticsDashboard({
                   color: COLORS[index % COLORS.length],
                 }}
               >
-                {tag}
+                {biography.tags_display ? tag : translateValue(tag, locale, 'tag')}
               </Badge>
             ))}
           </div>

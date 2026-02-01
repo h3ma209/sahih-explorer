@@ -41,6 +41,14 @@ export const tagTranslations: Record<string, Record<string, string>> = {
   "Muhajireen": { en: "Muhajireen", ar: "المهاجرون", ckb: "موهاجیرون" },
   "Sahaba": { en: "Companions", ar: "الصحابة", ckb: "سەحابە" },
   "Tabi'un": { en: "Tabi'un", ar: "التابعون", ckb: "تابعون" },
+
+  // Books
+  "Sahih Bukhari": { en: "Sahih Bukhari", ar: "صحيح البخاري", ckb: "سەحیحی بوخاری" },
+  "Sahih Muslim": { en: "Sahih Muslim", ar: "صحيح مسلم", ckb: "سەحیحی موسلیم" },
+  "Sunan an-Nasa'i": { en: "Sunan an-Nasa'i", ar: "سنن النسائي", ckb: "سونەنی نەسائی" },
+  "Sunan Abi Da'ud": { en: "Sunan Abi Da'ud", ar: "سنن أبي داود", ckb: "سونەنی ئەبی داود" },
+  "Sunan Ibn Majah": { en: "Sunan Ibn Majah", ar: "سنن ابن ماجه", ckb: "سونەنی ئیبن ماجە" },
+  "Jami' al-Tirmidhi": { en: "Jami' al-Tirmidhi", ar: "جامع الترمذي", ckb: "جاميعي تیرمیزی" },
 };
 
 // Helper function to translate a value

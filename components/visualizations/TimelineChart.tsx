@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   BarChart,
   Bar,
@@ -21,15 +21,18 @@ interface BiographyData {
     date_gregorian: string;
     date_display: string[] | null;
     place: string;
+    place_display?: Record<string, string>;
   };
   death: {
     date_hijri: string;
     date_gregorian: string;
     date_display: string[] | null;
     place: string;
+    place_display?: Record<string, string>;
     reason: string;
   };
   places_of_stay: string[];
+  places_of_stay_display?: Record<string, string>[];
 }
 
 interface TimelineChartProps {
@@ -39,6 +42,13 @@ interface TimelineChartProps {
 
 export default function TimelineChart({ biography, name }: TimelineChartProps) {
   const t = useTranslations('Timeline');
+  const locale = useLocale();
+
+  const getPlace = (place: string, display?: Record<string, string>) => {
+    if (display && display[locale]) return display[locale];
+    return place;
+  };
+
   const timelineData = useMemo(() => {
     const data = [];
 
@@ -47,7 +57,7 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
       data.push({
         event: t('birth'),
         year: biography.birth.date_hijri || t('unknown'),
-        location: biography.birth.place,
+        location: getPlace(biography.birth.place, biography.birth.place_display),
         value: 1,
         color: "#10b981",
       });
@@ -57,7 +67,9 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
     data.push({
       event: t('earlyEducation'),
       year: t('youth'),
-      location: biography.places_of_stay[0] || t('unknown'),
+      location: (biography.places_of_stay_display && biography.places_of_stay_display[0] && biography.places_of_stay_display[0][locale]) 
+                || biography.places_of_stay[0] 
+                || t('unknown'),
       value: 2,
       color: "#3b82f6",
     });
@@ -65,7 +77,9 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
     data.push({
       event: t('scholarlyWork'),
       year: t('adulthood'),
-      location: biography.places_of_stay[1] || biography.birth.place,
+      location: (biography.places_of_stay_display && biography.places_of_stay_display[1] && biography.places_of_stay_display[1][locale])
+                || biography.places_of_stay[1] 
+                || getPlace(biography.birth.place, biography.birth.place_display),
       value: 3,
       color: "#f59e0b",
     });
@@ -75,14 +89,14 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
       data.push({
         event: t('death'),
         year: biography.death.date_hijri || t('unknown'),
-        location: biography.death.place,
+        location: getPlace(biography.death.place, biography.death.place_display),
         value: 1,
         color: "#ef4444",
       });
     }
 
     return data;
-  }, [biography, t]);
+  }, [biography, t, locale]);
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
@@ -147,7 +161,7 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
             </p>
             <p className="text-xs text-muted-foreground">
               <MapPin className="w-3 h-3 inline mr-1" />
-              {biography.birth.place || t('locationUnknown')}
+              {getPlace(biography.birth.place, biography.birth.place_display) || t('locationUnknown')}
             </p>
           </div>
 
@@ -161,7 +175,7 @@ export default function TimelineChart({ biography, name }: TimelineChartProps) {
             </p>
             <p className="text-xs text-muted-foreground">
               <MapPin className="w-3 h-3 inline mr-1" />
-              {biography.death.place || t('locationUnknown')}
+              {getPlace(biography.death.place, biography.death.place_display) || t('locationUnknown')}
             </p>
             {biography.death.reason && (
               <p className="text-xs text-muted-foreground mt-2 italic">
