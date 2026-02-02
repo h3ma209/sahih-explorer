@@ -8,7 +8,7 @@ A modern, interactive web application for exploring Islamic scholars, their acad
 
 ## ✨ Features
 
-- **📚 1,940+ Scholar Profiles** with detailed biographies
+- **📚 24,000+ Scholar Profiles** with detailed biographies
 - **🕸️ Interactive Network Graphs** showing teacher-student relationships
 - **👨‍👩‍👧‍👦 Family Tree Visualizations** with genealogical connections
 - **📖 Authenticated Hadiths** with complete chain of narrators (Isnad)
