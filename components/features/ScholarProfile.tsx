@@ -344,7 +344,16 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                              <div className="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center text-xs font-bold text-blue-500">
                                T
                              </div>
-                             <span className="font-medium group-hover:text-blue-500 transition-colors">{t.name}</span>
+                             <div className="flex flex-col">
+                               <span className="font-medium group-hover:text-blue-500 transition-colors">{t.name}</span>
+                               {(t.reliability_grade || t.grade) && (
+                                  <div className="flex items-center gap-2 mt-1">
+                                    <Badge variant="outline" className="text-xs font-normal text-muted-foreground">
+                                      {[t.reliability_grade, t.grade].filter(Boolean).join(' • ')}
+                                    </Badge>
+                                  </div>
+                                )}
+                             </div>
                           </div>
                           {t.id && (
                             <Button variant="ghost" size="icon" className="h-6 w-6 opacity-0 group-hover:opacity-100">
@@ -384,7 +393,16 @@ export default function ScholarProfile({ initialData, searchIndex = [] }: Schola
                              <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-xs font-bold text-emerald-500">
                                S
                              </div>
-                             <span className="font-medium group-hover:text-emerald-500 transition-colors">{s.name}</span>
+                             <div className="flex flex-col">
+                               <span className="font-medium group-hover:text-emerald-500 transition-colors">{s.name}</span>
+                               {(s.reliability_grade || s.grade) && (
+                                  <div className="flex items-center gap-2 mt-1">
+                                    <Badge variant="outline" className="text-xs font-normal text-muted-foreground">
+                                      {[s.reliability_grade, s.grade].filter(Boolean).join(' • ')}
+                                    </Badge>
+                                  </div>
+                                )}
+                             </div>
                           </div>
                           {s.id && (
                             <Button variant="ghost" size="icon" className="h-6 w-6 opacity-0 group-hover:opacity-100">
