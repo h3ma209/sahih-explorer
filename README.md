@@ -1,6 +1,7 @@
 # Sahih Explorer
 
 A modern, interactive web application for exploring Islamic scholars, their academic networks, family trees, and authenticated hadith narrations.
+This is still in beta and testing the project needs cleaning
 
 ![Next.js](https://img.shields.io/badge/Next.js-15+-black.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)
@@ -47,7 +48,7 @@ sahih-explorer/
 │   └── visualizations/   # Chart components
 ├── lib/                   # Utilities
 ├── messages/              # i18n translations (en, ar, ckb)
-└── public/data/           # Static JSON data (1,940 scholars)
+└── public/data/           # Static JSON data (24,000+ scholars)
 ```
 
 ## 🌐 Internationalization
@@ -60,7 +61,7 @@ Language switcher available in navigation.
 
 ## 🗄️ Data
 
-- **1,940 Scholar Profiles** with biographical data
+- **24,000+ Scholar Profiles** with biographical data
 - **Academic Networks**: Teacher-student relationships
 - **Family Trees**: Genealogical connections
 - **Hadiths**: Authenticated narrations with chains
