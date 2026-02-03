@@ -43,7 +43,7 @@ export function ScholarLoaderProvider({ children }: ScholarLoaderProviderProps) 
         setTimeout(() => {
             setIsLoading(false);
         }, 100); 
-    }, 2700);
+    }, 3000);
   };
 
   return (

@@ -45,6 +45,11 @@ export const metadata: Metadata = {
   icons: {
     apple: "/icons/icon-512x512.png",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Sahih Explorer",
+  },
 };
 
 import { NextIntlClientProvider } from 'next-intl';
