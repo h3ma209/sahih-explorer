@@ -177,14 +177,18 @@ export default function HadithList({ hadiths, searchIndex = [] }: HadithListProp
                                 className="w-full text-left px-4 py-2.5 rounded-lg bg-gradient-to-br from-amber-500/5 to-amber-600/5 border border-amber-500/20 hover:border-amber-500/40 hover:shadow-md transition-all duration-200"
                               >
                                 <div className="flex items-center justify-between">
-                                  <span className="text-sm font-medium text-foreground/90 group-hover/narrator:text-amber-600 dark:group-hover/narrator:text-amber-400 transition-colors">
-                                    {narratorName}
-                                    {displayGrade && (
-                                      <span className="text-xs text-muted-foreground ml-2">
-                                        [{t('gradePrefix')}{displayGrade}]
-                                      </span>
+                                  <div className="flex flex-col items-start text-left">
+                                    <span className="text-sm font-medium text-foreground/90 group-hover/narrator:text-amber-600 dark:group-hover/narrator:text-amber-400 transition-colors">
+                                      {narratorName}
+                                    </span>
+                                    {(narratorGradeObj?.reliability_grade || narratorGradeObj?.grade) && (
+                                      <div className="flex items-center gap-2 mt-1">
+                                        <Badge variant="outline" className="text-xs font-normal text-muted-foreground">
+                                          {[narratorGradeObj?.reliability_grade, narratorGradeObj?.grade].filter(Boolean).join(' • ')}
+                                        </Badge>
+                                      </div>
                                     )}
-                                  </span>
+                                  </div>
                                   <svg className="w-4 h-4 text-amber-500/60 opacity-0 group-hover/narrator:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                   </svg>
