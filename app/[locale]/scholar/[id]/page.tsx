@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ScholarProfile from '@/components/features/ScholarProfile';
 import Link from 'next/link';
+import ScholarClientFallback from './ScholarClientFallback';
 import { cache } from 'react';
 
 // Cached data fetcher to deduplicate requests
@@ -125,31 +126,13 @@ export default async function ScholarPage({ params }: PageProps & { params: Prom
 
   if (!data) {
      const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:${process.env.PORT || 3000}`);
+     // Fallback to client-side fetching to solve Vercel Preview/Auth issues
      return (
-        <main className="container flex flex-col items-center justify-center min-h-[60vh] py-20 text-center">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Scholar Not Found</h1>
-            <p className="text-lg text-gray-600 mb-8">We couldn't connect to the data source for Scholar ID: <span className="font-mono font-bold">{resolvedParams.id}</span></p>
-            
-            <div className="bg-amber-50 border border-amber-200 p-6 rounded-lg text-left max-w-2xl w-full">
-                <h3 className="font-semibold text-amber-800 mb-2">Troubleshooting for Vercel:</h3>
-                <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-                    <li><strong>Invalid ID?</strong> Ensure ID `{resolvedParams.id}` exists in your data. (Try 30003 for Imam Muslim)</li>
-                    <li><strong>Private Deployment?</strong> If this is a Preview URL, Vercel Authentication blocks the server from fetching its own data.
-                        <ul className="pl-6 mt-1 list-circle text-xs text-gray-500">
-                            <li>Fix: Make the deployment <strong>Public</strong> in Vercel Settings.</li>
-                            <li>Fix: Or visit the <strong>Production</strong> domain (if public).</li>
-                        </ul>
-                    </li>
-                </ul>
-                <div className="mt-4 pt-4 border-t border-amber-100 text-xs text-gray-400 break-all">
-                    Debug URL: {baseUrl}/data/scholars/{resolvedParams.id}.json
-                </div>
-            </div>
-
-            <Link href="/" className="mt-8 px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors">
-                Return to Search
-            </Link>
-        </main>
+        <ScholarClientFallback 
+            id={resolvedParams.id} 
+            debugUrl={`${baseUrl}/data/scholars/${resolvedParams.id}.json`}
+            initialSearchIndex={searchIndex}
+        />
      );
   }
   
