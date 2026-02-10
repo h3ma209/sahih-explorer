@@ -11,6 +11,22 @@ const withPWA = withPWAInit({
   workboxOptions: {
     disableDevLogs: true,
     skipWaiting: true,
+    maximumFileSizeToCacheInBytes: 500 * 1024 * 1024, // 500MB to accommodate database
+    runtimeCaching: [
+      {
+        urlPattern: /^https?:\/\/.*\/scholars\.db$/,
+        handler: 'CacheFirst',
+        options: {
+          cacheName: 'sqlite-database',
+          expiration: {
+            maxAgeSeconds: 90 * 24 * 60 * 60, // 90 days
+          },
+        },
+      },
+    ],
+    additionalManifestEntries: [
+      { url: '/scholars.db', revision: null },
+    ],
   },
 });
 

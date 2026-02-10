@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Outfit, Amiri, Noto_Naskh_Arabic } from "next/font/g
 import "./globals.css";
 import NextTopLoader from 'nextjs-toploader';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -116,6 +117,7 @@ export default async function RootLayout({
           <ScholarLoaderProvider>
             {children}
             <Analytics />
+            <SpeedInsights />
           </ScholarLoaderProvider>
         </NextIntlClientProvider>
       </body>

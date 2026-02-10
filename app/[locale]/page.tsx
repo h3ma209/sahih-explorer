@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { useScholarLoader } from "@/components/providers/ScholarLoaderProvider";
 import Navigation from "@/components/layout/Navigation";
+import PWAInstallButton from "@/components/PWAInstallButton";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -170,6 +171,7 @@ export default function Home() {
                 View Prophet Muhammad ﷺ
                 <ArrowRight className="w-4 h-4" />
               </Button>
+              <PWAInstallButton />
             </div>
           </motion.div>
         </div>
