@@ -111,8 +111,8 @@ export default function LandingPage() {
   ];
 
   const stats = [
-    { value: '1,940+', label: locale === 'ar' ? 'علماء' : locale === 'ckb' ? 'زانا' : 'Scholars' },
-    { value: '10,000+', label: locale === 'ar' ? 'أحاديث' : locale === 'ckb' ? 'فەرموودە' : 'Hadiths' },
+    { value: '24,940+', label: locale === 'ar' ? 'علماء' : locale === 'ckb' ? 'زانا' : 'Scholars' },
+    { value: '34,000+', label: locale === 'ar' ? 'أحاديث' : locale === 'ckb' ? 'فەرموودە' : 'Hadiths' },
     { value: '3', label: locale === 'ar' ? 'لغات' : locale === 'ckb' ? 'زمان' : 'Languages' },
     { value: '100%', label: locale === 'ar' ? 'مجاني' : locale === 'ckb' ? 'بێبەرامبەر' : 'Free' }
   ];

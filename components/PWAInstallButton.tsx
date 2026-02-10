@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Download, Check, Smartphone } from 'lucide-react';
+import { Download, Check } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 interface BeforeInstallPromptEvent extends Event {
@@ -87,7 +87,7 @@ export default function PWAInstallButton() {
     <button
       onClick={handleInstallClick}
       disabled={isInstalling}
-      className="group relative inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+      className="group relative inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-emerald-500 to-emerald-700 hover:from-emerald-600 hover:to-emerald-800 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <div className="absolute inset-0 bg-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
@@ -98,9 +98,8 @@ export default function PWAInstallButton() {
         </>
       ) : (
         <>
-          <Smartphone className="w-5 h-5" />
-          <span>Install App</span>
-          <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+          <Download className="w-5 h-5" />
+          <span>Download App</span>
         </>
       )}
     </button>
