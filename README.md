@@ -2,7 +2,8 @@
 
 A modern, interactive web application for exploring Islamic scholars, their academic networks, family trees, and authenticated hadith narrations.
 
-(This is still in beta and testing the project needs cleaning verficiation)
+(This is still in beta and testing the project needs cleaning and verficiation)
+(family members are correct but some of the hadith chains need verification and fixing)
 
 ![Next.js](https://img.shields.io/badge/Next.js-15+-black.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)
